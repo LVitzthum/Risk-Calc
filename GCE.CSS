@@ -1,4 +1,5 @@
-html
+
+<style>
 body {
   background: #e5e5e5 no-repeat center center fixed; //#3b5998
   -webkit-background-size: cover;
@@ -33,3 +34,4 @@ p
 {
   text-align: left;
 }
+</style>
