@@ -42,14 +42,23 @@ else if (loc == 2) {
 var R = R + 0.00214
 }
 
-
-// // again asigned values directly in menu
+// R based on T stage
 var tstage = document.getElementById('tstage').value;
-// var R = R + tstage
-// // again asigned values directly in menu
-// var nstage = document.getElementById('nstage').value;
-// var R = R + nstage
- // Calculates omega from Risk score
+if (tstage == 0) {
+  var R = R + -0.04377;
+}
+else if (tstage == 2) {
+var R = R + 0.06533
+ }
+// R based on N stage
+var nstage = document.getElementById('nstage').value;
+if (nstage == 0) {
+  var R = R + -0.05272;
+}
+else if (nstage == 2) {
+var R = R + -0.00506
+ }
+//  // Calculates omega from Risk score
 var w = Math.exp(R)*0.6431;
  // Outputs to index.html
  document.getElementById("myclass").className = "alert alert-info";
