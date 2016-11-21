@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="./GCE.js"></script>
+
+
+<!-- CSS CODE -->
+<style>
+html
+
+body {
+  background: #e5e5e5 no-repeat center center fixed; //#3b5998
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+h1
+{
+  color: blue;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 50px;
+  //letter-spacing: 40px;
+}
+
+p
+{
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.abc
+{
+  color: #000000;//#e5e5e5;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.form-group
+{
+  text-align: left;
+}
+
+</style>
+
+</head>
+
+
+  <body>
+    <div class="jumbotron text-center">
+
+      <h1>GCE Calculator</h1>
+      <p>Calculates the ω factor for head and neck cancer patients enrolling in NRG-HN1539 </p>
+    </div>
+<div class= "abc">
+
+
+<!-- Input to GCE C<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p>
+</div>alculator -->
+
+<div class="form-group">
+<label for="input_age" class="col-md-5 control-label">Age</label>
+<div class="col-md-7">
+ <input type="number" class="form-control" id="age" >
+</div>
+
+ <label for="inputweight" class="col-md-5 control-label">Weight (kgs)</label>
+ <div class="col-md-7">
+  <input type="number" class="form-control" id="weight" >
+</div>
+
+<label for="inputheight" class="col-md-5 control-label">Height (m)</label>
+<div class="col-md-7">
+ <input type="number" class="form-control" id="height"  >
+</div>
+<br>
+<label for="Gender" class="col-md-5 control-label"> Gender</label>
+      <select class="form-control" id="sex" >
+      <option value=1>Female</option> <option value=0>Male</option>
+      </select>
+
+      <label for="Race" class="col-md-5 control-label"> Race</label>
+      <select class="form-control" id="race" >
+      <option value=0>White</option> <option value=1>Black or African American</option> <option value=0>Asian</option> <option value=0>American Indian</option>
+      </select>
+
+      <label for="Income" class="col-md-5 control-label"> Income</label>
+      <select class="form-control" id="income">
+        <option value =1>Income > $47,400</option> <option value=0>Income ≤ $47,400</option>
+      </select>
+
+      <label for="Education" class="col-md-5 control-label"> Education</label>
+      <select class="form-control" id="ed">
+        <option value=1>Any College Experience</option> <option value=0>No college</option>
+      </select>
+
+      <label for="mar" class="col-md-5 control-label"> Marital Status</label>
+      <select class="form-control" id="mar">
+        <option value=1>Married</option> <option value=0>Divorced/Not Married</option>
+      </select>
+
+      <label for="ECOG" class="col-md-5 control-label"> ECOG Performance Status</label>
+      <select class="form-control" id="ECOG">
+          <option value=0>0</option><option value=1>1</option> <option value=1>2</option>
+      </select>
+<br>
+<label for="site" class="col-md-5 control-label"> Primary Site</label>
+<select class="form-control" id="site">
+  <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option>
+</select>
+
+<label for="TStage" class="col-md-5 control-label"> T Stage</label>
+<select class="form-control" id="tstage">
+  <option value=0>0</option><option value=0>1</option> <option value=0>2</option> <option value=1>3</option> <option value=2>4</option>
+</select>
+
+<label for="nStage" class="col-md-5 control-label"> N Stage</label>
+<select class="form-control" id="nstage">
+<option value=0>0</option><option value=0>1</option> <option value=0>2a</option value=0> <option value=1>2b</option> <option value=1>2c</option><option value=2>3</option>
+</select>
+<br>
+
+<label for="smoke" class="col-md-5 control-label"> Smoking History</label>
+<select class="form-control" id="Smoke">
+<option>> 10 pack year history</option><option>≤ 10 pack year history </option>
+</select>
+
+<label for="p16" class="col-md-5 control-label"> p16 Status</label>
+<select class="form-control" id="Smoke">
+<option>p16 positive</option><option>p16 negative </option>
+</select>
+
+</div>
+
+<div class="form-group">
+<div class="col-md-offset-5 col-md-7">
+   <button onclick="omega()" type="button" class="btn btn-primary">Submit</button>
+</div>
+</div>
+
+  </body>
+
+</div>
+<br> <br>
+
+<div id="myclass" style="font-size:150%;">
+
+<div id="prompt1"> </div>  <div id="omega_out"></div>
+</div>
+
+
+</html>
