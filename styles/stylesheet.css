@@ -1,0 +1,36 @@
+body {
+  background: #e5e5e5 no-repeat center center fixed; //#3b5998
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+h1
+{
+  color: blue;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 50px;
+  //letter-spacing: 40px;
+}
+
+p
+{
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.abc
+{
+  color: #000000;//#e5e5e5;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.form-group
+{
+  text-align: left;
+}
