@@ -27,10 +27,26 @@ p
 {
   color: #000000;//#e5e5e5;
   text-align: center;
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
 }
 .form-group
 {
   text-align: left;
+}
+
+.binaryRow
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #6b6b6b;
+}
+
+.lineRow
+{
+background-color: #9E9E9E;
+  padding: 3px;
+
 }
