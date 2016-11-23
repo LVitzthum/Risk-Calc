@@ -12,7 +12,8 @@ var bmi = wt/Math.pow(ht, 2);
 //BMI calc end
 var R = R + (bmi-26.5)/5 *-0.01726
 
-var sex = document.getElementById('sex').value;
+var sex = document.querySelector('input[name="sex"]:checked').value;
+// var sex = document.getElementById('sex').value;
 var R = R + sex*0.03084 ;
 
 var race = document.getElementById('race').value;
@@ -60,8 +61,9 @@ var R = R + -0.00506
  }
 //  // Calculates omega from Risk score
 var w = Math.exp(R)*0.6431;
+// rounds omega to nearest to 2 decimels
+var w = Math.round(w * 100) / 100
  // Outputs to index.html
- document.getElementById("myclass").className = "alert alert-info";
  document.getElementById("prompt1").innerHTML = "The ω score for this patient is";
  document.getElementById("omega_out").innerHTML =w;
 

@@ -23,12 +23,36 @@ p
   margin-left: 10%;
 }
 
+.jumbotron {
+    padding: 0.5em 0.6em;
+        h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.2em;
+        .btn {
+            padding: 0.5em;
+        }
+    }
+}
+
+
+.formoutput{
+background-color: #66b3ff;
+color: #f2f2f2;
+height:100%;
+;
+
+}
+
+
 .abc
 {
   color: #000000;//#e5e5e5;
-  text-align: center;
-  width: 50%;
+  text-align:center;
+  width: 90%;
   margin: 0 auto;
+
 }
 .form-group
 {
