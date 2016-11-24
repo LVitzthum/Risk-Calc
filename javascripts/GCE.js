@@ -63,8 +63,77 @@ var R = R + -0.00506
 var w = Math.exp(R)*0.6431;
 // rounds omega to nearest to 2 decimels
 var w = Math.round(w * 100) / 100
+// If there is insufficient input an error message is created
+if (!w) {
+document.getElementById("prompt1").innerHTML = "There is insufficient information to calculate the ω score";
+  }
+ else {
  // Outputs to index.html
- document.getElementById("prompt1").innerHTML = "The ω score for this patient is";
+ document.getElementById("prompt1").innerHTML = "GCE ω score: ";
  document.getElementById("omega_out").innerHTML =w;
+}
+ // CARG scoring Tool //
+ // calculates GFR IN mL/min based on Cockcroft model which is different than the Jeliffe formula used in CARG paper
 
+ if (sex == 1) {
+   var gndr = 0.85;
+ }
+ else {
+   var gndr = 1;
+ };
+
+ var cr = parseFloat(document.getElementById('cr').value);
+
+ var gfr = (gndr * (140 - age)) * wt / 72 / cr;
+ var gfr = Math.round(gfr * 100) / 100
+
+ if (!gfr) {
+ document.getElementById("CRC").innerHTML = "Invalid Inputs";
+   }
+else{
+   document.getElementById("CRC").innerHTML = gfr;
+}
+   if (!bmi) {
+   document.getElementById("BMI").innerHTML = "Invalid Inputs";
+     }
+else {
+  document.getElementById("BMI").innerHTML = bmi;
+
+}
+
+
+ if (gfr < 34) {
+   var gfrscr = 3
+ }
+ else {
+   var gfrscr = 0
+ }
+
+
+
+// // // Adds up CARG values
+var CARG = gfrscr;
+if (document.getElementById("anemia").checked == true) {
+    var CARG = CARG + 3
+    }
+if (document.getElementById("fall").checked == true) {
+    var CARG = CARG + 3
+    }
+if (document.getElementById("hear").checked == true) {
+    var CARG = CARG + 2
+    }
+if (document.getElementById("walk").checked == true) {
+    var CARG = CARG + 2
+    }
+    if (document.getElementById("meds").checked == true) {
+        var CARG = CARG + 1
+        }
+    if (document.getElementById("soc").checked == true) {
+        var CARG = CARG + 1
+        }
+
+
+// // Outputs to index.html
+document.getElementById("promptCARG").innerHTML = "CARG score: ";
+document.getElementById("CARG_out").innerHTML =CARG;
 }

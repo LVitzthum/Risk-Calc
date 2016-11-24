@@ -26,7 +26,7 @@
       <h1>Comorbidity Calculator</h1>
 
 
-      <p>Calculates the ω factor for head and neck cancer patients enrolling in NRG-HN1539 </p>
+      <p>Calculates risk factors for head and neck cancer patients enrolling in NRG-HN004 </p>
     </div>
 <div class= "abc">
 
@@ -35,30 +35,47 @@
   <p>Resize this responsive page to see the effect!</p>
 </div>alculator -->
 
-<div class="row">
-  <div class=col-md-4 >
+<div class="row content">
+
+  <div class="col-md-3 leftcolumn">
+<p> This tool is designed to determine a patient’s eligibility for the NRG trial HN004. To qualify, patients ≥  70 years old must meet one of the following criteria and patients < 70 must meet two. <p>
+  <ul style="list-style-type:disc">
+  <li>GCE ω-score < 0.5</li>
+  <li>ACE-27 Index ≥ 2</li>
+  <li>Charlson Comorbidity Index ≥ 2</li>
+    <li>G-8 score ≤ 14</li>
+  <li>CARG Toxicity Score ≥ 30%</li>
+  <li>CIRS-G Score ≥ 6</li>
+
+  </div>
+
+  <div class= "col-md-3" >
   <!-- Text inputs  -->
   <div class="form-group">
+
+    <div class="row">
 <label for="input_age" class="col-xs-5 control-label">Age</label>
-<div class="col-xs-5">
+<div class="col-xs-7">
  <input type="number" class="form-control" id="age" >
+</div></div>
+
+<div class="row">
+ <label for="inputweight" class="col-xs-5 control-label">Weight</label>
+ <div class="col-xs-7">
+  <input type="number" placeholder="Kgs" class="form-control" id="weight" >
+</div> </div>
+
+<div class="row">
+<label for="inputheight" class="col-xs-5 control-label">Height</label>
+<div class="col-xs-7">
+ <input type="number" class="form-control" placeholder= "m" id="height"  >
+</div> </div>
 </div>
 
- <label for="inputweight" class="col-xs-5 control-label">Weight (kgs)</label>
- <div class="col-xs-5">
-  <input type="number" class="form-control" id="weight" >
-</div>
-<br> <br>
 
-<label for="inputheight" class="col-xs-5 control-label">Height (m)</label>
-<div class="col-xs-5">
- <input type="number" class="form-control" id="height"  >
-</div>
-</div>
-<br><br>
-
+<div class="row">
 <div class="form-group">
-  <label class="col-xs-5 control-label" for="radios">Gender</label>
+  <label class="col-xs-6 control-label" for="radios">Gender</label>
   <div class="col-xs-6">
     <label class="radio-inline" for="radios-0">
       <input type="radio" name="sex" id="radios-0" value="0" checked="checked">
@@ -68,38 +85,45 @@
       <input type="radio" name="sex" id="radios-1" value="1">
       Female
     </label>
-  </div>
+  </div> </div>
 </div>
-<br>
+
+<div class="row">
 <div class= form-group>
       <label for="Race" class="col-xs-5 control-label"> Race</label>
-      <div class="col-xs-6">
+      <div class="col-xs-7">
       <select class="form-control" id="race" >
       <option value=0>White</option> <option value =0>Hispanic </option><option value=1>Black or African American</option> <option value=0>Asian</option> <option value=0>American Indian</option>
       </select>
-    </div>
-<br>
+    </div> </div> </div>
 
+<div class="row">
       <label for="Income" class="col-xs-5 control-label"> Income</label>
-      <div class="col-xs-6">
+      <div class="col-xs-7">
       <select class="form-control" id="income">
         <option value =1>Income > $47,400</option> <option value=0>Income ≤ $47,400</option>
       </select>
-</div>
+</div> </div>
+
+<div class="row">
       <label for="Education" class="col-xs-5 control-label"> Education</label>
-      <div class="col-xs-6">
+      <div class="col-xs-7">
       <select class="form-control" id="ed">
         <option value=1>Any College Experience</option> <option value=0>No college</option>
       </select>
-</div>
+</div> </div>
+
+<div class="row">
       <label for="mar" class="col-xs-5 control-label"> Marital Status</label>
-      <div class="col-xs-6">
+      <div class="col-xs-7">
       <select class="form-control" id="mar">
         <option value=1>Married</option> <option value=0>Divorced/Not Married</option>
       </select>
-</div>
-      <label for="ECOG" class="col-xs-5 control-label"> ECOG Performance Status</label>
-      <div class="col-xs-6">
+</div> </div>
+
+<div class="row">
+      <label for="ECOG" class="col-xs-5 control-label"> ECOG PS</label>
+      <div class="col-xs-7">
       <select class="form-control" id="ECOG">
           <option value=0>0</option><option value=1>1</option> <option value=1>2</option>
       </select>
@@ -107,62 +131,134 @@
     </div>
     </div>
 
-<div class="col-md-4">
+<div class="col-md-3">
   <div class="form-group">
-    <label for="site" class="col-xs-4 control-label"> Primary Site</label>
+  <div class= "row">
+    <label for="site" class="col-md-5 control-label"> Primary Site</label>
   <div class="col-xs-7">
   <select class="form-control" id="site">
   <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option>
   </select>
-  </div>
+</div> </div>
 
-
-  <label for="TStage" class="col-xs-4 control-label"> T Stage</label>
+<div class="row">
+  <label for="TStage" class="col-xs-5 control-label"> T Stage</label>
   <div class="col-xs-7">
   <select class="form-control" id="tstage">
     <option value=0>0</option><option value=0>1</option> <option value=0>2</option> <option value=1>3</option> <option value=2>4</option>
   </select>
-</div>
-  <label for="nStage" class="col-xs-4 control-label"> N Stage</label>
+</div> </div>
+<div class="row">
+  <label for="nStage" class="col-xs-5 control-label"> N Stage</label>
 <div class="col-xs-7">
   <select class="form-control" id="nstage">
       <option value=0>0</option><option value=0>1</option> <option value=0>2a</option value=0> <option value=1>2b</option> <option value=1>2c</option><option value=2>3</option>
   </select>
-</div>
+</div></div>
 
-<label for="p16" class="col-xs-4 control-label"> p16 Status</label>
+<div class="row">
+<label for="p16" class="col-xs-5 control-label"> p16 Status</label>
 <div class="col-xs-7">
 <select class="form-control" id="Smoke">
 <option>p16 positive</option><option>p16 negative </option>
 </select>
-</div>
-
-  <label for="smoke" class="col-xs-4 control-label"> Smoking History</label>
-    <div class="col-xs-7">
-  <select class="form-control" id="Smoke">
-  <option>> 10 pack year history</option><option>≤ 10 pack year history </option>
-  </select>
-</div>
-
-
 </div> </div>
 
-
-<div class= "col-md-4 formoutput">
-   <div id="myclass" style="font-size:150%;">
-   <div id="prompt1"> </div>  <div id="omega_out"></div>
-
-   </div>
+<div class="row">
+<label for="smoke" class="col-xs-5 control-label"> Smoking History</label>
+<div class="col-xs-7">
+<select class="form-control" id="Smoke">
+<option> > 10 pack yr history</option><option> ≤ 10 pack year history </option>
+</select>
 </div> </div>
 
-<div class= "text-align:center">
-<button onclick="omega()" type="button" class="btn btn-primary">Submit</button>
+<div class="row">
+<label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL</label>
+<div class="col-xs-7">
+ <input type="number" class="form-control" id="cr" >
+</div> </div>
+
+<div class="row">
+<div class="col-xs-12">
+<input type="checkbox" id="anemia" > Anemia <br>
+<input type="checkbox" id="fall" > Any fall in the past 6 months <br>
+ <input type="checkbox" id="hear" > Hearing, fair or worse <br>
+ <input type="checkbox" id="walk" > Limited in walking 1 block  <br>
+ <input type="checkbox" id="meds" > Inability to take medications independently  <br>
+<input type="checkbox" id="soc" > Decreased socialization because of health <br>
+</div>
 </div>
 </div>
 
+
+</div>
+
+
+<div class= "col-md-3 formoutput">
+  <div class= "row">
+    <h5> GCE ω Score: This model uses a patient's medical, socioeconomic and tumor characteristics to determine their risk of dying from cancer relative to all other causes </h5>
+   <dev id="prompt1"> </dev>  <dev id="omega_out"></dev>
+
+</div> <hr>
+
+<div class= "row">
+<h5> ACE-27: RTOG Adult Comorbidity Evaluation assigns grades to relevant comorbidities </h5>
+<a href="https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290" target="_blank"> RTOG ACE-27 form </a>
+</div>
+
+<div class="row">
+<label for="ACE" class="col-xs-6 control-label"> ACE-27 Score</label>
+<div class="col-xs-6">
+<select class="form-control" id="ACE">
+    <option> select </option> <option value=0>0</option><option value=1>1</option> <option value=2>2</option> <option value=3>3</option>
+</select>
+</div>
+</div>
+<hr>
+
+<div class="row">
+<h5> Charlson Comorbidity Index </h5>
+<a href="https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290"> Relevant Link </a>
+
+<label for="Charl" class="col-xs-6 control-label"> Charlson Score</label>
+<div class="col-xs-6">
+<select class="form-control" id="Charl">
+    <option> select </option> <option value=0>0</option><option value=1>1</option> <option value=2>2</option> <option value=3>3</option>
+</select>
+</div> </div>
+<hr>
+
+<div class="row">
+<h5> G-8 Score </h5>
+<a href="https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290"> Relevant Link </a>
+</div><hr>
+
+<div class="row">
+<h5> CARG Toxicity </h5>
+<a href="https://www.ncbi.nlm.nih.gov/pubmed/21810685"> Hurria et al. JCO 2011 </a>
 <br>
+<dev id="promptCARG"></dev>
+<dev id="CARG_out"></dev>
+</div>
+<hr>
 
+<div class="row">
+<h5> CIRS-G Score </h5>
+<a href="https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290"> Relevant Link </a>
+</div> <hr>
 
+<div class="row">
+BMI : <dev id=BMI> </dev> <br>
+Creatinine clearance:  <dev id=CRC> </dev> (mg/dL)
+</div> </div>
+</div>
+
+</div>
+<div class= "center">
+<button onclick="omega()" type="button" class="btn btn-primary">Calculate</button>
+</div>
+
+<p style="font-size:80%;"> Code by Lucas Vitzthum </p>
 
   </body>
 
