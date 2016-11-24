@@ -23,11 +23,16 @@ p
   margin-left: 10%;
 }
 
+  .row.content {height: 300 px}
+
 .jumbotron {
+  background-color: #006A96;
+  color: #f2f2f2;
     padding: 0.5em 0.6em;
         h1 {
         font-size: 2em;
     }
+
     p {
         font-size: 1.2em;
         .btn {
@@ -36,23 +41,32 @@ p
     }
 }
 
-
-.formoutput{
-background-color: #66b3ff;
-color: #f2f2f2;
-height:100%;
-;
+.leftcolumn{
+text-align:left;
 
 }
 
+.formoutput{
+background-color: #3b5998;
+color: #f2f2f2;
+height:90%;
+padding: 20px;
+
+}
+
+.center {
+  margin: auto;
+   width: 50%;
+   padding: 10px;
+   text-align: center;
+}
 
 .abc
 {
   color: #000000;//#e5e5e5;
-  text-align:center;
-  width: 90%;
+  /*text-align:center;*/
+  width: 95%;
   margin: 0 auto;
-
 }
 .form-group
 {
