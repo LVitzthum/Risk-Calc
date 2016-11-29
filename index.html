@@ -97,13 +97,6 @@
     </select>
     </div> </div> </div>
 
-    <div class="row">
-    <label for="Income" class="col-xs-5 control-label"> Income</label>
-    <div class="col-xs-7">
-    <select class="form-control" id="income">
-      <option value =1>Income > $47,400</option> <option value=0>Income ≤ $47,400</option>
-    </select>
-    </div> </div>
 
     <div class="row">
     <label for="Education" class="col-xs-5 control-label"> Education</label>
@@ -140,7 +133,7 @@
     <label for="site" class="col-xs-5 control-label"> Primary Site</label>
     <div class="col-xs-7">
     <select class="form-control" id="site">
-    <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option>
+    <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option> <option value=3> Oropharynx </option>
     </select>
     </div> </div>
 
@@ -162,16 +155,16 @@
     <div class="row">
     <label for="p16" class="col-xs-5 control-label"> p16 Status</label>
     <div class="col-xs-7">
-    <select class="form-control" id="Smoke">
-    <option>p16 positive</option><option>p16 negative </option>
+    <select class="form-control" id="p16">
+    <option value=1>p16 positive</option><option value=0>p16 negative </option>
     </select>
     </div> </div>
 
     <div class="row">
     <label for="smoke" class="col-xs-5 control-label"> Smoking History</label>
     <div class="col-xs-7">
-    <select class="form-control" id="Smoke">
-    <option> > 10 pack yr history</option><option> ≤ 10 pack year history </option>
+    <select class="form-control" id="smoke">
+    <option value=0> > 10 pack yr history</option><option value=1> ≤ 10 pack year history </option>
     </select>
     </div> </div>
 
@@ -183,6 +176,7 @@
 
     <div class="row">
     <div class="col-xs-12">
+      <div class="center"> <strong> Check all that apply </strong> </div>
     <input type="checkbox" id="anemia" > Anemia <br>
     <input type="checkbox" id="fall" > Any fall in the past 6 months <br>
     <input type="checkbox" id="hear" > Hearing, fair or worse <br>
@@ -197,7 +191,8 @@
 <div class= "col-md-3 formoutput">
     <div class= "row">
     <h5> GCE ω Score: This model uses a patient's medical, socioeconomic and tumor characteristics to determine their risk of dying from cancer relative to all other causes </h5>
-    <dev id="prompt1"> </dev>  <dev id="omega_out"></dev>
+    <dev id="prompt1"> </dev>  <dev id="omega_out"></dev> <br>
+    <dev id="prompt2"> </dev>  <dev id="omega2_out"></dev> <br>
 
     </div> <hr>
 
@@ -257,8 +252,6 @@
 <div class= "center">
 <button onclick="omega()" type="button" class="btn btn-primary">Calculate</button>
 </div>
-
-<p style="font-size:80%;"> Code by Lucas Vitzthum </p>
 
   </body>
 
