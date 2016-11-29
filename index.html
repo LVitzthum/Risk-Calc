@@ -35,7 +35,7 @@
   <p>Resize this responsive page to see the effect!</p>
 </div>alculator -->
 
-<div class="row content">
+<div class="row">
 
   <div class="col-md-3 leftcolumn">
   <p> This tool is designed to determine a patient’s eligibility for the NRG trial HN004. To qualify, patients ≥  70 years old must meet one of the following criteria and patients < 70 must meet two. <p>
@@ -124,6 +124,21 @@
     </select>
     </div>
     </div>
+
+    <div class="row">
+      <div class="col-xs-12" style="height:70px;"></div>
+    </div>
+        <div class="row">
+        <div class="col-xs-12">
+          <div class="center"> <strong> Check all that apply </strong> </div>
+        <input type="checkbox" id="anemia" > Anemia <br>
+        <input type="checkbox" id="fall" > Any fall in the past 6 months <br>
+        <input type="checkbox" id="hear" > Hearing, fair or worse <br>
+        <input type="checkbox" id="walk" > Limited in walking 1 block  <br>
+        <input type="checkbox" id="meds" > Inability to take medications independently  <br>
+        <input type="checkbox" id="soc" > Decreased socialization because of health <br>
+        </div>
+        </div>
     </div>
 
 <div class="col-md-3">
@@ -174,16 +189,12 @@
     <input type="number" class="form-control" id="cr" >
     </div> </div>
 
+<div class="row">
+  <div class="col-xs-12" style="height:190px;"></div>
+</div>
     <div class="row">
-    <div class="col-xs-12">
-      <div class="center"> <strong> Check all that apply </strong> </div>
-    <input type="checkbox" id="anemia" > Anemia <br>
-    <input type="checkbox" id="fall" > Any fall in the past 6 months <br>
-    <input type="checkbox" id="hear" > Hearing, fair or worse <br>
-    <input type="checkbox" id="walk" > Limited in walking 1 block  <br>
-    <input type="checkbox" id="meds" > Inability to take medications independently  <br>
-    <input type="checkbox" id="soc" > Decreased socialization because of health <br>
-    </div>
+    BMI : <dev id=BMI> </dev> <br>
+    Creatinine clearance:  <dev id=CRC> </dev> (mg/dL)
     </div>
 </div>
 
@@ -192,7 +203,7 @@
     <div class= "row">
     <h5> GCE ω Score: This model uses a patient's medical, socioeconomic and tumor characteristics to determine their risk of dying from cancer relative to all other causes </h5>
     <dev id="prompt1"> </dev>  <dev id="omega_out"></dev> <br>
-    <dev id="prompt2"> </dev>  <dev id="omega2_out"></dev> <br>
+    <dev id="prompt2"> </dev>  <dev id="omega2_out"></dev>
 
     </div> <hr>
 
@@ -240,12 +251,8 @@
     <div class="row">
     <h5> CIRS-G Score </h5>
     <a href="https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290"> Relevant Link </a>
-    </div> <hr>
-
-    <div class="row">
-    BMI : <dev id=BMI> </dev> <br>
-    Creatinine clearance:  <dev id=CRC> </dev> (mg/dL)
-    </div> </div>
+    </div>
+    </div>
     </div>
 
 </div>
