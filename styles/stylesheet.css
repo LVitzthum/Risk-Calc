@@ -27,6 +27,9 @@ p
 
 .jumbotron {
   background-color: #006A96;
+/*background-image: url(../img/scripps.jpg);
+background-size:cover;
+background-position: 0% 60%;*/
 
   color: #f2f2f2;
     padding: 0.5em 0.6em;
@@ -72,4 +75,12 @@ padding:2em;
 .form-group
 {
   text-align: left;
+}
+
+.padding-0R{
+    padding-right:0;
+    }
+.padding-0L{
+    padding-left:0;
+
 }

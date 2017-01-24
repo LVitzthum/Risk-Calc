@@ -1,19 +1,29 @@
 
-
 function omega(){
+
  // Calculates Rblind from omega
- var age = parseFloat(document.getElementById('age').value);
-  var Rb = -0.2306 * (0.1 * age - 5.8) / 0.948 ;
-  var R = -0.2306 * (0.1 * age - 5.8) / 0.948 ;
+var age = parseFloat(document.getElementById('age').value);
+var Rb = -0.2306 * (0.1 * age - 5.8) / 0.948 ;
+var R = -0.2306 * (0.1 * age - 5.8) / 0.948 ;
 
 // BMI calc start
 var wt = parseFloat(document.getElementById('weight').value)
 var ht = parseFloat(document.getElementById('height').value)
-var bmi = wt/Math.pow(ht, 2);
+
+// Unit Conversion
+var w_unit = document.getElementById('w_unit').value;
+var h_unit = document.getElementById('h_unit').value;
+if (w_unit == 1) {
+wt = wt / 2.20462262
+}
+if (h_unit == 1) {
+ht = ht * 0.0254
+}
+
 //BMI calc end
+var bmi = wt/Math.pow(ht, 2);
 var Rb = Rb - 0.08198 * (0.2 * bmi -5.17)  / 1.15
 var R = R - 0.08198 * (0.2 * bmi -5.17)  / 1.15
-
 
 var sex = document.querySelector('input[name="sex"]:checked').value;
 // var sex = document.getElementById('sex').value;
@@ -60,12 +70,12 @@ var t02 = 1; var t4 = 0;
 }
 
 else if (tstage == 1) {
-  var t02 = 0; var t4 = 0;
- }
+var t02 = 0; var t4 = 0;
+}
 
 else if (tstage == 2) {
-  var t02 = 0; var t4 = 1;
- }
+var t02 = 0; var t4 = 1;
+}
 
  var Rb = Rb - .075 * ((t02 - 0.323) / 0.468) + 0.15228 * (( t4 - 0.28) / 0.449);
  var R = R - .075 * ((t02 - 0.323) / 0.468) + 0.15228 * (( t4 - 0.28) / 0.449);
@@ -73,13 +83,13 @@ else if (tstage == 2) {
 // R based on N stage
 var nstage = document.getElementById('nstage').value;
 if (nstage == 0) {
-  var n02a = 1; var n3 = 0;
+var n02a = 1; var n3 = 0;
 }
 if (nstage == 1) {
-  var n02a = 0; var n3 = 0;
+var n02a = 0; var n3 = 0;
 }
 else if (nstage == 2) {
-  var n02a = 0; var n3 = 1;
+var n02a = 0; var n3 = 1;
 }
 
 var Rb = Rb - 0.07905 * ((n02a - 0.416) / 0.493) + 0.02246 * ((n3 - 0.0844) / 0.278);
@@ -147,37 +157,158 @@ else {
 
 
  if (gfr < 34) {
-   var gfrscr = 3
+   var CARG = 3
  }
  else {
-   var gfrscr = 0
+   var CARG = 0
  }
 
-
-
 // // // Adds up CARG values
-var CARG = gfrscr;
+if (age >= 72) {
+     CARG += 2
+}
+
 if (document.getElementById("anemia").checked == true) {
-    var CARG = CARG + 3
-    }
+     CARG += 3
+}
 if (document.getElementById("fall").checked == true) {
-    var CARG = CARG + 3
-    }
+     CARG += 3
+}
 if (document.getElementById("hear").checked == true) {
-    var CARG = CARG + 2
-    }
+     CARG += 2
+}
 if (document.getElementById("walk").checked == true) {
-    var CARG = CARG + 2
-    }
+     CARG += 2
+}
     if (document.getElementById("meds").checked == true) {
-        var CARG = CARG + 1
-        }
+      CARG += 1
+}
     if (document.getElementById("soc").checked == true) {
-        var CARG = CARG + 1
-        }
+      CARG += 1
+}
 
+var pCARG = 100 / (1+ Math.exp (2.055 - CARG * 0.3002))
 
-// // Outputs to index.html
+// // Outputs CARG to index.html
 document.getElementById("promptCARG").innerHTML = "CARG score: ";
 document.getElementById("CARG_out").innerHTML =CARG;
+document.getElementById("promptpCARG").innerHTML = "Risk of chemotherapay toxicity:";
+document.getElementById("pCARG_out").innerHTML = Math.round(pCARG);
+document.getElementById("CARG%").innerHTML = "%"
+
+// Charlson scoring
+var Charlson = 0
+if (document.getElementById("MI").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("HF").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("PVD").checked == true) {
+     Charlson += 1
+}
+if (document.getElementById("CVD").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("Dem").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("CPD").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("CTD").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("UD").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("MLD").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("DM").checked == true) {
+    Charlson += 1
+}
+if (document.getElementById("HEMI").checked == true) {
+    Charlson += 2
+}
+if (document.getElementById("ModRenal").checked == true) {
+    Charlson += 2
+}
+if (document.getElementById("DMend").checked == true) {
+    Charlson += 2
+}
+if (document.getElementById("leuk").checked == true) {
+    Charlson += 2
+}
+if (document.getElementById("lymph").checked == true) {
+    Charlson += 2
+}
+if (document.getElementById("tumor").checked == true) {
+    Charlson += 2
+}
+if (document.getElementById("ModLD").checked == true) {
+    Charlson += 3
+}
+if (document.getElementById("met").checked == true) {
+    Charlson += 6
+}
+if (document.getElementById("AIDS").checked == true) {
+    Charlson += 6
+}
+
+// // Outputs CARG to index.html
+document.getElementById("promptCharlson").innerHTML = "Charlson Comorbidity score: ";
+document.getElementById("Charlson_out").innerHTML =Charlson;
+
+// Determines ultimate eligibility
+if (age >= 70){
+var ELIG = 0
+if (wbp < 0.6) {
+ELIG += 1
+}
+if (document.getElementById('ACE').value >=1) {
+ELIG += 1
+}
+if (Charlson >=1) {
+ELIG += 1
+}
+if (pCARG >= 30) {
+ELIG += 1
+}
+if (ELIG >= 1){
+  var eligible_out = ["This patient qualifies by meeting", ELIG, "criteria."]
+document.getElementById("ElAlert").className = "alert alert-success";
+document.getElementById("ElAlert").innerHTML = eligible_out.join(" ")
+}
+else {
+  document.getElementById("ElAlert").className = "alert alert-warning";
+  document.getElementById("ElAlert").innerHTML = "This patient does not qualify"
+}
+}
+if (age < 70){
+var ELIG = 0
+if (wbp < 0.5) {
+ELIG += 1
+}
+if (document.getElementById('ACE').value >=2) {
+ELIG += 1
+}
+if (Charlson >=2) {
+ELIG += 1
+}
+if (pCARG >= 30) {
+ELIG += 1
+}
+if (ELIG >= 2){
+  var eligible_out = ["This patient qualifies by meeting", ELIG, "criteria."]
+document.getElementById("ElAlert").className = "alert alert-success";
+document.getElementById("ElAlert").innerHTML = eligible_out.join(" ")
+}
+else {
+  document.getElementById("ElAlert").className = "alert alert-warning";
+  document.getElementById("ElAlert").innerHTML = "This patient does not qualify"
+}
+}
+
+
 }
