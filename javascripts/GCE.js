@@ -114,6 +114,12 @@ var wp = w / (w + 1);
 var wbp = Math.round(wbp * 100) / 100;
 var wp = Math.round(wp * 100) / 100;
 
+// Age Output
+document.getElementById("AGE1").innerHTML = age;
+document.getElementById("AGE2").innerHTML = age;
+
+//
+
 // If there is insufficient input an error message is created
 if (!wb) {
 document.getElementById("prompt1").innerHTML = "There is insufficient information to calculate the ω score";
@@ -142,19 +148,26 @@ document.getElementById("prompt1").innerHTML = "There is insufficient informatio
  var gfr = Math.round(gfr * 100) / 100
 
  if (!gfr) {
- document.getElementById("CRC").innerHTML = "Invalid Inputs";
+ document.getElementById("CRC1").innerHTML = "Invalid Inputs";
+ document.getElementById("CRC2").innerHTML = "Invalid Inputs";
+
    }
 else{
-   document.getElementById("CRC").innerHTML = gfr;
+   document.getElementById("CRC1").innerHTML = gfr;
+   document.getElementById("CRC2").innerHTML = gfr;
+
 }
+// BMI output
    if (!bmi) {
-   document.getElementById("BMI").innerHTML = "Invalid Inputs";
+   document.getElementById("BMI1").innerHTML = "Invalid Inputs";
+   document.getElementById("BMI2").innerHTML = "Invalid Inputs";
+
      }
 else {
-  document.getElementById("BMI").innerHTML = bmi;
+  document.getElementById("BMI1").innerHTML = bmi;
+  document.getElementById("BMI2").innerHTML = bmi;
 
 }
-
 
  if (gfr < 34) {
    var CARG = 3
@@ -164,6 +177,7 @@ else {
  }
 
 // // // Adds up CARG values
+
 if (age >= 72) {
      CARG += 2
 }
@@ -192,7 +206,7 @@ var pCARG = 100 / (1+ Math.exp (2.055 - CARG * 0.3002))
 // // Outputs CARG to index.html
 document.getElementById("promptCARG").innerHTML = "CARG score: ";
 document.getElementById("CARG_out").innerHTML =CARG;
-document.getElementById("promptpCARG").innerHTML = "Risk of chemotherapay toxicity:";
+document.getElementById("promptpCARG").innerHTML = "Risk of chemotherapy toxicity:";
 document.getElementById("pCARG_out").innerHTML = Math.round(pCARG);
 document.getElementById("CARG%").innerHTML = "%"
 
@@ -260,7 +274,29 @@ if (document.getElementById("AIDS").checked == true) {
 document.getElementById("promptCharlson").innerHTML = "Charlson Comorbidity score: ";
 document.getElementById("Charlson_out").innerHTML =Charlson;
 
-// Determines ultimate eligibility
+// Calculates G8 Score //
+var food = parseFloat( document.getElementById('Food').value);
+var wl = parseFloat( document.getElementById('WL').value);
+var mob = parseFloat(document.getElementById('Mob').value);
+var psy = parseFloat(document.getElementById('Psy').value);
+var rx = parseFloat(document.getElementById('Rx').value);
+var self = parseFloat(document.getElementById('Self').value);
+
+var g8age = 0;
+if ( age <= 85 && age >= 80) {g8age = 1};
+if ( age < 80 ) {g8age = 2};
+
+var g8BMI = 0;
+if ( bmi < 21 && bmi >= 19) {g8BMI = 1};
+if ( bmi < 23 && bmi >= 21 ) {g8BMI = 2};
+if ( bmi >= 23 ) {g8BMI = 3};
+
+var g8 = food + wl + mob + psy + rx + self + g8age + g8BMI;
+// Outputs G8 Score //
+document.getElementById("G8Score").innerHTML =g8;
+
+//
+// Determines ultimate eligibility //
 if (age >= 70){
 var ELIG = 0
 if (wbp < 0.6) {
@@ -269,12 +305,19 @@ ELIG += 1
 if (document.getElementById('ACE').value >=1) {
 ELIG += 1
 }
+if (document.getElementById('CIRS').value >=6) {
+ELIG += 1
+}
 if (Charlson >=1) {
 ELIG += 1
 }
 if (pCARG >= 30) {
 ELIG += 1
 }
+if (g8 <= 14){
+ELIG += 1
+}
+
 if (ELIG >= 1){
   var eligible_out = ["This patient qualifies by meeting", ELIG, "criteria."]
 document.getElementById("ElAlert").className = "alert alert-success";
@@ -299,6 +342,13 @@ ELIG += 1
 if (pCARG >= 30) {
 ELIG += 1
 }
+if (document.getElementById('CIRS').value >=6) {
+ELIG += 1
+}
+if (g8 <= 14){
+ELIG += 1
+}
+
 if (ELIG >= 2){
   var eligible_out = ["This patient qualifies by meeting", ELIG, "criteria."]
 document.getElementById("ElAlert").className = "alert alert-success";
