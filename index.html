@@ -469,65 +469,38 @@
                                                 </div>
                                                 
                                                 <div class="row">
-                                                  <!-- <label for="CIRS" class="col-xs-6 control-label"> Input CIRS-G Score</label> -->
                                                   
                                                   <div class="col-md-4">   
-                                                    <button onclick="displayCIRSHelp(heart)" class="mdc-button mdc-button--raised">
+                                                    <button onclick="displayCIRSHelp('heart')" class="mdc-button mdc-button--raised">
                                                       Heart Score
                                                     </button>
                                                   </div>
-                                                  <div id = "heartHelp"></div>
                                                   
-                                                  <div class="col-md-1">
-                                                    <div class="mdc-radio">
-                                                      <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked>
-                                                      <div class="mdc-radio__background">
-                                                        <div class="mdc-radio__outer-circle"></div>
-                                                        <div class="mdc-radio__inner-circle"></div>
-                                                      </div>
-                                                    </div>
+                                                  <div>
+                                                    <div class="col-md-1"><div class="mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                    <div class="col-md-1"><div class="mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                    <div class="col-md-1"><div class="mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                    <div class="col-md-1"><div class="mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                    <div class="col-md-1"><div class="mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                   </div>
-                                                  
-                                                  <div class="col-md-1">
-                                                    <div class="mdc-radio">
-                                                      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios">
-                                                      <div class="mdc-radio__background">
-                                                        <div class="mdc-radio__outer-circle"></div>
-                                                        <div class="mdc-radio__inner-circle"></div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  
-                                                  
-                                                  <div class="col-md-1">
-                                                    <div class="mdc-radio">
-                                                      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios">
-                                                      <div class="mdc-radio__background">
-                                                        <div class="mdc-radio__outer-circle"></div>
-                                                        <div class="mdc-radio__inner-circle"></div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="col-md-1">
-                                                    <div class="mdc-radio">
-                                                      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios">
-                                                      <div class="mdc-radio__background">
-                                                        <div class="mdc-radio__outer-circle"></div>
-                                                        <div class="mdc-radio__inner-circle"></div>
-                                                      </div>
-                                                    </div>        </div>
-                                                    <div class="col-md-1">
-                                                      <div class="mdc-radio">
-                                                        <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios">
-                                                        <div class="mdc-radio__background">
-                                                          <div class="mdc-radio__outer-circle"></div>
-                                                          <div class="mdc-radio__inner-circle"></div>
-                                                        </div>
-                                                      </div>        </div>
-                                                    </div>
-                                                  </div>
+
                                                 </div>
-                                                
+                                                      
+                                                <div id = "heartHelp" class="row CIRSHelp">
+                                                  <div>Level 0: No problem.</div>
+                                                  <div>Level 1: Remote MI (> five years ago) / occasional angina treated with prn meds.</div>
+                                                  <div>Level 2: CHF compensated with meds / daily anti-angine meds / left ventricular hypertorphy / atrial fibrillation / bundle branch block / daily antiarrhythimic drugs.</div>
+                                                  <div>Level 3: Previous MI within five years / abnormal stress test / status post percutaneous coronary angioplasty or coronary artery bypass graft surgery.</div>
+                                                  <div>Level 4: Marked activity restriction secondary to cardiac status (i.e., unstable angina or intractable congestive heart failure.)</div>
+                                                  Additional Considerations: 
+The bulk of heart disease is encompassed by athersclerotic heart disease, arrythmias, congestive heart failure and valvular disease. Within each of these categories the 1-4 rating of severity must be judged. 
+Atherosclerotic Heart Disease - Mild throught extremely severe stages of athersclerotic heart disease are reflected in the above levels as outlined. 
+Congestive Heart Failure - Requiring daily medications for CHF merits at least a '2', intractable CHF a '4' and an intermediate condition a '3'. 
+Arrhythmias - EKG findings of atrial fibrillation, right or left bundle branch block, or the necessity of daily antiarrhythmic drugs merits '2' at least, a bifasicular block a '3.' In patients who require a pacemaker, placement for an indidental finding of periods of bradycardia during a holder monitor would score a '2,' whereas placement of a pacemaker for cariogenic syncope would merit a '3.' 
+Valvular Disease - Detectable murmurs that indicate valvular pathology without activity restriction would merit a '1,' more severly compromising valvular disease would require a progressively higher rating. 
+Pericardial Pathology - A pericardial effusion or pericarditis would merit at least a '3'.
+                                                </div>                                                
+                    
                                                 <div class="formout">
                                                   <div class="row">
                                                     
