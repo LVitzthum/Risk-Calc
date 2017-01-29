@@ -183,22 +183,22 @@ if (age >= 72) {
      CARG += 2
 }
 
-if (document.getElementById("anemia").checked == true) {
+if (document.getElementById("anemia").checked) {
      CARG += 3
 }
-if (document.getElementById("fall").checked == true) {
+if (document.getElementById("fall").checked) {
      CARG += 3
 }
-if (document.getElementById("hear").checked == true) {
+if (document.getElementById("hear").checked) {
      CARG += 2
 }
-if (document.getElementById("walk").checked == true) {
+if (document.getElementById("walk").checked) {
      CARG += 2
 }
-    if (document.getElementById("meds").checked == true) {
+    if (document.getElementById("meds").checked) {
       CARG += 1
 }
-    if (document.getElementById("soc").checked == true) {
+    if (document.getElementById("soc").checked) {
       CARG += 1
 }
 
@@ -213,61 +213,61 @@ document.getElementById("pCARG_out").innerHTML = Math.round(pCARG);
 
 // Charlson scoring
 var Charlson = 0
-if (document.getElementById("MI").checked == true) {
+if (document.getElementById("MI").checked) {
     Charlson += 1
 }
-if (document.getElementById("HF").checked == true) {
+if (document.getElementById("HF").checked) {
     Charlson += 1
 }
-if (document.getElementById("PVD").checked == true) {
+if (document.getElementById("PVD").checked) {
      Charlson += 1
 }
-if (document.getElementById("CVD").checked == true) {
+if (document.getElementById("CVD").checked) {
     Charlson += 1
 }
-if (document.getElementById("Dem").checked == true) {
+if (document.getElementById("Dem").checked) {
     Charlson += 1
 }
-if (document.getElementById("CPD").checked == true) {
+if (document.getElementById("CPD").checked) {
     Charlson += 1
 }
-if (document.getElementById("CTD").checked == true) {
+if (document.getElementById("CTD").checked) {
     Charlson += 1
 }
-if (document.getElementById("UD").checked == true) {
+if (document.getElementById("UD").checked) {
     Charlson += 1
 }
-if (document.getElementById("MLD").checked == true) {
+if (document.getElementById("MLD").checked) {
     Charlson += 1
 }
-if (document.getElementById("DM").checked == true) {
+if (document.getElementById("DM").checked) {
     Charlson += 1
 }
-if (document.getElementById("HEMI").checked == true) {
+if (document.getElementById("HEMI").checked) {
     Charlson += 2
 }
-if (document.getElementById("ModRenal").checked == true) {
+if (document.getElementById("ModRenal").checked) {
     Charlson += 2
 }
-if (document.getElementById("DMend").checked == true) {
+if (document.getElementById("DMend").checked) {
     Charlson += 2
 }
-if (document.getElementById("leuk").checked == true) {
+if (document.getElementById("leuk").checked) {
     Charlson += 2
 }
-if (document.getElementById("lymph").checked == true) {
+if (document.getElementById("lymph").checked) {
     Charlson += 2
 }
-if (document.getElementById("tumor").checked == true) {
+if (document.getElementById("tumor").checked) {
     Charlson += 2
 }
-if (document.getElementById("ModLD").checked == true) {
+if (document.getElementById("ModLD").checked) {
     Charlson += 3
 }
-if (document.getElementById("met").checked == true) {
+if (document.getElementById("met").checked) {
     Charlson += 6
 }
-if (document.getElementById("AIDS").checked == true) {
+if (document.getElementById("AIDS").checked) {
     Charlson += 6
 }
 
