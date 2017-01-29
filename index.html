@@ -12,18 +12,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" 
+<link rel="stylesheet"
       href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 <style>
   :root {
     --mdc-theme-primary: #0e4ead;
   }
-  
+
   .mdc-ripple-surface.mdc-ripple-upgraded.mdc-button--primary::before,
   .mdc-ripple-surface.mdc-ripple-upgraded.mdc-button--primary::after {
     background-color: rgba(255, 255, 255, .2);
   }
-  
+
   #greeting-form > button {
     margin-top: 8px;
   }
@@ -79,16 +79,16 @@ $(document).ready(function(){
       </div>
     </div>
   </nav> -->
-<div class="style">
-<div id="about" class="row">
-  <br><br>
-<h3>This tool is designed to determine a patient’s eligibility and calculate comorbidity data for the NRG trial HN004.</div>
-</h3>
+<div class="jumbotron text-center">
+<h1>NRG HN-004 Eligibility Calculator</h1>
+<p>Tool to calculate comorbidity scores and determinite eligibility for HN-004 </p>
+</div>
 
+<div class="style">
 
 <div id="section1" class=container-fluid>
 <div class="minihead">
-<h2> 1. General Patient Information </h2>
+<h2> 1. General/ GCE Model Input</h2>
 </div>
 
 
@@ -97,25 +97,25 @@ $(document).ready(function(){
 <div class="row">
 
 <div class="col-xs-12 col-md-6">
-  
+
   <div class="row">
 
     <label class="col-xs-4 control-label" for="input_age">Age: </label>
     <div class="mdc-textfield col-xs-7">
       <input type="text" id="age" class="basic_entry mdc-textfield__input" placeholder="Type Age">
-    </div>  
+    </div>
   </div>
 
 
 
   <div class="row" >
-    
+
     <label class="col-md-4 control-label" for="inputweight">Weight: </label>
     <div class="mdc-textfield col-xs-4">
       <input type="text" id="weight" class="basic_entry mdc-textfield__input" placeholder="Type Weight">
-    </div>  
-    
-    <!-- 
+    </div>
+
+    <!--
   <label for="inputweight" class="col-xs-5 ">Weight</label>
   <div class="col-xs-4 padding-0R">
   <input type="number" class="form-control" id="weight" >
@@ -126,7 +126,7 @@ $(document).ready(function(){
     <select id="w_unit" class="mdc-select basic_entry">
       <option value=0 default selected>kgs</option>
       <option value=1>lbs</option>
-    </select> 
+    </select>
   </div>
 </div>
 
@@ -365,7 +365,7 @@ $(document).ready(function(){
   </div>
   <div class="row">
     <strong>
-      
+
 
       <div class="mdc-form-field">
         <div class="mdc-checkbox">
@@ -378,7 +378,7 @@ $(document).ready(function(){
           </div>
         </div>
         <label for="my-checkbox" id="my-checkbox-label">Anemia (Hgb < 11 g/dL)</label>
-      </div>  
+      </div>
       <br>
       <div class="mdc-form-field">
       <div class="mdc-checkbox">
@@ -405,9 +405,9 @@ $(document).ready(function(){
       </div>
       <label for="my-checkbox" id="my-checkbox-label">Hearing, fair or worse</label>
       </div>
-    
-    
-      
+
+
+
     <!-- <input type="checkbox" id="anemia" > Anemia (Hgb < 11 g/dL) <br> -->
     <!-- <input type="checkbox" id="fall" > Any fall in the past 6 months <br> -->
     <input type="checkbox" id="hear" > Hearing, fair or worse <br>
@@ -456,18 +456,18 @@ $(document).ready(function(){
 
 <div id="section5" class="container-fluid">
   <div class="minihead">
-  <h2> 6. CIRS-G </h2>
+  <h2> 6. CIRS-G Model Input</h2>
   </div>
-  
+
   <div class="row">
       <div class="col-md-4">Rating</div>
       <div class="col-md-1">0</div>
       <div class="col-md-1">1</div>
       <div class="col-md-1">2</div>
-      <div class="col-md-1">3</div>  
-      <div class="col-md-1">4</div>  
+      <div class="col-md-1">3</div>
+      <div class="col-md-1">4</div>
   </div>
-  
+
   <div class="row">
     <!-- <label for="CIRS" class="col-xs-6 control-label"> Input CIRS-G Score</label> -->
       <div class="col-md-4">Heart Score</div>
@@ -478,7 +478,7 @@ $(document).ready(function(){
             <div class="mdc-radio__outer-circle"></div>
             <div class="mdc-radio__inner-circle"></div>
           </div>
-        </div>              
+        </div>
       </div>
 
       <div class="col-md-1">
@@ -488,10 +488,10 @@ $(document).ready(function(){
             <div class="mdc-radio__outer-circle"></div>
             <div class="mdc-radio__inner-circle"></div>
           </div>
-        </div>  
+        </div>
       </div>
-      
-      
+
+
       <div class="col-md-1">
         <div class="mdc-radio">
           <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios">
@@ -499,7 +499,7 @@ $(document).ready(function(){
             <div class="mdc-radio__outer-circle"></div>
             <div class="mdc-radio__inner-circle"></div>
           </div>
-        </div>  
+        </div>
             </div>
       <div class="col-md-1">
         <div class="mdc-radio">
