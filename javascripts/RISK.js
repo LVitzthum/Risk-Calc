@@ -121,17 +121,17 @@ document.getElementById("AGE2").innerHTML = age;
 //
 
 // If there is insufficient input an error message is created
-if (!wb) {
-document.getElementById("prompt1").innerHTML = "There is insufficient information to calculate the ω score";
-  }
- else {
+// if (!wb) {
+// document.getElementById("prompt1").innerHTML = "There is insufficient information to calculate the ω score";
+//   }
+//  else {
  // Outputs to index.html
- document.getElementById("prompt1").innerHTML = "GCE ω score (blind to race and gender): ";
+ // document.getElementById("prompt1").innerHTML = "GCE ω score (blind to race and gender): ";
  document.getElementById("omega_out").innerHTML = wbp;
- document.getElementById("prompt2").innerHTML = "GCE ω score (w/ race and gender): ";
- document.getElementById("omega2_out").innerHTML = wp;
+ // document.getElementById("prompt2").innerHTML = "GCE ω score (w/ race and gender): ";
+ // document.getElementById("omega2_out").innerHTML = wp;
+// }
 
-}
  // CARG scoring Tool //
  // calculates GFR IN mL/min based on Cockcroft model which is different than the Jeliffe formula used in CARG paper
 
@@ -149,23 +149,24 @@ document.getElementById("prompt1").innerHTML = "There is insufficient informatio
 
  if (!gfr) {
  document.getElementById("CRC1").innerHTML = "Invalid Inputs";
- document.getElementById("CRC2").innerHTML = "Invalid Inputs";
+ // document.getElementById("CRC2").innerHTML = "Invalid Inputs";
 
    }
 else{
    document.getElementById("CRC1").innerHTML = gfr;
-   document.getElementById("CRC2").innerHTML = gfr;
+  //  document.getElementById("CRC2").innerHTML = gfr;
 
 }
 // BMI output
+bmi= Math.round(bmi*100) / 100
    if (!bmi) {
    document.getElementById("BMI1").innerHTML = "Invalid Inputs";
-   document.getElementById("BMI2").innerHTML = "Invalid Inputs";
+  //  document.getElementById("BMI2").innerHTML = "Invalid Inputs";
 
      }
 else {
   document.getElementById("BMI1").innerHTML = bmi;
-  document.getElementById("BMI2").innerHTML = bmi;
+  // document.getElementById("BMI2").innerHTML = bmi;
 
 }
 
@@ -204,11 +205,11 @@ if (document.getElementById("walk").checked == true) {
 var pCARG = 100 / (1+ Math.exp (2.055 - CARG * 0.3002))
 
 // // Outputs CARG to index.html
-document.getElementById("promptCARG").innerHTML = "CARG score: ";
+// document.getElementById("promptCARG").innerHTML = "CARG score: ";
 document.getElementById("CARG_out").innerHTML =CARG;
-document.getElementById("promptpCARG").innerHTML = "Risk of chemotherapy toxicity:";
+// document.getElementById("promptpCARG").innerHTML = "Risk of chemotherapy toxicity:";
 document.getElementById("pCARG_out").innerHTML = Math.round(pCARG);
-document.getElementById("CARG%").innerHTML = "%"
+// document.getElementById("CARG%").innerHTML = "%"
 
 // Charlson scoring
 var Charlson = 0
@@ -271,7 +272,7 @@ if (document.getElementById("AIDS").checked == true) {
 }
 
 // // Outputs CARG to index.html
-document.getElementById("promptCharlson").innerHTML = "Charlson Comorbidity score: ";
+// document.getElementById("promptCharlson").innerHTML = "Charlson Comorbidity score: ";
 document.getElementById("Charlson_out").innerHTML =Charlson;
 
 // Calculates G8 Score //
@@ -296,7 +297,23 @@ var g8 = food + wl + mob + psy + rx + self + g8age + g8BMI;
 document.getElementById("G8Score").innerHTML =g8;
 
 //
+
+// GETS CIRS-G and ACE and outputs them//
+var ace = document.getElementById('ACE').value
+document.getElementById("aceout").innerHTML = ace
+
+var ace = document.getElementById('CIRS').value
+document.getElementById("cirsout").innerHTML = ace
+}
+
+
+//
+///
+//
+//
 // Determines ultimate eligibility //
+function elig(){
+
 if (age >= 70){
 var ELIG = 0
 if (wbp < 0.6) {
@@ -320,14 +337,13 @@ ELIG += 1
 
 if (ELIG >= 1){
   var eligible_out = ["This patient qualifies by meeting", ELIG, "criteria."]
-document.getElementById("ElAlert").className = "alert alert-success";
-document.getElementById("ElAlert").innerHTML = eligible_out.join(" ")
+document.getElementById("elgout").innerHTML = eligible_out.join(" ")
 }
 else {
-  document.getElementById("ElAlert").className = "alert alert-warning";
-  document.getElementById("ElAlert").innerHTML = "This patient does not qualify"
+  document.getElementById("elgout").innerHTML = "This patient does not qualify"
 }
 }
+
 if (age < 70){
 var ELIG = 0
 if (wbp < 0.5) {
@@ -351,12 +367,12 @@ ELIG += 1
 
 if (ELIG >= 2){
   var eligible_out = ["This patient qualifies by meeting", ELIG, "criteria."]
-document.getElementById("ElAlert").className = "alert alert-success";
-document.getElementById("ElAlert").innerHTML = eligible_out.join(" ")
+// document.getElementById("ElAlert").className = "alert alert-success";
+document.getElementById("elgout").innerHTML = eligible_out.join(" ")
 }
 else {
-  document.getElementById("ElAlert").className = "alert alert-warning";
-  document.getElementById("ElAlert").innerHTML = "This patient does not qualify"
+  // document.getElementById("ElAlert").className = "alert alert-warning";
+  document.getElementById("elgout").innerHTML = "This patient does not qualify"
 }
 }
 

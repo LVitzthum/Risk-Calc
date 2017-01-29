@@ -1,379 +1,437 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
 
 <head>
+<title> NRG HN004 Calc </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=divice-width, initial-scale=1">
-<!-- Latest compiled and minified CSS -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
-<script src="./javascripts/GCE.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/RISKstyle.css">
 
-<!-- jQuery library -->
+<script src="./javascripts/RISK.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+    $("input").change(function(){
+        omega();
+    });
+});
+
+$(document).ready(function(){
+  $("*").click(function(){
+        omega();
+    });
+});
+
+</script>
 </head>
 
-<body>
-<div class="jumbotron text-center">
-<h1>NRG HN-004 Eligibility Calculator</h1>
-<p>This tool is designed to determine a patient’s eligibility for the NRG trial HN004. </p>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<!-- Scroll Spy  -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">HN004 Calculator</a>
+      </div>
+      <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#about">About</a><li>
+            <li><a href="#section1">1. General</a></li>
+            <li><a href="#section2">2. G8</a></li>
+            <li><a href="#section3">3. Charlson</a></li>
+            <li><a href="#section4">4. CARG</a></li>
+            <li><a href="#section5">5. ACE 27</a></li>
+            <li><a href="#section6">6. CIRS G</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+<div class="style">
+<div id="about" class="row">
+  <br><br>
+<h3>This tool is designed to determine a patient’s eligibility and calculate comorbidity data for the NRG trial HN004.</div>
+</h3>
+
+
+<div id="section1" class=container-fluid>
+<div class="minihead">
+<h2> 1. General Patient Information </h2>
 </div>
-<div class= "abc">
 <div class="row">
-<div class="col-md-3 leftcolumn">
-<p> G8 Input </p>
 
-<div class="row">
-<div class= "form-group">
-<label for="Food" class="col-xs-5 control-label"> Decline in food intake over past 3 months?</label>
-<div class="col-xs-7">
-<select class="form-control" id="Food" >
-<option value=0>Severe decline</option> <option value =1>Moderate Decline </option><option value=2>No decline</option>
-</select>
-</div> </div> </div>
+<div class="col-xs-12 col-md-6">
+  <div class="row">
+  <label for="input_age" class="col-xs-5 control-label">Age</label>
+  <div class="col-xs-7">
+  <input type="number" class="form-control" id="age" >
+  </div>
+  </div>
 
-<div class="row">
-<div class= "form-group">
-<label for="WL" class="col-xs-5 control-label"> Weight loss during last 3 months</label>
-<div class="col-xs-7">
-<select class="form-control" id="WL" >
-<option value=0>>3 kg</option> <option value =1>Don't know </option><option value=2>Between 1 and 3 kg </option> <option value=3> No Weight loss </option>
-</select>
-</div> </div> </div>
+  <div class="row" >
+  <label for="inputweight" class="col-xs-5 ">Weight</label>
+  <div class="col-xs-4 padding-0R">
+  <input type="number" class="form-control" id="weight" >
+  </div>
 
-<div class="row">
-<div class= "form-group">
-<label for="Mob" class="col-xs-5 control-label"> Mobility</label>
-<div class="col-xs-7">
-<select class="form-control" id="Mob" >
-<option value=0>Bed/chair bound</option> <option value =1> Doesn't go out</option><option value=2>Goes out</option>
-</select>
-</div> </div> </div>
+  <div class="col-xs-3 padding-0L">
+  <select class="form-control" id="w_unit" >
+  <option value=0>kgs</option> <option value =1>lbs </option>
+  </select>
+  </div>
 
-<div class="row">
-<div class= "form-group">
-<label for="Psy" class="col-xs-5 control-label"> Mobility</label>
-<div class="col-xs-7">
-<select class="form-control" id="Psy" >
-<option value=0>Severe depression/dementia</option> <option value =1> Mild dimentia</option><option value=2>No Psych issues</option>
-</select>
-</div> </div> </div>
+  </div>
+
+  <div class="row">
+  <label for="inputheight" class="col-xs-5 control-label">Height</label>
+  <div class="col-xs-4 padding-0R">
+  <input type="number" class="form-control" id="height"  >
+  </div>
+  <div class="col-xs-3 ">
+  <select class="form-control" id="h_unit" >
+  <option value=0>m</option> <option value =1>inches</option>
+  </select>
+  </div>
+  </div>
 
 
-<div class="row">
-<div class= "form-group">
-<label for="Rx" class="col-xs-5 control-label"> Prescriptions per day</label>
-<div class="col-xs-7">
-<select class="form-control" id="Rx" >
-<option value=0>> 3</option> <option value =1> ≤3 </option>
-</select>
-</div> </div> </div>
 
-<div class="row">
-<div class= "form-group">
-<label for="Self" class="col-xs-5 control-label"> Self rating of health compared to others of same age</label>
-<div class="col-xs-7">
-<select class="form-control" id="Self" >
-<option value=0>Worse</option> <option value =0.5> Doesn't Know </option> <option value =1> Same </option> <option value =2> Better </option>
-</select>
-</div> </div> </div>
+  <div class="row">
+  <div class="form-group">
+  <label class="col-xs-6 control-label" for="radios">Gender</label>
+  <div class="col-xs-6">
+  <label class="radio" for="radios-0">
+  <input type="radio" name="sex" id="radios-0" value="0" checked="checked">
+  Male
+  </label>
+  <label class="radio" for="radios-1">
+  <input type="radio" name="sex" id="radios-1" value="1">
+  Female
+  </label>
+  </div> </div>
+  </div>
 
-<div class="row">
-<strong>BMI : </strong><dev id=BMI1> </dev>
+  <div class="row">
+  <div class= "form-group">
+  <label for="Race" class="col-xs-5 control-label"> Race</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="race" >
+  <option value=0>White</option> <option value =0>Hispanic </option><option value=1>Black or African American</option> <option value=0>Asian</option> <option value=0>American Indian</option>
+  </select>
+  </div> </div> </div>
+
+
+  <div class="row">
+  <label for="Education" class="col-xs-5 control-label"> Education</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="ed">
+  <option value=1>Any College Experience</option> <option value=0>No college</option>
+  </select>
+  </div> </div>
+
+  <div class="row">
+  <label for="mar" class="col-xs-5 control-label"> Marital Status</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="mar">
+  <option value=1>Married</option> <option value=0>Divorced/Not Married</option>
+  </select>
+  </div> </div>
+
+
+
+  <div class="row">
+  <label for="ECOG" class="col-xs-5 control-label"> ECOG PS</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="ECOG">
+  <option value=0>0</option><option value=1>1</option> <option value=1>2</option>
+  </select>
+  </div>
+  </div>
+  </div>
+
+<div class="col-xs-12 col-md-6">
+  <div class= "row">
+  <label for="site" class="col-xs-5 control-label"> Primary Site</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="site">
+  <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option> <option value=3> Oropharynx </option>
+  </select>
+  </div> </div>
+
+  <div class="row">
+  <label for="TStage" class="col-xs-5 control-label"> T Stage</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="tstage">
+  <option value=0>0</option><option value=0>1</option> <option value=0>2</option> <option value=1>3</option> <option value=2>4</option>
+  </select>
+  </div> </div>
+  <div class="row">
+  <label for="nStage" class="col-xs-5 control-label"> N Stage</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="nstage">
+  <option value=0>0</option><option value=0>1</option> <option value=0>2a</option value=0> <option value=1>2b</option> <option value=1>2c</option><option value=2>3</option>
+  </select>
+  </div></div>
+
+  <div class="row">
+  <label for="p16" class="col-xs-5 control-label"> p16 Status</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="p16">
+  <option value=1>p16 positive</option><option value=0>p16 negative </option>
+  </select>
+  </div> </div>
+
+  <div class="row">
+  <label for="smoke" class="col-xs-5 control-label"> Smoking History</label>
+  <div class="col-xs-7">
+  <select class="form-control" id="smoke">
+  <option value=0> > 10 pack yr history</option><option value=1> ≤ 10 pack year history </option>
+  </select>
+  </div> </div>
+
+  <div class="row">
+  <label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL</label>
+  <div class="col-xs-7">
+  <input type="number" class="form-control" id="cr" >
+  </div> </div>
+</div>
+</div>
 </div>
 
+
+<div id="section2" class=container-fluid>
+  <div class="minihead">
+  <h2> 2. G8 Model Input </h2>
+  </div>
+  <div class="row">
+    <div class="row">
+    <div class= "form-group">
+    <label for="Food" class="col-xs-5 control-label"> Decline in food intake over past 3 months?</label>
+    <div class="col-xs-7">
+    <select class="form-control" id="Food" >
+    <option value=0>Severe decline</option> <option value =1>Moderate Decline </option><option value=2>No decline</option>
+    </select>
+    </div> </div> </div>
+
+    <div class="row">
+    <div class= "form-group">
+    <label for="WL" class="col-xs-5 control-label"> Weight loss during last 3 months</label>
+    <div class="col-xs-7">
+    <select class="form-control" id="WL" >
+    <option value=0>>3 kg</option> <option value =1>Don't know </option><option value=2>Between 1 and 3 kg </option> <option value=3> No Weight loss </option>
+    </select>
+    </div> </div> </div>
+
+    <div class="row">
+    <div class= "form-group">
+    <label for="Mob" class="col-xs-5 control-label"> Mobility</label>
+    <div class="col-xs-7">
+    <select class="form-control" id="Mob" >
+    <option value=0>Bed/chair bound</option> <option value =1> Doesn't go out</option><option value=2>Goes out</option>
+    </select>
+    </div> </div> </div>
+
+    <div class="row">
+    <div class= "form-group">
+    <label for="Psy" class="col-xs-5 control-label"> Mobility</label>
+    <div class="col-xs-7">
+    <select class="form-control" id="Psy" >
+    <option value=0>Severe depression/dementia</option> <option value =1> Mild dimentia</option><option value=2>No Psych issues</option>
+    </select>
+    </div> </div> </div>
+
+
+    <div class="row">
+    <div class= "form-group">
+    <label for="Rx" class="col-xs-5 control-label"> Prescriptions per day</label>
+    <div class="col-xs-7">
+    <select class="form-control" id="Rx" >
+    <option value=0>> 3</option> <option value =1> ≤3 </option>
+    </select>
+    </div> </div> </div>
+
+    <div class="row">
+    <div class= "form-group">
+    <label for="Self" class="col-xs-5 control-label"> Self rating of health compared to others of same age</label>
+    <div class="col-xs-7">
+    <select class="form-control" id="Self" >
+    <option value=0>Worse</option> <option value =0.5> Doesn't Know </option> <option value =1> Same </option> <option value =2> Better </option>
+    </select>
+    </div> </div> </div>
+
+    <div class="row autofill">
+    <div class="col-xs-5">
+    <strong>BMI : </strong>
+    </div>
+    <div class=  "col-xs-7">
+    <dev id=BMI1> </dev>
+    </div>
+    </div>
+
+    <div class="row autofill">
+    <div class="col-xs-5">
+    <strong>Age: </strong>
+    </div>
+    <div class=  "col-xs-7">
+    <dev id=AGE2> </dev>
+    </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div id="section3" class=container-fluid>
+  <div class="minihead">
+  <h2> 3. Charlson Model Input </h2>
+  </div>
+  <div class="col-md-6">
+    <strong>
+    <input type="checkbox" id="MI" > Myocardial infarct<br>
+    <input type="checkbox" id="HF" > Heart failure <br>
+    <input type="checkbox" id="PVD" > Peripheral vascular disease <br>
+    <input type="checkbox" id="CVD" > Cerebrovascular disease <br>
+    <input type="checkbox" id="Dem" > Dementia <br>
+    <input type="checkbox" id="CPD" > Chronic pulmonary disese <br>
+    <input type="checkbox" id="CTD" > Connective tissue disease <br>
+    <input type="checkbox" id="UD" > Ulcer disease <br>
+    <input type="checkbox" id="MLD" > Mild liver disease <br>
+  </div>
+  <div class="col-md-6">
+    <input type="checkbox" id="ModLD" > Moderate to severe liver disease <br>
+    <input type="checkbox" id="DM" > Diabetes <br>
+    <input type="checkbox" id="HEMI" > Hemiplegia <br>
+    <input type="checkbox" id="ModRenal" > Moderate or severe renal disease <br>
+    <input type="checkbox" id="DMend" > Diabetes with end organ damage <br>
+    <input type="checkbox" id="leuk" > Leukemia <br>
+    <input type="checkbox" id="lymph" > Lymphoma <br>
+    <input type="checkbox" id="tumor" > Additional tumor <br>
+    <input type="checkbox" id="met" > Additional metastatic tumor <br>
+    <input type="checkbox" id="AIDS" > AIDS <br>
+    </div>
+    </strong>
+    </div>
+
+
+<div id="section4" class=container-fluid>
+  <div class="minihead">
+  <h2> 4. CARG Model Input </h2>
+  </div>
+  <div class="row">
+    <strong>
+    <input type="checkbox" id="anemia" > Anemia (Hgb < 11 g/dL) <br>
+    <input type="checkbox" id="fall" > Any fall in the past 6 months <br>
+    <input type="checkbox" id="hear" > Hearing, fair or worse <br>
+    <input type="checkbox" id="walk" > Limited in walking 1 block  <br>
+    <input type="checkbox" id="meds" > Inability to take medications independently  <br>
+    <input type="checkbox" id="soc" > Decreased socialization because of health <br>
+    </strong>
+
+    <div class="row autofill">
+    <div class="col-xs-5">
+    <strong>Creatinine Clearance : </strong>
+    </div>
+    <div class=  "col-xs-7">
+    <dev id=CRC1> </dev> (mg/dL)
+    </div>
+    </div>
+
+    <div class="row autofill">
+    <div class="col-xs-5">
+    <strong>Age: </strong>
+    </div>
+    <div class=  "col-xs-7">
+    <dev id=AGE1> </dev>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="section5" class=container-fluid>
+  <div class="minihead">
+  <h2> 5. ACE-27 Model Input </h2>
+  </div>
+  <div class="row">
+    <label for="ACE" class="col-xs-6 control-label"> Input ACE-27 Score</label>
+    <div class="col-xs-6">
+    <select class="form-control" id="ACE">
+    <option>  </option> <option value=0>0</option><option value=1>1</option> <option value=2>2</option> <option value=3>3</option>
+    </select>
+    </div>
+    <a class="indent" href="https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290" target="_blank"> RTOG ACE-27 form </a>
+
+  </div>
+</div>
+
+
+<div id="section5" class="container-fluid">
+  <div class="minihead">
+  <h2> 6. CIRS-G </h2>
+  </div>
+  <div class="row">
+    <label for="CIRS" class="col-xs-6 control-label"> Input CIRS-G Score</label>
+    <div class="col-xs-6">
+    <input type="number" class="form-control" id="CIRS" >
+    </div>
+    <a class="indent" href="http://eforms.moffitt.org/cirsgScore.aspx"> Moffitt Tool </a>
+    </div>
+  </div>
+</div>
+
+<div class="formout">
+  <div class="row">
+
+    <div class="col-md-2 col-xs-4">
+    <dev class="medtxt">GCE ω :</dev><dev id="omega_out" class="bigout"></dev>
+    </div>
+
+    <div class="col-md-2 col-xs-4">
+    <dev class="medtxt">G8 :</dev><dev id="G8Score" class="bigout"></dev>
+    </div>
+
+    <div class="col-md-2 col-xs-4">
+    <dev class="medtxt">Charlson:</dev><dev id="Charlson_out" class="bigout"></dev>
+    </div>
+
+    <div class="col-md-2 col-xs-4">
+    <dev class="medtxt">CARG:</dev><dev id="pCARG_out" class="bigout"></dev><dev class="medtxt">%</dev><strong>(<dev id="CARG_out"></dev>)</strong>
+
+    </div>
+
+    <div class="col-md-2 col-xs-4">
+    <dev class="medtxt">ACE-27:</dev><dev id="aceout" class="bigout"></dev>
+    </div>
+
+    <div class="col-md-2 col-xs-4">
+    <dev class="medtxt">CIRS-G :</dev><dev id="cirsout" class="bigout"></dev>
+    </div>
+</div>
 <div class="row">
-<strong>Age: </strong><dev id=AGE2> </dev>
+<div class="col-xs-4">
+<button onclick="elig()" type="button" class="btn btn-info btn-lg">Check Eligibility</button>
 </div>
-
-
-<!-- <p> To qualify, patients ≥  70 years old must meet one of the following criteria. <p>
-<ul style="list-style-type:disc">
-<li>GCE ω-score < 0.6</li>
-<li>ACE-27 Index ≥ 1</li>
-<li>Charlson Comorbidity Index ≥ 1</li>
-<li>G-8 score ≤ 14</li>
-<li>CARG Toxicity Score ≥ 30%</li>
-<li>CIRS-G Score ≥ 6</li>
-</ul>
-<p> Patients < 70 years old must meet two of the following criteria. <p>
-<ul style="list-style-type:disc">
-<li>GCE ω-score < 0.5</li>
-<li>ACE-27 Index ≥ 2</li>
-<li>Charlson Comorbidity Index ≥ 2</li>
-<li>G-8 score ≤ 14</li>
-<li>CARG Toxicity Score ≥ 30%</li>
-<li>CIRS-G Score ≥ 6</li> </ul> -->
-
-</div>
-
-<div class= "col-md-3" >
-<!-- Text inputs  -->
-<div class="form-group">
-
-<div class="row">
-<label for="input_age" class="col-xs-5 control-label">Age</label>
-<div class="col-xs-7">
-<input type="number" class="form-control" id="age" >
-</div></div>
-
-<div class="row" >
-<label for="inputweight" class="col-xs-5 ">Weight</label>
-<div class="col-xs-4 padding-0R">
-<input type="number" class="form-control" id="weight" >
-</div>
-
-<div class="col-xs-3 padding-0L">
-<select class="form-control" id="w_unit" >
-<option value=0>kgs</option> <option value =1>lbs </option>
-</select>
-</div>
-
-</div>
-
-<div class="row">
-<label for="inputheight" class="col-xs-5 control-label">Height</label>
-<div class="col-xs-4 padding-0R">
-<input type="number" class="form-control" id="height"  >
-</div>
-<div class="col-xs-3 padding-0L">
-<select class="form-control" id="h_unit" >
-<option value=0>m</option> <option value =1>inches</option>
-</select>
-</div>
-</div>
-
-</div>
-
-
-<div class="row">
-<div class="form-group">
-<label class="col-xs-6 control-label" for="radios">Gender</label>
 <div class="col-xs-6">
-<label class="radio-inline" for="radios-0">
-<input type="radio" name="sex" id="radios-0" value="0" checked="checked">
-Male
-</label>
-<label class="radio-inline" for="radios-1">
-<input type="radio" name="sex" id="radios-1" value="1">
-Female
-</label>
-</div> </div>
-</div>
-
-<div class="row">
-<div class= "form-group">
-<label for="Race" class="col-xs-5 control-label"> Race</label>
-<div class="col-xs-7">
-<select class="form-control" id="race" >
-<option value=0>White</option> <option value =0>Hispanic </option><option value=1>Black or African American</option> <option value=0>Asian</option> <option value=0>American Indian</option>
-</select>
-</div> </div> </div>
-
-
-<div class="row">
-<label for="Education" class="col-xs-5 control-label"> Education</label>
-<div class="col-xs-7">
-<select class="form-control" id="ed">
-<option value=1>Any College Experience</option> <option value=0>No college</option>
-</select>
-</div> </div>
-
-<div class="row">
-<label for="mar" class="col-xs-5 control-label"> Marital Status</label>
-<div class="col-xs-7">
-<select class="form-control" id="mar">
-<option value=1>Married</option> <option value=0>Divorced/Not Married</option>
-</select>
-</div> </div>
-
-
-
-<div class="row">
-<label for="ECOG" class="col-xs-5 control-label"> ECOG PS</label>
-<div class="col-xs-7">
-<select class="form-control" id="ECOG">
-<option value=0>0</option><option value=1>1</option> <option value=1>2</option>
-</select>
-</div>
-</div>
-
-<div class="row">
-<div class="col-xs-12" style="height:70px;"></div>
-</div>
-<div class="row">
-<div class="col-xs-12">
-<div class="center"> <strong> Check all that apply </strong> </div>
-<p> CARG Input </p>
-
-<strong>
-<input type="checkbox" id="anemia" > Anemia (Hgb < 11 g/dL) <br>
-<input type="checkbox" id="fall" > Any fall in the past 6 months <br>
-<input type="checkbox" id="hear" > Hearing, fair or worse <br>
-<input type="checkbox" id="walk" > Limited in walking 1 block  <br>
-<input type="checkbox" id="meds" > Inability to take medications independently  <br>
-<input type="checkbox" id="soc" > Decreased socialization because of health <br>
-</strong>
-
-<strong>Age: </strong><dev id=AGE1> </dev> <br>
-<strong> Creatinine clearance:  </strong> <dev id=CRC1> </dev> (mg/dL) <br>
-
-</div>
-</div>
-</div>
-
-<div class="col-md-3">
-
-
-<div class= "row">
-<label for="site" class="col-xs-5 control-label"> Primary Site</label>
-<div class="col-xs-7">
-<select class="form-control" id="site">
-<option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option> <option value=3> Oropharynx </option>
-</select>
-</div> </div>
-
-<div class="row">
-<label for="TStage" class="col-xs-5 control-label"> T Stage</label>
-<div class="col-xs-7">
-<select class="form-control" id="tstage">
-<option value=0>0</option><option value=0>1</option> <option value=0>2</option> <option value=1>3</option> <option value=2>4</option>
-</select>
-</div> </div>
-<div class="row">
-<label for="nStage" class="col-xs-5 control-label"> N Stage</label>
-<div class="col-xs-7">
-<select class="form-control" id="nstage">
-<option value=0>0</option><option value=0>1</option> <option value=0>2a</option value=0> <option value=1>2b</option> <option value=1>2c</option><option value=2>3</option>
-</select>
-</div></div>
-
-<div class="row">
-<label for="p16" class="col-xs-5 control-label"> p16 Status</label>
-<div class="col-xs-7">
-<select class="form-control" id="p16">
-<option value=1>p16 positive</option><option value=0>p16 negative </option>
-</select>
-</div> </div>
-
-<div class="row">
-<label for="smoke" class="col-xs-5 control-label"> Smoking History</label>
-<div class="col-xs-7">
-<select class="form-control" id="smoke">
-<option value=0> > 10 pack yr history</option><option value=1> ≤ 10 pack year history </option>
-</select>
-</div> </div>
-
-<div class="row">
-<label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL</label>
-<div class="col-xs-7">
-<input type="number" class="form-control" id="cr" >
-</div> </div>
-<strong> BMI : </strong> <dev id=BMI2> </dev> <br>
-<strong> Creatinine clearance:  </strong> <dev id=CRC2> </dev> (mg/dL)
-
-<div class="row">
-<div class="col-xs-12" style="height:140px;"></div>
-</div>
-<div class="row">
-<p> Charlson Input</p>
-<strong>
-<input type="checkbox" id="MI" > Myocardial infarct<br>
-<input type="checkbox" id="HF" > Heart failure <br>
-<input type="checkbox" id="PVD" > Peripheral vascular disease <br>
-<input type="checkbox" id="CVD" > Cerebrovascular disease <br>
-<input type="checkbox" id="Dem" > Dementia <br>
-<input type="checkbox" id="CPD" > Chronic pulmonary disese <br>
-<input type="checkbox" id="CTD" > Connective tissue disease <br>
-<input type="checkbox" id="UD" > Ulcer disease <br>
-<input type="checkbox" id="MLD" > Mild liver disease <br>
-<input type="checkbox" id="ModLD" > Moderate to severe liver disease <br>
-<input type="checkbox" id="DM" > Diabetes <br>
-<input type="checkbox" id="HEMI" > Hemiplegia <br>
-<input type="checkbox" id="ModRenal" > Moderate or severe renal disease <br>
-<input type="checkbox" id="DMend" > Diabetes with end organ damage <br>
-<input type="checkbox" id="leuk" > Leukemia <br>
-<input type="checkbox" id="lymph" > Lymphoma <br>
-<input type="checkbox" id="tumor" > Additional tumor <br>
-<input type="checkbox" id="met" > Additional metastatic tumor <br>
-<input type="checkbox" id="AIDS" > AIDS <br>
-</strong>
+  <div class="finalout">
+<dev id="elgout"></dev>
+  </div>
 </div>
 </div>
 
 
-<div class= "col-md-3 formoutput">
-<div class= "row">
-<h5> GCE ω Score: This model uses a patient's medical, socioeconomic and tumor characteristics to determine their risk of dying from cancer relative to all other causes </h5>
-<dev id="prompt1"> </dev>  <dev id="omega_out"></dev> <br>
-<dev id="prompt2"> </dev>  <dev id="omega2_out"></dev>
-
-</div> <hr>
-
-<div class= "row">
-<h5> ACE-27: Adult Comorbidity Evaluation assigns grades to relevant comorbidities that correlate with survival</h5>
-<a href="https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290" target="_blank"> RTOG ACE-27 form </a>
 </div>
-
-<div class="row">
-<label for="ACE" class="col-xs-6 control-label"> Input ACE-27 Score</label>
-<div class="col-xs-6">
-<select class="form-control" id="ACE">
-<option> select </option> <option value=0>0</option><option value=1>1</option> <option value=2>2</option> <option value=3>3</option>
-</select>
-</div>
-</div>
-<hr>
-
-<div class="row">
-<h5>  Charlson Comorbidity Index: Estimates mortality risk based on medical comorbidities </h5>
-<!-- <a href="http://mchp-appserv.cpe.umanitoba.ca/viewConcept.php?conceptID=1098"> Charlson Score Description </a> -->
-<br>
-<dev id="promptCharlson"></dev>
-<dev id="Charlson_out"></dev>
-</div>
-<hr>
-
-<div class="row">
-<h5> G-8 Score </h5>
-<strong> G8 Score </strong> <dev id=G8Score> </dev>
-<!-- <a href="https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290"> Relevant Link </a> -->
-</div><hr>
-
-<div class="row">
-<h5> Cancer and Aging Research Group (CARG) Toxicity: Estimates risk of grade 3-5 toxicity from chemotherapy based on age and medical comorbidity </h5>
-<a href="https://www.ncbi.nlm.nih.gov/pubmed/21810685"> Hurria et al. JCO 2011 </a>
-<br>
-<dev id="promptCARG"></dev>
-<dev id="CARG_out"></dev> <br>
-<dev id="promptpCARG"></dev>
-<dev id="pCARG_out"></dev>
-<dev id="CARG%"></dev>
-</div>
-<hr>
-<h5> CIRS-G Score </h5>
-<a href="http://eforms.moffitt.org/cirsgScore.aspx"> Moffitt Tool </a>
-<div class="row">
-<label for="CIRS" class="col-xs-6 control-label"> Input CIRS-G Score</label>
-<div class="col-xs-6">
-<input type="number" class="form-control" id="CIRS" >
-</div>
-</div>
-<hr>
-<div id=ElAlert> </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class= "center">
-<button onclick="omega()" type="button" class="btn btn-primary">Calculate</button>
-</div>
-
 </body>
-
 </html>
