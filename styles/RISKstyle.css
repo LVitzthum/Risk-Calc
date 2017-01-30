@@ -69,6 +69,12 @@ font-size: 2em;
   text-align: justify;
 }
 
+.CIRSTopicBtn {
+  min-width: 240px;
+  text-align: left;
+
+}
+
 .CIRSHelpTitle {
   font-weight: 700;
 }
