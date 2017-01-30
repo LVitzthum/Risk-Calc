@@ -57,8 +57,30 @@ font-size: 2em;
 
 .CIRSHelp {
   display: none;
+  margin: 5px;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
+.CIRSHelpTitle {
+  font-weight: 700;
+}
+
+.CIRSRatingTitle {
+  font-size: 22px;
+
+}
+
+.CIRSRadio {
+  margin-left: -13px;
+}
+
+.CIRSInstruct {
+  font-size: 14px;
+  margin-top: 6px;
+  margin-left: 18px;
+  margin-right: -18px;
+}
 
 .formout{
   position: fixed;
