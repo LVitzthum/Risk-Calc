@@ -7,9 +7,9 @@ background-size: cover;
 }
 
 .style{
-  margin-top: 50px;
-  padding-left: 20%;
-  margin-right:20%;
+margin-top: 24px;
+  padding-left: 16%;
+  margin-right:16%;
   padding-bottom: 150px;
 
 
@@ -29,10 +29,11 @@ margin-right: 10%;
 margin-left: 10%;
 }
 .minihead{
-  background-color: #182B49;
-  margin:  0px;
-  text-align: center;
-  color: #f2f2f2;
+background-color: #182B49;
+    margin-bottom: 18px;
+    margin-top: 40px;
+    color: #f2f2f2;
+    padding: 8px;
 }
 .indent{
   margin-left: 5%
@@ -42,13 +43,12 @@ color:#666666;
 font-style: italic;
 }
 .jumbotron{
-background-color: #006A96;
 
-color: #f2f2f2;
-padding: 0.5em 0.6em;
-margin:  0px;
-h1
-font-size: 2em;
+  background-color: #006A96;
+  color: #f2f2f2;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  margin:  0px;
 }
 
 .basic_entry{
