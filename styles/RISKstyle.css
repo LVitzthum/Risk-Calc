@@ -62,6 +62,16 @@ font-size: 2em;
     margin-left: 0px;
 }
 
+.CARGLabel {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.CARGRow {
+  margin-bottom: 12px;
+    margin-top: 20px;
+}
+
 .CIRSHelp {
   display: none;
   margin: 5px;
