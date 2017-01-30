@@ -12,6 +12,25 @@ $(document).ready(function() {
   
   // Force selection
   
+  $(".ACETopicBtn").click(function() {
+    window.open("https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290", '_blank');
+  });
+  
+  function getACE() {
+    var ACEVal;
+    $( ".ACERadioVal" ).each(function( index , value ) {
+      if($(this).prop('checked')) {
+        if (index === 4) {
+          ACEVal = 9;
+        } else {
+          ACEVal = index;
+        }
+      }
+    });
+    return ACEVal;
+  }
+  
+  
   $(".CIRSTopicBtn").click(function() {
     $(this).closest(".CIRSTopic").find(".CIRSHelp").slideToggle( "fast", function() {});  
     console.log('here');
@@ -61,7 +80,12 @@ $(document).ready(function() {
     var Rb = Rb - 0.08198 * (0.2 * bmi -5.17)  / 1.15
     var R = R - 0.08198 * (0.2 * bmi -5.17)  / 1.15
     
-    var sex = document.querySelector('input[name="sex"]:checked').value;
+    
+    //goheres
+    
+    var sex = document.getElementById('sex_unit').value;
+
+    // var sex = document.querySelector('input[name="sex"]:checked').value;
     // var sex = document.getElementById('sex').value;
     var R = R + .08463 * ((sex - 0.167) / 0.373);
     
@@ -271,12 +295,12 @@ $(document).ready(function() {
     document.getElementById("G8Score").innerHTML =g8;
     
     // GETS CIRS-G and ACE and outputs them//
-    var ace = document.getElementById('ACE').value
+        
+    var ace = getACE();
+    console.log(getACE());
+    
     document.getElementById("aceout").innerHTML = ace
     
-    
-    //TEMP
-    ace = 0;
     //var ace = document.getElementById('CIRS').value
     //document.getElementById("cirsout").innerHTML = ace;
     
@@ -284,7 +308,7 @@ $(document).ready(function() {
       var ELIG = 0;
       
       if (wbp < 0.6) ELIG += 1;
-      if (document.getElementById('ACE').value >= 1) ELIG += 1;
+      if (ace >= 1) ELIG += 1;
       // if (document.getElementById('CIRS').value >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
@@ -299,7 +323,7 @@ $(document).ready(function() {
     } else {
       var ELIG = 0
       if (wbp < 0.5) ELIG += 1;
-      if (document.getElementById('ACE').value >= 2) ELIG += 1;
+      if (ace) ELIG += 1;
       if (Charlson >= 2) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
       // if (document.getElementById('CIRS').value >= 6) ELIG += 1;
@@ -325,7 +349,7 @@ $(document).ready(function() {
       var ELIG = 0;
       
       if (wbp < 0.6) ELIG += 1;
-      if (document.getElementById('ACE').value >= 1) ELIG += 1;
+      if (ace >= 1) ELIG += 1;
       if (document.getElementById('CIRS').value >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
@@ -340,7 +364,7 @@ $(document).ready(function() {
     } else {
       var ELIG = 0
       if (wbp < 0.5) ELIG += 1;
-      if (document.getElementById('ACE').value >= 2) ELIG += 1;
+      if (ace >= 2) ELIG += 1;
       if (Charlson >=2) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
       if (document.getElementById('CIRS').value >= 6) ELIG += 1;
