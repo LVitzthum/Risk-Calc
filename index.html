@@ -94,13 +94,13 @@
           <div class="row" >
             <label class="col-md-4 control-label" for="inputweight">Weight: </label>
             <div class="mdc-textfield col-xs-4">
-              <input type="text" id="weight" class="basic_entry mdc-textfield__input" placeholder="Type Weight">
+              <input type="text" id="weight" class="hw_entry mdc-textfield__input" placeholder="Type Weight">
             </div>
             <div class="col-md-1 padding-0L"></div>
-            <div class="col-md-3 padding-0L">
+            <div class="col-md-2 padding-0L">
               <select id="w_unit" class="mdc-select unit_entry">
-                <option value=0 default selected>kgs</option>
-                <option value=1>lbs</option>
+                <option value=0 default selected>kg</option>
+                <option value=1>lb</option>
               </select>
             </div>
           </div>
@@ -108,10 +108,10 @@
           <div class="row" >
             <label class="col-md-4 control-label" for="inputweight">Height: </label>
             <div class="mdc-textfield col-xs-4">
-              <input type="text" id="height" class="basic_entry mdc-textfield__input" placeholder="Type Height">
+              <input type="text" id="height" class="hw_entry mdc-textfield__input" placeholder="Type Height">
             </div>
             <div class="col-md-1 padding-0L"></div>
-            <div class="col-md-3 padding-0L">
+            <div class="col-md-2 padding-0L">
               <select id="h_unit" class="mdc-select unit_entry">
                 <option value=0 default selected>m</option>
                 <option value=1>in</option>
@@ -208,8 +208,8 @@
                               
                               <div class="row">
                                 <label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL</label>
-                                <div class="col-xs-7">
-                                  <input type="number" class="form-control" id="cr" >
+                                <div class="mdc-textfield col-xs-7">
+                                  <input type="number" placeholder="Type Creatinine" class="basic_entry mdc-textfield__input form-control" id="cr" >
                                 </div> </div>
                               </div>
                             </div>
@@ -223,7 +223,7 @@
                               <div class="mdc-typography--display2 col-md-8">2. G8 Model Input</div>
                             </div>
                             
-                            <div class="row">
+                            <div class="row col-xs-12">
                               <div class="row">
                                 <div class= "form-group">
                                   <label for="Food" class="col-xs-5 control-label"> Decline in food intake over past 3 months?</label>
@@ -342,9 +342,7 @@
                                                       <div class="mdc-typography--display2 col-md-8">4. CARG Model Input </div>
                                                     </div>
                                                     
-                                                    <div class="CARGRow row">
-                                                      <div class="col-md-2"></div>
-                                                      
+                                                    <div class="CARGRow row">                                                      
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="anemia" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -362,7 +360,7 @@
                                                     
                                                     <div class="divider row col-md-12"></div>
                                                     <div class="CARGRow row">
-                                                      <div class="col-md-2"></div>
+                                                      
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="fall" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -379,7 +377,7 @@
                                                     
                                                     <div class="divider row col-md-12"></div>
                                                     <div class="CARGRow row">
-                                                      <div class="col-md-2"></div>
+                                                      
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="hear" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -396,7 +394,7 @@
                                                     
                                                     <div class="divider row col-md-12"></div>
                                                     <div class="CARGRow row">
-                                                      <div class="col-md-2"></div>
+                                                      
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="walk" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -413,7 +411,7 @@
                                                     
                                                     <div class="divider row col-md-12"></div>
                                                     <div class="CARGRow row">
-                                                      <div class="col-md-2"></div>
+                                                      
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="meds" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -430,7 +428,7 @@
                                                     
                                                     <div class="divider row col-md-12"></div>
                                                     <div class="CARGRow row">
-                                                      <div class="col-md-2"></div>
+                                                      
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="soc" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -529,11 +527,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiohrt" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiohrt"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiohrt"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiohrt"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiohrt"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -571,11 +569,11 @@
                                                           </button>
                                                         </div>
                                                         <div class = "CIRSBtns">
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -608,11 +606,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio5" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio5"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio5"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio5"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio5"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -646,48 +644,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      <div class="row CIRSHelp col-md-12">
-                                                        <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
-                                                        <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
-                                                        <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
-                                                        <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
-                                                        <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
-                                                        <div>
-                                                          <br>
-                                                          <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
-                                                          <div><span class = "CIRSHelpTitle">Hypertension</span> - Defined as a persistently elevated diastolic pressure > 90 mmHg. When managed drug free - '1,' requiring single daily antihypertensive - '2,' requiring two or more drugs for control or with evidence of left ventricular hypertrophy - '3.' </div>
-                                                          <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
-                                                          <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
-                                                          <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
-                                                      <div class="divider row col-md-12"></div>
-                                                      
-                                                    </div>
-                                                    
-                                                    <div class = "CIRSTopic">
-                                                      <div class="row">
-                                                        <div class="col-md-5">   
-                                                          <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                                            Vascular Score
-                                                          </button>
-                                                        </div>
-                                                        <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio6" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio6"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio6"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio6"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio6"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -720,11 +681,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio7" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio7"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio7"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio7"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio7"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -757,11 +718,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio8" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio8"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio8"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio8"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio8"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -794,11 +755,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio9" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio9"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio9"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio9"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio9"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -831,11 +792,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio10" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio10"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio10"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio10"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio10"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -868,11 +829,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio11" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio11"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio11"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio11"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio11"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -905,11 +866,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio12" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio12"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio12"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio12"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio12"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -942,11 +903,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio13" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio13"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio13"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio13"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio13"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -979,11 +940,11 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio14" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio14"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio14"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio14"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio14"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       
@@ -1016,11 +977,48 @@
                                                           </button>
                                                         </div>
                                                         <div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
-                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio15" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio15"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio15"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio15"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio15"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                        </div>
+                                                      </div>
+                                                      
+                                                      <div class="row CIRSHelp col-md-12">
+                                                        <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
+                                                        <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
+                                                        <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
+                                                        <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
+                                                        <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
+                                                        
+                                                        <div>
+                                                          <br>
+                                                          <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
+                                                          <div><span class = "CIRSHelpTitle">Hypertension</span> - Defined as a persistently elevated diastolic pressure > 90 mmHg. When managed drug free - '1,' requiring single daily antihypertensive - '2,' requiring two or more drugs for control or with evidence of left ventricular hypertrophy - '3.' </div>
+                                                          <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
+                                                          <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
+                                                          <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
+                                                        </div>                                                
+                                                      </div> 
+                                                      
+                                                      <div class="divider row col-md-12"></div>
+                                                      
+                                                    </div>
+                                                    
+                                                    <div class = "CIRSTopic">
+                                                      <div class="row">
+                                                        <div class="col-md-5">   
+                                                          <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                            Vascular Score
+                                                          </button>
+                                                        </div>
+                                                        <div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio17" checked><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio17"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio17"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio17"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
+                                                          <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio17"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
                                                       

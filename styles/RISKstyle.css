@@ -10,8 +10,7 @@ background-size: cover;
 margin-top: 24px;
   padding-left: 16%;
   margin-right:16%;
-  padding-bottom: 150px;
-
+    padding-bottom: 240px;
 
 }
 h1
@@ -54,6 +53,12 @@ font-style: italic;
 .basic_entry{
   font-size: 16px;
   min-width: 226px;
+
+}
+
+.hw_entry{
+  font-size: 16px;
+  min-width: 100px;
 
 }
 

@@ -36,12 +36,15 @@ $(document).ready(function() {
     console.log('here');
   });
   
-  function calculateCIRS(){
-    
-    
+  function calculateCIRS(){    
+    var CIRSVal = 0;
+    $( ".CIRSRadioVal" ).each(function( index , value ) {
+      if($(this).prop('checked')) {
+        CIRSVal += index % 5;
+      }
+    });
+    return CIRSVal;
   }
-  
-  
   
   // function displayCIRSHelp(type) {
   //   console.log(type);
@@ -296,20 +299,25 @@ $(document).ready(function() {
     
     // GETS CIRS-G and ACE and outputs them//
         
-    var ace = getACE();
-    console.log(getACE());
+    var cirs = calculateCIRS();    
+    var ace = getACE();    
+    
+    if (ace === undefined) {
+      ace = '-';
+    }
     
     document.getElementById("aceout").innerHTML = ace
     
+    
     //var ace = document.getElementById('CIRS').value
-    //document.getElementById("cirsout").innerHTML = ace;
+    document.getElementById("cirsout").innerHTML = cirs;
     
     if (age >= 70){
       var ELIG = 0;
       
       if (wbp < 0.6) ELIG += 1;
       if (ace >= 1) ELIG += 1;
-      // if (document.getElementById('CIRS').value >= 6) ELIG += 1;
+      if (cirs >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
@@ -326,7 +334,7 @@ $(document).ready(function() {
       if (ace) ELIG += 1;
       if (Charlson >= 2) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
-      // if (document.getElementById('CIRS').value >= 6) ELIG += 1;
+      if (cirs >= 6) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
       
       if (ELIG >= 2) {
@@ -350,7 +358,7 @@ $(document).ready(function() {
       
       if (wbp < 0.6) ELIG += 1;
       if (ace >= 1) ELIG += 1;
-      if (document.getElementById('CIRS').value >= 6) ELIG += 1;
+      if (cirs >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
@@ -367,7 +375,7 @@ $(document).ready(function() {
       if (ace >= 2) ELIG += 1;
       if (Charlson >=2) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
-      if (document.getElementById('CIRS').value >= 6) ELIG += 1;
+      if (cirs >= 6) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
       
       if (ELIG >= 2) {
