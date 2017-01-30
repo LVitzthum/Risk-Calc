@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   
   $("input").change(function(){
@@ -14,10 +13,15 @@ $(document).ready(function() {
   // Force selection
   
   $(".CIRSTopicBtn").click(function() {
-    
     $(this).closest(".CIRSTopic").find(".CIRSHelp").slideToggle( "fast", function() {});  
     console.log('here');
   });
+  
+  function calculateCIRS(){
+    
+    
+  }
+  
   
   
   // function displayCIRSHelp(type) {
@@ -281,7 +285,7 @@ $(document).ready(function() {
       
       if (wbp < 0.6) ELIG += 1;
       if (document.getElementById('ACE').value >= 1) ELIG += 1;
-      if (document.getElementById('CIRS').value >= 6) ELIG += 1;
+      // if (document.getElementById('CIRS').value >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
@@ -298,7 +302,7 @@ $(document).ready(function() {
       if (document.getElementById('ACE').value >= 2) ELIG += 1;
       if (Charlson >= 2) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;
-      if (document.getElementById('CIRS').value >= 6) ELIG += 1;
+      // if (document.getElementById('CIRS').value >= 6) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
       
       if (ELIG >= 2) {
