@@ -5,30 +5,30 @@
   <title> NRG HN004 Calc </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=divice-width, initial-scale=1">
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+
   <script src="./javascripts/RISK.js"></script>
-  
+
   <link rel="stylesheet"
   href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <style>
     :root {
       --mdc-theme-primary: #0e4ead;
     }
-    
+
     .mdc-ripple-surface.mdc-ripple-upgraded.mdc-button--primary::before,
     .mdc-ripple-surface.mdc-ripple-upgraded.mdc-button--primary::after {
       background-color: rgba(255, 255, 255, .2);
     }
-    
+
     #greeting-form > button {
       margin-top: 8px;
     }
   </style>
-  
+
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <script>mdc.autoInit();</script>
   <link rel="stylesheet" type="text/css" href="styles/RISKstyle.css">
@@ -68,29 +68,29 @@
     NRG HN-004 Eligibility Calculator</h1>
     <p>A tool to calculate comorbidity scores and determinite eligibility for HN-004 </p>
   </div>
-  
+
   <div class="style">
-    
+
     <div id="section1" class=container-fluid>
-      
-      
+
+
       <div class="row minihead">
         <div class="mdc-typography--display2 col-md-8">1. General/ GCE Model Input</div>
       </div>
-      
-      
+
+
       <div class="row">
-        
+
         <div class="col-xs-12 col-md-6">
-          
+
           <div class="row">
-            
+
             <label class="col-xs-4 control-label" for="input_age">Age: </label>
             <div class="mdc-textfield col-xs-7">
               <input type="text" id="age" class="basic_entry mdc-textfield__input" placeholder="Type Age">
             </div>
           </div>
-          
+
           <div class="row" >
             <label class="col-md-4 control-label" for="inputweight">Weight: </label>
             <div class="mdc-textfield col-xs-4">
@@ -104,7 +104,7 @@
               </select>
             </div>
           </div>
-          
+
           <div class="row" >
             <label class="col-md-4 control-label" for="inputweight">Height: </label>
             <div class="mdc-textfield col-xs-4">
@@ -118,7 +118,7 @@
               </select>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="form-group">
               <label class="col-xs-4 control-label" for="radios">Gender</label>
@@ -129,7 +129,7 @@
                 </select>
               </div> </div>
             </div>
-            
+
             <div class="row">
               <div class= "form-group">
                 <label for="Race" class="col-xs-4 control-label"> Race</label>
@@ -138,8 +138,8 @@
                     <option value=0>White</option> <option value =0>Hispanic </option><option value=1>Black or African American</option> <option value=0>Asian</option> <option value=0>American Indian</option>
                   </select>
                 </div> </div> </div>
-                
-                
+
+
                 <div class="row">
                   <label for="Education" class="col-xs-4 control-label"> Education</label>
                   <div class="col-xs-8">
@@ -147,7 +147,7 @@
                       <option value=1>Any College Experience</option> <option value=0>No college</option>
                     </select>
                   </div> </div>
-                  
+
                   <div class="row">
                     <label for="mar" class="col-xs-4 control-label"> Marital Status</label>
                     <div class="col-xs-8">
@@ -155,7 +155,7 @@
                         <option value=1>Married</option> <option value=0>Divorced/Not Married</option>
                       </select>
                     </div> </div>
-                    
+
                     <div class="row">
                       <label for="ECOG" class="col-xs-4 control-label"> ECOG PS</label>
                       <div class="col-xs-8">
@@ -165,7 +165,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="col-xs-12 col-md-6">
                     <div class= "row">
                       <label for="site" class="col-xs-5 control-label"> Primary Site</label>
@@ -174,7 +174,7 @@
                           <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option> <option value=3> Oropharynx </option>
                         </select>
                       </div> </div>
-                      
+
                       <div class="row">
                         <label for="TStage" class="col-xs-5 control-label"> T Stage</label>
                         <div class="col-xs-7">
@@ -189,7 +189,7 @@
                               <option value=0>0</option><option value=0>1</option> <option value=0>2a</option value=0> <option value=1>2b</option> <option value=1>2c</option><option value=2>3</option>
                             </select>
                           </div></div>
-                          
+
                           <div class="row">
                             <label for="p16" class="col-xs-5 control-label"> p16 Status</label>
                             <div class="col-xs-7">
@@ -197,7 +197,7 @@
                                 <option value=1>p16 positive</option><option value=0>p16 negative </option>
                               </select>
                             </div> </div>
-                            
+
                             <div class="row">
                               <label for="smoke" class="col-xs-5 control-label"> Smoking History</label>
                               <div class="col-xs-7">
@@ -205,7 +205,7 @@
                                   <option value=0> > 10 pack yr hx</option><option value=1> ≤ 10 pack yr hx </option>
                                 </select>
                               </div> </div>
-                              
+
                               <div class="row">
                                 <label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL</label>
                                 <div class="mdc-textfield col-xs-7">
@@ -214,15 +214,15 @@
                               </div>
                             </div>
                           </div>
-                          
-                          
+
+
                           <div id="section2" class=container-fluid>
-                            
-                            
+
+
                             <div class="row minihead">
                               <div class="mdc-typography--display2 col-md-8">2. G8 Model Input</div>
                             </div>
-                            
+
                             <div class="row col-xs-12">
                               <div class="row">
                                 <div class= "form-group">
@@ -232,7 +232,7 @@
                                       <option value=0>Severe decline</option> <option value =1>Moderate Decline </option><option value=2>No decline</option>
                                     </select>
                                   </div> </div> </div>
-                                  
+
                                   <div class="row">
                                     <div class= "form-group">
                                       <label for="WL" class="col-xs-5 control-label"> Weight loss during last 3 months</label>
@@ -241,7 +241,7 @@
                                           <option value=0>>3 kg</option> <option value =1>Don't know </option><option value=2>Between 1 and 3 kg </option> <option value=3> No Weight loss </option>
                                         </select>
                                       </div> </div> </div>
-                                      
+
                                       <div class="row">
                                         <div class= "form-group">
                                           <label for="Mob" class="col-xs-5 control-label"> Mobility</label>
@@ -250,7 +250,7 @@
                                               <option value=0>Bed/chair bound</option> <option value =1> Doesn't go out</option><option value=2>Goes out</option>
                                             </select>
                                           </div> </div> </div>
-                                          
+
                                           <div class="row">
                                             <div class= "form-group">
                                               <label for="Psy" class="col-xs-5 control-label"> Mobility</label>
@@ -259,8 +259,8 @@
                                                   <option value=0>Severe depression/dementia</option> <option value =1> Mild dimentia</option><option value=2>No Psych issues</option>
                                                 </select>
                                               </div> </div> </div>
-                                              
-                                              
+
+
                                               <div class="row">
                                                 <div class= "form-group">
                                                   <label for="Rx" class="col-xs-5 control-label"> Prescriptions per day</label>
@@ -269,7 +269,7 @@
                                                       <option value=0>> 3</option> <option value =1> ≤3 </option>
                                                     </select>
                                                   </div> </div> </div>
-                                                  
+
                                                   <div class="row">
                                                     <div class= "form-group">
                                                       <label for="Self" class="col-xs-5 control-label"> Self rating of health compared to others of same age</label>
@@ -278,7 +278,7 @@
                                                           <option value=0>Worse</option> <option value =0.5> Doesn't Know </option> <option value =1> Same </option> <option value =2> Better </option>
                                                         </select>
                                                       </div> </div> </div>
-                                                      
+
                                                       <div class="row autofill">
                                                         <div class="col-xs-5">
                                                           <strong>BMI : </strong>
@@ -287,7 +287,7 @@
                                                           <dev id=BMI1> </dev>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row autofill">
                                                         <div class="col-xs-5">
                                                           <strong>Age: </strong>
@@ -296,14 +296,14 @@
                                                           <dev id=AGE2> </dev>
                                                         </div>
                                                       </div>
-                                                      
-                                                      
+
+
                                                     </div>
                                                   </div>
-                                                  
-                                                  
+
+
                                                   <div id="section3" class=container-fluid>
-                                                    
+
                                                     <div class="row minihead">
                                                       <div class="mdc-typography--display2 col-md-8">3. Charlson Model Input</div>
                                                     </div>
@@ -333,16 +333,16 @@
                                                       </div>
                                                     </strong>
                                                   </div>
-                                                  
-                                                  
+
+
                                                   <div id="section4" class=container-fluid>
-                                                    
-                                                    
+
+
                                                     <div class="row minihead">
                                                       <div class="mdc-typography--display2 col-md-8">4. CARG Model Input </div>
                                                     </div>
-                                                    
-                                                    <div class="CARGRow row">                                                      
+
+                                                    <div class="CARGRow row">
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="anemia" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -353,14 +353,14 @@
                                                             <div class="mdc-checkbox__mixedmark"></div>
                                                           </div>
                                                         </div>
-                                                        <div class = "CARGLabel">Anemia (Hgb < 11 g/dL)</div>                                                      
+                                                        <div class = "CARGLabel">Anemia (Hgb < 11 g/dL)</div>
                                                       </div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class="divider row col-md-5"></div>
                                                     <div class="CARGRow row">
-                                                      
+
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="fall" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -371,13 +371,13 @@
                                                             <div class="mdc-checkbox__mixedmark"></div>
                                                           </div>
                                                         </div>
-                                                        <div class = "CARGLabel">Any fall in the past 6 months</div>                                                      
+                                                        <div class = "CARGLabel">Any fall in the past 6 months</div>
                                                       </div>
                                                     </div>
-                                                    
+
                                                     <div class="divider row col-md-5"></div>
                                                     <div class="CARGRow row">
-                                                      
+
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="hear" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -388,13 +388,13 @@
                                                             <div class="mdc-checkbox__mixedmark"></div>
                                                           </div>
                                                         </div>
-                                                        <div class = "CARGLabel">Hearing, fair or worse</div>                                                      
+                                                        <div class = "CARGLabel">Hearing, fair or worse</div>
                                                       </div>
                                                     </div>
-                                                    
+
                                                     <div class="divider row col-md-5"></div>
                                                     <div class="CARGRow row">
-                                                      
+
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="walk" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -405,13 +405,13 @@
                                                             <div class="mdc-checkbox__mixedmark"></div>
                                                           </div>
                                                         </div>
-                                                        <div class = "CARGLabel">Limited in walking 1 block</div>                                                      
+                                                        <div class = "CARGLabel">Limited in walking 1 block</div>
                                                       </div>
                                                     </div>
-                                                    
+
                                                     <div class="divider row col-md-5"></div>
                                                     <div class="CARGRow row">
-                                                      
+
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="meds" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -422,13 +422,13 @@
                                                             <div class="mdc-checkbox__mixedmark"></div>
                                                           </div>
                                                         </div>
-                                                        <div class = "CARGLabel">Inability to take medications independently</div>                                                      
+                                                        <div class = "CARGLabel">Inability to take medications independently</div>
                                                       </div>
                                                     </div>
-                                                    
+
                                                     <div class="divider row col-md-5"></div>
                                                     <div class="CARGRow row">
-                                                      
+
                                                       <div class="mdc-form-field col-md-8">
                                                         <div class="mdc-checkbox">
                                                           <input id="soc" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -439,22 +439,22 @@
                                                             <div class="mdc-checkbox__mixedmark"></div>
                                                           </div>
                                                         </div>
-                                                        <div class = "CARGLabel">Decreased socialization because of health</div>                                                      
+                                                        <div class = "CARGLabel">Decreased socialization because of health</div>
                                                       </div>
                                                     </div>
-                                                    
-                                                    
+
+
                                                     <div class="row">
-                                                      
+
                                                       <div class="row autofill">
                                                         <div class="col-xs-5">
                                                           <strong>Creatinine Clearance : </strong>
                                                         </div>
                                                         <div class=  "col-xs-7">
-                                                          <dev id=CRC1> </dev> (mg/dL)
+                                                          <dev id=CRC1> </dev> (mL/min)
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row autofill">
                                                         <div class="col-xs-5">
                                                           <strong>Age: </strong>
@@ -465,15 +465,15 @@
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  
-                                                  
+
+
                                                   <div id="section5" class=container-fluid>
-                                                    
+
                                                     <div class="row minihead">
                                                       <div class="mdc-typography--display2 col-md-8">5. ACE-27 Model Input </div>
                                                     </div>
-                                                    
-                                                    
+
+
                                                     <div class="row">
                                                       <div class="CIRSInstruct col-md-5">Click for criteria</div>
                                                       <div class="col-md-1 CIRSRatingTitle">0</div>
@@ -482,11 +482,11 @@
                                                       <div class="col-md-1 CIRSRatingTitle">3</div>
                                                       <div class="col-md-1 CIRSRatingTitle">9</div>
                                                     </div>
-                                                    
-                                                    
+
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="ACETopicBtn mdc-button button--compact mdc-button--raised">
                                                             ACE-27 SCORE
                                                           </button>
@@ -498,18 +498,18 @@
                                                           <div class="col-md-1"><div class="ACERadio mdc-radio"><input class="ACERadioVal mdc-radio__native-control" type="radio" id="radio-1" name="aceRad"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                           <div class="col-md-1"><div class="ACERadio mdc-radio"><input class="ACERadioVal mdc-radio__native-control" type="radio" id="radio-1" name="aceRad"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
-                                                      </div>                                                  
+                                                      </div>
                                                     </div>
-                                                    
+
                                                   </div>
-                                                  
-                                                  
+
+
                                                   <div id="section5" class="container-fluid">
-                                                    
+
                                                     <div class="row minihead">
                                                       <div class="mdc-typography--display2 col-md-8">6. CIRS-G Model Input </div>
                                                     </div>
-                                                    
+
                                                     <div class="row">
                                                       <div class="CIRSInstruct col-md-5">Click for criteria</div>
                                                       <div class="col-md-1 CIRSRatingTitle">0</div>
@@ -518,10 +518,10 @@
                                                       <div class="col-md-1 CIRSRatingTitle">3</div>
                                                       <div class="col-md-1 CIRSRatingTitle">4</div>
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Heart Score
                                                           </button>
@@ -534,14 +534,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiohrt"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Remote MI (> five years ago) / occasional angina treated with prn meds.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> CHF compensated with meds / daily anti-angine meds / left ventricular hypertorphy / atrial fibrillation / bundle branch block / daily antiarrhythimic drugs.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Previous MI within five years / abnormal stress test / status post percutaneous coronary angioplasty or coronary artery bypass graft surgery.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Marked activity restriction secondary to cardiac status (i.e., unstable angina or intractable congestive heart failure.)</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -550,20 +550,20 @@
                                                           <div><span class = "CIRSHelpTitle">Congestive Heart Failure</span> - Requiring daily medications for CHF merits at least a '2', intractable CHF a '4' and an intermediate condition a '3'. </div>
                                                           <div><span class = "CIRSHelpTitle">Arrhythmias</span> - EKG findings of atrial fibrillation, right or left bundle branch block, or the necessity of daily antiarrhythmic drugs merits '2' at least, a bifasicular block a '3.' In patients who require a pacemaker, placement for an indidental finding of periods of bradycardia during a holder monitor would score a '2,' whereas placement of a pacemaker for cariogenic syncope would merit a '3.' </div>
                                                           <div><span class = "CIRSHelpTitle">Valvular Disease</span> - Detectable murmurs that indicate valvular pathology without activity restriction would merit a '1,' more severly compromising valvular disease would require a progressively higher rating. </div>
-                                                          <div><span class = "CIRSHelpTitle">Pericardial Pathology</span> - A pericardial effusion or pericarditis would merit at least a '3'.</div>                                                
-                                                        </div>                                                
-                                                      </div> 
+                                                          <div><span class = "CIRSHelpTitle">Pericardial Pathology</span> - A pericardial effusion or pericarditis would merit at least a '3'.</div>
+                                                        </div>
+                                                      </div>
                                                       <div class="divider row col-md-12"></div>
-                                                      
-                                                      
-                                                    </div> 
-                                                    
-                                                    
-                                                    
-                                                    
+
+
+                                                    </div>
+
+
+
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular
                                                           </button>
@@ -576,14 +576,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -591,18 +591,18 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                                            Endo/Metabolic/Breast 
+                                                            Endo/Metabolic/Breast
                                                           </button>
                                                         </div>
                                                         <div>
@@ -613,14 +613,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio5"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -628,17 +628,17 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
+                                                        </div>
                                                       </div>
-                                                      
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
-                                                      
+
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -651,14 +651,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio6"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -666,16 +666,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -688,14 +688,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio7"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -703,16 +703,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -725,14 +725,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio8"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -740,16 +740,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -762,14 +762,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio9"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -777,16 +777,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -799,14 +799,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio10"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -814,16 +814,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -836,14 +836,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio11"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -851,16 +851,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -873,14 +873,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio12"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -888,16 +888,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -910,14 +910,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio13"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -925,16 +925,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -947,14 +947,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio14"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -962,16 +962,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -984,14 +984,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio15"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -999,16 +999,16 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
-                                                        <div class="col-md-5">   
+                                                        <div class="col-md-5">
                                                           <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
                                                             Vascular Score
                                                           </button>
@@ -1021,14 +1021,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio17"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row CIRSHelp col-md-12">
                                                         <div><span class = "CIRSHelpTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "CIRSHelpTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "CIRSHelpTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "CIRSHelpTitle">Additional Considerations: </span></div>
@@ -1036,41 +1036,41 @@
                                                           <div><span class = "CIRSHelpTitle">Peripheral Atherosclerotic Disease Heart Failure</span> - Evidence of at leason one physical symptom or imaging evidence (e.g., angiogram) merits a '2,' two or more symptoms a '3' and if bypass graft surgery was required or is currently indicated a '4' is merited.  </div>
                                                           <div><span class = "CIRSHelpTitle">Intercranial vascular event</span> - For consistency, CNS vascular events are listed under neurology  </div>
                                                           <div><span class = "CIRSHelpTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
-                                                        </div>                                                
-                                                      </div> 
-                                                      
+                                                        </div>
+                                                      </div>
+
                                                     </div>
-                                                    
-                                                    
-                                                    
-                                                    
-                                                  </div>                                                
-                                                </div>                                                
-                                                
-                                                
+
+
+
+
+                                                  </div>
+                                                </div>
+
+
                                                 <div class="formout">
                                                   <div class="row">
-                                                    
+
                                                     <div class="col-md-2 col-xs-4">
                                                       <dev class="medtxt">GCE ω :</dev><dev id="omega_out" class="bigout"></dev>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-2 col-xs-4">
                                                       <dev class="medtxt">G8 :</dev><dev id="G8Score" class="bigout"></dev>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-2 col-xs-4">
                                                       <dev class="medtxt">Charlson:</dev><dev id="Charlson_out" class="bigout"></dev>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-2 col-xs-4">
                                                       <dev class="medtxt">CARG:</dev><dev id="pCARG_out" class="bigout"></dev><dev class="medtxt">%</dev><strong>(<dev id="CARG_out"></dev>)</strong>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-2 col-xs-4">
                                                       <dev class="medtxt">ACE-27:</dev><dev id="aceout" class="bigout"></dev>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-2 col-xs-4">
                                                       <dev class="medtxt">CIRS-G :</dev><dev id="cirsout" class="bigout"></dev>
                                                     </div>
@@ -1086,8 +1086,8 @@
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  
-                                                  
+
+
                                                 </div>
                                               </body>
                                               </html>
