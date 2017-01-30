@@ -35,9 +35,7 @@ $(document).ready(function() {
   
   
   function omega(){
-    
-    return;
-    
+        
     // Calculates Rblind from omega
     var age = parseFloat(document.getElementById('age').value);
     var Rb = -0.2306 * (0.1 * age - 5.8) / 0.948 ;
