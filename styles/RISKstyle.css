@@ -10,7 +10,7 @@ background-size: cover;
 margin-top: 24px;
   padding-left: 16%;
   margin-right:16%;
-    padding-bottom: 240px;
+    padding-bottom: 180px;
 
 }
 h1
@@ -97,6 +97,15 @@ font-size: 16px;
   text-align: justify;
 }
 
+.verticalLine {
+  border-left: thin solid lightgray;
+}
+
+.blankDivider {
+
+margin-top: 8px
+}
+
 .CIRSTopicBtn {
   min-width: 240px;
   text-align: left;
@@ -136,17 +145,19 @@ font-size: 16px;
    bottom: 0;
    width:100%;
    padding-bottom: 10px;
+   padding-top: 10px;
    padding-left: 16%;
    padding-right: 16%;
    background-color: #006A96;
    color: #f2f2f2;
    text-align: center;
 }
+
 .medtxt{
-font-size:150%
+  font-size: 20px;
+  text-align:left;
 }
 .bigout{
-  font-size: 200%;
   font-weight: bold;
 
 }
