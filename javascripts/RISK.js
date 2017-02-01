@@ -273,7 +273,7 @@ ccl = Math.round(ccl*10) / 10;
 
     // // Outputs CARG to index.html
     // document.getElementById("promptCARG").innerHTML = "CARG score: ";
-    document.getElementById("CARG_out").innerHTML = "<div class = 'medtxt'>" + CARG + " %(" + Math.round(pCARG) + ")" + "</div>";
+    document.getElementById("CARG_out").innerHTML = "<div class = 'medtxt'>" + Math.round(pCARG) + "%" +"<small>" + "(" + CARG + ")" + "</small>"+ "</div>";
     // document.getElementById("promptpCARG").innerHTML = "Risk of chemotherapy toxicity:";
     // document.getElementById("pCARG_out").innerHTML = Math.round(pCARG);
     // document.getElementById("CARG%").innerHTML = "%"
