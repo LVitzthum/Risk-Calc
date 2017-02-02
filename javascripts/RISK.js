@@ -347,7 +347,7 @@ ccl = Math.round(ccl*10) / 10;
       if (ace >= 1) ELIG += 1;
       if (cirs >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
-      if (pCARG >= 30) ELIG += 1;
+      if (pCARG >= 20) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
 
       if (ELIG >= 1){
@@ -361,7 +361,7 @@ ccl = Math.round(ccl*10) / 10;
       if (wbp < 0.5) ELIG += 1;
       if (ace) ELIG += 1;
       if (Charlson >= 2) ELIG += 1;
-      if (pCARG >= 30) ELIG += 1;
+      if (pCARG >= 29) ELIG += 1;
       if (cirs >= 6) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
 
