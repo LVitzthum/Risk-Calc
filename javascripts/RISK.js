@@ -28,6 +28,7 @@ $(document).ready(function() {
       }
     });
     return ACEVal;
+    console.log(ACEVal);
   }
 
 
@@ -273,9 +274,9 @@ ccl = Math.round(ccl*10) / 10;
 
     // // Outputs CARG to index.html
     // document.getElementById("promptCARG").innerHTML = "CARG score: ";
-    document.getElementById("CARG_out").innerHTML = "<div class = 'medtxt'>" + Math.round(pCARG) + "%" +"<small>" + "(" + CARG + ")" + "</small>"+ "</div>";
+    document.getElementById("CARG_out").innerHTML =CARG;
     // document.getElementById("promptpCARG").innerHTML = "Risk of chemotherapy toxicity:";
-    // document.getElementById("pCARG_out").innerHTML = Math.round(pCARG);
+    document.getElementById("pCARG_out").innerHTML = Math.round(pCARG);
     // document.getElementById("CARG%").innerHTML = "%"
 
     // Charlson scoring
@@ -347,31 +348,31 @@ ccl = Math.round(ccl*10) / 10;
       if (ace >= 1) ELIG += 1;
       if (cirs >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
-      if (pCARG >= 20) ELIG += 1;
+      if (pCARG >= 30) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
 
       if (ELIG >= 1){
-        var eligible_out = ["Qualifies by ", ELIG, "criteria."]
+        var eligible_out = ["This patient qualifies by meeting", ELIG, "criteria."]
         document.getElementById("elgout").innerHTML = eligible_out.join(" ")
       } else {
-        document.getElementById("elgout").innerHTML = "Does not qualify"
+        document.getElementById("elgout").innerHTML = "This patient does not qualify"
       }
     } else {
       var ELIG = 0
       if (wbp < 0.5) ELIG += 1;
-      if (ace) ELIG += 1;
+      if (ace >=2) ELIG += 1;
       if (Charlson >= 2) ELIG += 1;
-      if (pCARG >= 29) ELIG += 1;
+      if (pCARG >= 30) ELIG += 1;
       if (cirs >= 6) ELIG += 1;
       if (g8 <= 14) ELIG += 1;
 
       if (ELIG >= 2) {
-        var eligible_out = ["Qualifies by ", ELIG, "criteria."]
+        var eligible_out = ["This patient qualifies by meeting", ELIG, "criteria."]
         // document.getElementById("ElAlert").className = "alert alert-success";
         document.getElementById("elgout").innerHTML = eligible_out.join(" ")
       } else {
         // document.getElementById("ElAlert").className = "alert alert-warning";
-        document.getElementById("elgout").innerHTML = "Does not qualify"
+        document.getElementById("elgout").innerHTML = "This patient does not qualify"
       }
     }
   }
