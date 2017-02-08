@@ -359,7 +359,7 @@ ccl = Math.round(ccl*10) / 10;
     } else {
       var ELIG = 0
       if (wbp < 0.5) ELIG += 1;
-      if (ace >=) ELIG += 1;
+      if (ace >=2) ELIG += 1;
       if (Charlson >= 2) ELIG += 1;
       if (pCARG >= 29) ELIG += 1;
       if (cirs >= 6) ELIG += 1;
