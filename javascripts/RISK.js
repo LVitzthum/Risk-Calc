@@ -16,6 +16,11 @@ $(document).ready(function() {
     window.open("https://www.rtog.org/LinkClick.aspx?fileticket=oClaTCMufRA%3D&tabid=290", '_blank');
   });
 
+
+  $("#charInfo").click(function(){
+    $('#myModal').modal('show')
+  });
+
   function getACE() {
     var ACEVal;
     $( ".ACERadioVal" ).each(function( index , value ) {
