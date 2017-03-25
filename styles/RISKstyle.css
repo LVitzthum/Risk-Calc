@@ -90,7 +90,7 @@ font-size: 16px;
     margin-top: 20px;
 }
 
-.CIRSHelp {
+.helpDiv {
   display: none;
   margin: 5px;
   margin-bottom: 20px;
@@ -116,7 +116,7 @@ margin-top: 8px
   text-align: left;
 }
 
-.CIRSHelpTitle {
+.helpDivTitle {
   font-weight: 700;
 }
 
