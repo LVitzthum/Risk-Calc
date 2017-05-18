@@ -2,95 +2,59 @@
 <html lang="en">
 
 <head>
-  <title> NRG HN004 Calc </title>
+  <title> NRG-HN004 Calc </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=divice-width, initial-scale=1">
-  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
   <script src="./javascripts/RISK.js"></script>
-  
-  <link rel="stylesheet"
-  href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <style>
     :root {
       --mdc-theme-primary: #0e4ead;
     }
-    
+
     .mdc-ripple-surface.mdc-ripple-upgraded.mdc-button--primary::before,
     .mdc-ripple-surface.mdc-ripple-upgraded.mdc-button--primary::after {
       background-color: rgba(255, 255, 255, .2);
     }
-    
+
     #greeting-form > button {
       margin-top: 8px;
     }
   </style>
-  
+
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <script>mdc.autoInit();</script>
   <link rel="stylesheet" type="text/css" href="styles/RISKstyle.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50" class="mdc-typography">
-  <!-- Scroll Spy  -->
-  <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-  <div class="navbar-header">
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="#">HN004 Calculator</a>
-</div>
-<div>
-<div class="collapse navbar-collapse" id="myNavbar">
-<ul class="nav navbar-nav">
-<li><a href="#about">About</a><li>
-<li><a href="#section1">1. General</a></li>
-<li><a href="#section2">2. G8</a></li>
-<li><a href="#section3">3. Charlson</a></li>
-<li><a href="#section4">4. CARG</a></li>
-<li><a href="#section5">5. ACE 27</a></li>
-<li><a href="#section6">6. CIRS G</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</nav> -->
 <div class="jumbotron text-center">
   <h1 class="mdc-typography--display4">
-    NRG HN-004 Eligibility Calculator</h1>
-    <p>A tool to calculate comorbidity scores and determinite eligibility for HN-004 </p>
+    NRG-HN004 Eligibility Calculator</h1>
+    <p>A tool to calculate comorbidity scores and determinite eligibility for HN004 </p>
   </div>
-  
   <div class="style">
-    
     <div id="section1" class=container-fluid>
-      
-      
       <div class="row minihead">
         <div class="mdc-typography--display2 col-md-8">1. General/ GCE Model Input</div>
       </div>
-      
-      
+
+
       <div class="row">
-        
+
         <div class="col-xs-12 col-md-6">
-          
+
           <div class="row">
-            
+
             <label class="col-xs-4 control-label" for="input_age">Age: </label>
             <div class="mdc-textfield col-xs-7">
               <input type="text" id="age" class="basic_entry mdc-textfield__input" placeholder="Type Age">
             </div>
           </div>
-          
+
           <div class="row" >
             <label class="col-md-4 control-label" for="inputweight">Weight: </label>
             <div class="mdc-textfield col-xs-4">
@@ -104,7 +68,7 @@
               </select>
             </div>
           </div>
-          
+
           <div class="row" >
             <label class="col-md-4 control-label" for="inputweight">Height: </label>
             <div class="mdc-textfield col-xs-4">
@@ -118,7 +82,7 @@
               </select>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="form-group">
               <label class="col-xs-4 control-label" for="radios">Gender</label>
@@ -129,7 +93,7 @@
                 </select>
               </div> </div>
             </div>
-            
+
             <div class="row">
               <div class= "form-group">
                 <label for="Race" class="col-xs-4 control-label"> Race</label>
@@ -138,8 +102,8 @@
                     <option value=0>White</option> <option value =0>Hispanic </option><option value=1>Black or African American</option> <option value=0>Asian</option> <option value=0>American Indian</option>
                   </select>
                 </div> </div> </div>
-                
-                
+
+
                 <div class="row">
                   <label for="Education" class="col-xs-4 control-label"> Education</label>
                   <div class="col-xs-8">
@@ -147,7 +111,7 @@
                       <option value=1>Any College Experience</option> <option value=0>No college</option>
                     </select>
                   </div> </div>
-                  
+
                   <div class="row">
                     <label for="mar" class="col-xs-4 control-label"> Marital Status</label>
                     <div class="col-xs-8">
@@ -155,7 +119,7 @@
                         <option value=1>Married</option> <option value=0>Divorced/Not Married</option>
                       </select>
                     </div> </div>
-                    
+
                     <div class="row">
                       <label for="ECOG" class="col-xs-4 control-label"> ECOG PS</label>
                       <div class="col-xs-8">
@@ -165,7 +129,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="col-xs-12 col-md-6">
                     <div class= "row">
                       <label for="site" class="col-xs-5 control-label"> Primary Site</label>
@@ -174,7 +138,7 @@
                           <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option> <option value=3> Oropharynx </option>
                         </select>
                       </div> </div>
-                      
+
                       <div class="row">
                         <label for="TStage" class="col-xs-5 control-label"> T Stage</label>
                         <div class="col-xs-7">
@@ -189,7 +153,7 @@
                               <option value=0>0</option><option value=0>1</option> <option value=0>2a</option value=0> <option value=1>2b</option> <option value=1>2c</option><option value=2>3</option>
                             </select>
                           </div></div>
-                          
+
                           <div class="row">
                             <label for="p16" class="col-xs-5 control-label"> p16 Status</label>
                             <div class="col-xs-7">
@@ -197,7 +161,7 @@
                                 <option value=1>p16 positive</option><option value=0>p16 negative </option>
                               </select>
                             </div> </div>
-                            
+
                             <div class="row">
                               <label for="smoke" class="col-xs-5 control-label"> Smoking History</label>
                               <div class="col-xs-7">
@@ -205,7 +169,7 @@
                                   <option value=0> > 10 pack yr hx</option><option value=1> ≤ 10 pack yr hx </option>
                                 </select>
                               </div> </div>
-                              
+
                               <div class="row">
                                 <label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL</label>
                                 <div class="mdc-textfield col-xs-7">
@@ -214,15 +178,15 @@
                               </div>
                             </div>
                           </div>
-                          
-                          
+
+
                           <div id="section2" class=container-fluid>
-                            
-                            
+
+
                             <div class="row minihead">
                               <div class="mdc-typography--display2 col-md-8">2. G8 Model Input</div>
                             </div>
-                            
+
                             <div class="row col-xs-12">
                               <div class="row">
                                 <div class= "form-group">
@@ -232,7 +196,7 @@
                                       <option value=0>Severe decline</option> <option value =1>Moderate Decline </option><option value=2>No decline</option>
                                     </select>
                                   </div> </div> </div>
-                                  
+
                                   <div class="row">
                                     <div class= "form-group">
                                       <label for="WL" class="col-xs-5 control-label"> Weight loss during last 3 months</label>
@@ -241,7 +205,7 @@
                                           <option value=0>>3 kg</option> <option value =1>Don't know </option><option value=2>Between 1 and 3 kg </option> <option value=3> No Weight loss </option>
                                         </select>
                                       </div> </div> </div>
-                                      
+
                                       <div class="row">
                                         <div class= "form-group">
                                           <label for="Mob" class="col-xs-5 control-label"> Mobility</label>
@@ -250,7 +214,7 @@
                                               <option value=0>Bed/chair bound</option> <option value =1> Doesn't go out</option><option value=2>Goes out</option>
                                             </select>
                                           </div> </div> </div>
-                                          
+
                                           <div class="row">
                                             <div class= "form-group">
                                               <label for="Psy" class="col-xs-5 control-label"> Psychiatric health</label>
@@ -259,8 +223,8 @@
                                                   <option value=0>Severe depression/dementia</option> <option value =1> Mild Dementia</option><option value=2>No Psych issues</option>
                                                 </select>
                                               </div> </div> </div>
-                                              
-                                              
+
+
                                               <div class="row">
                                                 <div class= "form-group">
                                                   <label for="Rx" class="col-xs-5 control-label"> Prescriptions per day</label>
@@ -269,7 +233,7 @@
                                                       <option value=0>> 3</option> <option value =1> ≤3 </option>
                                                     </select>
                                                   </div> </div> </div>
-                                                  
+
                                                   <div class="row">
                                                     <div class= "form-group">
                                                       <label for="Self" class="col-xs-5 control-label"> Self rating of health compared to others of same age</label>
@@ -278,7 +242,7 @@
                                                           <option value=0>Worse</option> <option value =0.5> Doesn't Know </option> <option value =1> Same </option> <option value =2> Better </option>
                                                         </select>
                                                       </div> </div> </div>
-                                                      
+
                                                       <div class="row autofill">
                                                         <div class="col-xs-5">
                                                           <strong>BMI : </strong>
@@ -287,7 +251,7 @@
                                                           <dev id=BMI1> </dev>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row autofill">
                                                         <div class="col-xs-5">
                                                           <strong>Age: </strong>
@@ -296,18 +260,18 @@
                                                           <dev id=AGE2> </dev>
                                                         </div>
                                                       </div>
-                                                      
-                                                      
+
+
                                                     </div>
                                                   </div>
-                                                  
-                                                  
+
+
                                                   <div id="section3" class=container-fluid>
-                                                    
+
                                                     <div class="row minihead">
                                                       <div class="mdc-typography--display2 col-md-8">3. Charlson Model Input</div>
                                                     </div>
-                                                    
+
                                                     <div class="row">
                                                       <div class = "CIRSTopic col-md-6">
                                                         <div class="row">
@@ -330,13 +294,13 @@
                                                             Myocardial infarction includes patients with one or more definite or probable myocardial infarction. These patients should have been hospitalized for chest pain or an equivalent clinical event and have had electrocardiographic and/ or enzyme changes. Patients with electrocardiographic changes alone who have no clinical history are not designated as having had an infarction.
                                                         </div>
                                                       </div>
-                                                      
-                                                      
+
+
                                                       <div class = "CIRSTopic col-md-6">
                                                         <div class="row">
                                                           <div class="col-md-2 mdc-form-field">
                                                             <div class="mdc-checkbox">
-                                                              <input id="MI" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <input id="HF" type="checkbox" class="mdc-checkbox__native-control"/>
                                                               <div class="mdc-checkbox__background">
                                                                 <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
                                                                   <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
@@ -346,57 +310,403 @@
                                                             </div>
                                                           </div>
                                                             <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                                              Heart failure 
+                                                              Heart failure
                                                             </button>
                                                         </div>
                                                         <div class="helpDiv col-md-12">
-                                                            Myocardial infarction includes patients with one or more definite or probable myocardial infarction. These patients should have been hospitalized for chest pain or an equivalent clinical event and have had electrocardiographic and/ or enzyme changes. Patients with electrocardiographic changes alone who have no clinical history are not designated as having had an infarction.
+                                                          Congestive heart failure includes patients who have had exertional or paroxysmal nocturnal dyspnea and who have responded symptomatically (or on physical examination) to digitalis, diuretics, or afterload reducing agents. It does not include patients who are on one of those medications but who have had no response and no evidence of improvement of physical signs with treatment.
                                                         </div>
                                                       </div>
-                                                                                                            
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="PVD" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Peripheral vasc disease
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Peripheral vascular includes patients with intermittent claudication or those who had a bypass for  arterial insufficiency, those with gangrene or acute arterial insufficiency, and those with a treated or untreated thoracic or abdominal aneurysm (6 cm or more).
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="CVD" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              CVA or TIA
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Cerebrovascular disease includes patients with a history of a cerebrovascular accident with minor or no residua, and patients who have had transient ischemic attacks. If the CVA resulted in hemiplegia, code only hemiplegia.                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="Dem" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Dementia
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Dementia includes patients with moderate to severe chronic cognitive deficit resulting in impaired function from any cause.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="CPD" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Chronic lung disease
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Pulmonary disease includes patients with asthma, chronic bronchitis, emphysema, and other chronic lung disease who have ongoing symptoms such as dyspnea or cough, with mild or moderate activity. This includes patients who are dyspneic with slight activity, with or without treatment and those who are dyspneic with moderate activity despite treatment, as well as patients who are dyspneic at rest, despite treatment, those who require constant oxygen, those with CO2 retention and those with a baseline PO2 below 50 torr.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="CTD" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Connective tissue disease
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Rheumatologic disease includes patients with systemic lupus erythematous, polymyositis, mixed connective tissue disease, rheumatoid arthritis, polymyositis, polymyalgia rheumatica, vasculitis, sarcoidosis, Sjogrens syndrome or any other systemic vasculitis
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="UD" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Ulcer disease
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Peptic ulcer disease includes patients who have required treatment for ulcer disease, including those who have bled from ulcers.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="MLD" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Mild liver disease
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Mild liver disease consists of chronic hepatitis (B or C) or cirrhosis without portal hypertension.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="ModLD" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Moderate to severe liver disease
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Moderate liver disease consists of cirrhosis with portal hypertension, but without bleeding. Severe liver disease consists of patients with ascites, chronic jaundice, portal hypertension or a history of variceal bleeding or those who have had liver transplant.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="DM" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Diabetes
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Diabetes includes all patients with diabetes treated with insulin or oral hypoglycemic, but not diet alone. Diabetes during pregnancy alone is not counted.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="DMend" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Diabetes with end organ damage
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          This includes patients with retinopathy, neuropathy, or nephropathy attributable to diabetes
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="HEMI" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Hemiplegia
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          This includes patients with a hemiplegia or paraplegia, whether it occurred as a result of a cerebrovascular accident or other condition.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="ModRenal" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Moderate or severe renal disease
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Moderate renal insufficiency includes patients with a serum creatinine >3 mg/dl. Severe renal disease includes patients on dialysis, those who had a transplant, and those with uremia.
+                                                         </div>
+                                                      </div>
+
+                                                                                                          <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="leuk" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Leukemia
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Leukemia includes patients with acute and chronic myelogenous leukemia, acute and chronic lymphocytic leukemia, and polycythemia vera.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="lymph" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Lymphoma
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Lymphoma includes patients with Hodgkins, lymphosarcoma, Waldenstrom’s macroglobulinemia, myeloma, and other lymphomas.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="tumor" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Additional solid tumor
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Solid tumor consists of patients with solid tumors without documented metastases, including breast, colon, lung, prostate, and a variety of other tumors.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="met" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              Metastatic tumor
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Metastatic cancer includes patients with metastatic solid tumors, including breast, lung, colon and other tumors.
+                                                         </div>
+                                                      </div>
+
+                                                      <div class = "CIRSTopic col-md-6">
+                                                        <div class="row">
+                                                          <div class="col-md-2 mdc-form-field">
+                                                            <div class="mdc-checkbox">
+                                                              <input id="AIDS" type="checkbox" class="mdc-checkbox__native-control"/>
+                                                              <div class="mdc-checkbox__background">
+                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                                                </svg>
+                                                                <div class="mdc-checkbox__mixedmark"></div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
+                                                              AIDS or HIV
+                                                            </button>
+                                                        </div>
+                                                        <div class="helpDiv col-md-12">
+                                                          Acquired immune deficiency syndrome includes patients with definite or probable AIDS, i.e. AIDS related complex, and those who are HIV positive and asymptomatic.
+                                                         </div>
+                                                      </div>
+
                                                     </div>
-                                                    
-                                                    
-                                                    
-                                                    <div class="col-md-6">
-                                                      <strong>
-                                                        <input type="checkbox" id="HF" > Heart failure <br>
-                                                        <input type="checkbox" id="PVD" > Peripheral vascular disease <br>
-                                                        <input type="checkbox" id="CVD" > Cerebrovascular disease <br>
-                                                        <input type="checkbox" id="Dem" > Dementia <br>
-                                                        <input type="checkbox" id="CPD" > Chronic pulmonary disese <br>
-                                                        <input type="checkbox" id="CTD" > Connective tissue disease <br>
-                                                        <input type="checkbox" id="UD" > Ulcer disease <br>
-                                                        <input type="checkbox" id="MLD" > Mild liver disease <br>
-                                                      </div>
-                                                      <div class="col-md-6">
-                                                        <input type="checkbox" id="ModLD" > Moderate to severe liver disease <br>
-                                                        <input type="checkbox" id="DM" > Diabetes <br>
-                                                        <input type="checkbox" id="HEMI" > Hemiplegia <br>
-                                                        <input type="checkbox" id="ModRenal" > Moderate or severe renal disease <br>
-                                                        <input type="checkbox" id="DMend" > Diabetes with end organ damage <br>
-                                                        <input type="checkbox" id="leuk" > Leukemia <br>
-                                                        <input type="checkbox" id="lymph" > Lymphoma <br>
-                                                        <input type="checkbox" id="tumor" > Additional tumor <br>
-                                                        <input type="checkbox" id="met" > Additional metastatic tumor <br>
-                                                        <input type="checkbox" id="AIDS" > AIDS <br>
-                                                      </div>
-                                                    </strong>
-                                                  </div>
-                                                  
-                                                  
+
+
+
                                                   <div id="section4" class=container-fluid>
-                                                    
+
                                                     <div class="row minihead">
                                                       <div class="mdc-typography--display2 col-md-8">4. CARG Model Input </div>
                                                     </div>
-                                                    
-                                                    
+
+
                                                     <div class="row">
-                                                      
+
                                                       <div class="col-md-5">
-                                                        
-                                                        
+
+
                                                         <div class="CARGRow row">
                                                           <div class="mdc-form-field col-md-8">
                                                             <div class="mdc-checkbox">
@@ -410,13 +720,13 @@
                                                             </div>
                                                             <div class = "CARGLabel">Anemia (Hgb < 11 g/dL)</div>
                                                           </div>
-                                                          
+
                                                         </div>
-                                                        
+
                                                         <div class="divider row col-md-5"></div>
-                                                        
+
                                                         <div class="CARGRow row">
-                                                          
+
                                                           <div class="mdc-form-field col-md-8">
                                                             <div class="mdc-checkbox">
                                                               <input id="fall" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -430,11 +740,11 @@
                                                             <div class = "CARGLabel">Any fall in the past 6 months</div>
                                                           </div>
                                                         </div>
-                                                        
+
                                                         <div class="divider row col-md-5"></div>
-                                                        
+
                                                         <div class="CARGRow row">
-                                                          
+
                                                           <div class="mdc-form-field col-md-8">
                                                             <div class="mdc-checkbox">
                                                               <input id="hear" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -448,14 +758,14 @@
                                                             <div class = "CARGLabel">Hearing, fair or worse</div>
                                                           </div>
                                                         </div>
-                                                        
+
                                                       </div>
-                                                      
+
                                                       <div class="col-md-7">
-                                                        
-                                                        
+
+
                                                         <div class="CARGRow row">
-                                                          
+
                                                           <div class="mdc-form-field col-md-8">
                                                             <div class="mdc-checkbox">
                                                               <input id="walk" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -469,11 +779,11 @@
                                                             <div class = "CARGLabel">Limited in walking 1 block</div>
                                                           </div>
                                                         </div>
-                                                        
-                                                        
+
+
                                                         <div class="divider row col-md-8"></div>
                                                         <div class="CARGRow row">
-                                                          
+
                                                           <div class="mdc-form-field col-md-8">
                                                             <div class="mdc-checkbox">
                                                               <input id="meds" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -488,9 +798,9 @@
                                                           </div>
                                                         </div>
                                                         <div class="divider row col-md-8"></div>
-                                                        
+
                                                         <div class="CARGRow row">
-                                                          
+
                                                           <div class="mdc-form-field col-md-8">
                                                             <div class="mdc-checkbox">
                                                               <input id="soc" type="checkbox" class="mdc-checkbox__native-control"/>
@@ -504,15 +814,15 @@
                                                             <div class = "CARGLabel">Decreased socialization because of health</div>
                                                           </div>
                                                         </div>
-                                                        
+
                                                       </div>
-                                                      
+
                                                     </div>
-                                                    
-                                                    
-                                                    
+
+
+
                                                     <div class="row">
-                                                      
+
                                                       <div class="row autofill">
                                                         <div class="col-xs-5">
                                                           <strong>Creatinine Clearance : </strong>
@@ -521,7 +831,7 @@
                                                           <dev id=CRC1> </dev> (mL/min)
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row autofill">
                                                         <div class="col-xs-5">
                                                           <strong>Age: </strong>
@@ -532,15 +842,15 @@
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  
-                                                  
+
+
                                                   <div id="section5" class=container-fluid>
-                                                    
+
                                                     <div class="row minihead">
                                                       <div class="mdc-typography--display2 col-md-8">5. ACE-27 Model Input </div>
                                                     </div>
-                                                    
-                                                    
+
+
                                                     <div class="row">
                                                       <div class="CIRSInstruct col-md-5">Click for criteria</div>
                                                       <div class="col-md-1 CIRSRatingTitle">0</div>
@@ -549,8 +859,8 @@
                                                       <div class="col-md-1 CIRSRatingTitle">3</div>
                                                       <div class="col-md-1 CIRSRatingTitle">9</div>
                                                     </div>
-                                                    
-                                                    
+
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
                                                         <div class="col-md-5">
@@ -567,16 +877,16 @@
                                                         </div>
                                                       </div>
                                                     </div>
-                                                    
+
                                                   </div>
-                                                  
-                                                  
+
+
                                                   <div id="section6" class="container-fluid">
-                                                    
+
                                                     <div class="row minihead">
                                                       <div class="mdc-typography--display2 col-md-8">6. CIRS-G Model Input </div>
                                                     </div>
-                                                    
+
                                                     <div class="row">
                                                       <div class="CIRSInstruct col-md-5">Click for criteria</div>
                                                       <div class="col-md-1 CIRSRatingTitle">0</div>
@@ -585,7 +895,7 @@
                                                       <div class="col-md-1 CIRSRatingTitle">3</div>
                                                       <div class="col-md-1 CIRSRatingTitle">4</div>
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
                                                         <div class="col-md-5">
@@ -601,14 +911,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiohrt"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row helpDiv col-md-12">
                                                         <div><span class = "helpDivTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "helpDivTitle">Level 1:</span> Remote MI (> five years ago) / occasional angina treated with prn meds.</div>
                                                         <div><span class = "helpDivTitle">Level 2:</span> CHF compensated with meds / daily anti-angine meds / left ventricular hypertorphy / atrial fibrillation / bundle branch block / daily antiarrhythimic drugs.</div>
                                                         <div><span class = "helpDivTitle">Level 3:</span> Previous MI within five years / abnormal stress test / status post percutaneous coronary angioplasty or coronary artery bypass graft surgery.</div>
                                                         <div><span class = "helpDivTitle">Level 4:</span> Marked activity restriction secondary to cardiac status (i.e., unstable angina or intractable congestive heart failure.)</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "helpDivTitle">Additional Considerations: </span></div>
@@ -621,13 +931,13 @@
                                                         </div>
                                                       </div>
                                                       <div class="divider row col-md-12"></div>
-                                                      
-                                                      
+
+
                                                     </div>
-                                                    
-                                                    
-                                                    
-                                                    
+
+
+
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
                                                         <div class="col-md-5">
@@ -643,14 +953,14 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radiovas"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row helpDiv col-md-12">
                                                         <div><span class = "helpDivTitle">Level 0:</span> No problem.</div>
                                                         <div><span class = "helpDivTitle">Level 1:</span> Hypertension compensated with salt restriction and weight loss/serum cholesterol > 200 mg/dl. Serum cholesterol above normal*</div>
                                                         <div><span class = "helpDivTitle">Level 2:</span> Daily antihypertensive meds/one symptom of atersclerotic disease (angina, claudication, bruit, amaurosis fugax, absent pedal pulses) / aortic aneurysm < 4 cm.</div>
                                                         <div><span class = "helpDivTitle">Level 3:</span> Two or more symptoms of atherosclerosis.</div>
                                                         <div><span class = "helpDivTitle">Level 4:</span> Previous surgery for vascular problem/aortic aneurysm > 4 cm.</div>
-                                                        
+
                                                         <div>
                                                           <br>
                                                           <div><span class = "helpDivTitle">Additional Considerations: </span></div>
@@ -660,11 +970,11 @@
                                                           <div><span class = "helpDivTitle">Hyperlipidemia</span> In the original CIRS-G, cholesterol >200mg was rated 1. Given recent literature, we changed to above normal. We suggest a similar rating for triglycerides </div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
                                                         <div class="col-md-5">
@@ -680,7 +990,7 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio5"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row helpDiv col-md-12">
                                                         <li><b>Level 0:</b> No problem</li>
                                                         <li><b>Level 1:</b> Hemoglobin: females > 10 < 12, males > 12 < 14 / anemia of chronic
@@ -697,12 +1007,12 @@
                                                             severe.</br>
                                                             <b>Leucopenia</b> - Total WBC cut-offs are provided. </li>
                                                           </div>
-                                                          
+
                                                           <div class="divider row col-md-12"></div>
-                                                          
-                                                          
+
+
                                                         </div>
-                                                        
+
                                                         <div class = "CIRSTopic">
                                                           <div class="row">
                                                             <div class="col-md-5">
@@ -718,7 +1028,7 @@
                                                               <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio6"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                             </div>
                                                           </div>
-                                                          
+
                                                           <div class="row helpDiv col-md-12">
                                                             <li><b>Level 0:</b> No problem.</li>
                                                             <li><b>Level 1:</b> Recurrent episodes of acute bronchitis/currently treated asthma with prn inhalers / cigarette smoker > 10 but < 20 pack years.</li>
@@ -731,11 +1041,11 @@
                                                           <b>Chronic Bronchitis, Asthma, and Emphysema </b>- These conditions are rated '1' if only prn inhalers are required, '2' if daily theophylline or inhalers are required, '3' if steroids are required and '4' if supplemental oxygen is required.  More objective evidence, e.g. blood gases would help to sharpen the appropriate level.</br>
                                                           <b>Pneumonia</b> - As acute pneumonia treated as an outpatient would merit a '3,' and if hospitalization was required a '4.'  Two ore more episodes of pneumonia in the past five years would permit a '2.'
                                                         </div>
-                                                        
+
                                                         <div class="divider row col-md-12"></div>
-                                                        
+
                                                       </div>
-                                                      
+
                                                       <div class = "CIRSTopic">
                                                         <div class="row">
                                                           <div class="col-md-5">
@@ -751,7 +1061,7 @@
                                                             <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio7"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                           </div>
                                                         </div>
-                                                        
+
                                                         <div class="row helpDiv col-md-12">
                                                           <li><b>Level 0:</b> No problem.</li>
                                                           <li><b>Level 1:</b> Corrected vision 20/40 / chronic sinusitis / mild hearing loss.</li>
@@ -764,11 +1074,11 @@
                                                         <b>Vertigo, Lightheadedness and Dizziness </b>- These complaints are very frequent in the elderly and would merit a '2' if medications are required for control and a '4' if surgical intervention is required.</br>
                                                         <b>Other conditions</b> - Of the myriad of other EENT conditions, rating should be based on an estimate of the level of disability or impairment e.g., laryngectomy merits a '4' as it severely limits communication, etc. </br>
                                                       </div>
-                                                      
+
                                                       <div class="divider row col-md-12"></div>
-                                                      
+
                                                     </div>
-                                                    
+
                                                     <div class = "CIRSTopic">
                                                       <div class="row">
                                                         <div class="col-md-5">
@@ -784,7 +1094,7 @@
                                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio8"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                         </div>
                                                       </div>
-                                                      
+
                                                       <div class="row helpDiv col-md-12">
                                                         <li><b>Level 0:</b> No problem.</li>
                                                         <li><b>Level 1:</b> Hiatal hernia / heartburn complaints treated with prn meds.   </li>
@@ -796,11 +1106,11 @@
                                                       <b>Ulcers</b> - Symptoms of heartburn, and the diagnoses of hiatal hernia, gastritis and gastric or duodenal ulcer can be seen on a continuum of severity, i.e., mild symptoms requiring prn antacids merit a '1,' daily antacid regimens - '2,' an active ulcer or in combination with guiac positive stools - '3,' and a history of perforated ulcer or heavy bleeding from a UGI source a '4.</br>
                                                       <b>Cancer</b> - Any UGI malignancy generally merits a '4.'  (See 'Rating Malignancies')
                                                     </div>
-                                                    
+
                                                     <div class="divider row col-md-12"></div>
-                                                    
+
                                                   </div>
-                                                  
+
                                                   <div class = "CIRSTopic">
                                                     <div class="row">
                                                       <div class="col-md-5">
@@ -816,7 +1126,7 @@
                                                         <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio9"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                       </div>
                                                     </div>
-                                                    
+
                                                     <div class="row helpDiv col-md-12">
                                                       <li><b>Level 0:</b> No problem.  </li>
                                                       <li><b>Level 1: </b>Constipation managed with prn meds / active hemorrhoids / status post hernia repair.    </li>
@@ -829,11 +1139,11 @@
                                                     <b>Bleeding and Cancer </b>- Any active bleeding generally merits a '4' as does the diagnosis of cancer (see 'Rating Malignancies').</br>
                                                     <b>Diverticular Disease </b>- A diagnosis of diverticulosis or a history of diverticulitis in the past merits a '2,' an active flare-up of diverticulitis merits a '4' and an intermediate condition a '3.'
                                                   </div>
-                                                  
+
                                                   <div class="divider row col-md-12"></div>
-                                                  
+
                                                 </div>
-                                                
+
                                                 <div class = "CIRSTopic">
                                                   <div class="row">
                                                     <div class="col-md-5">
@@ -849,7 +1159,7 @@
                                                       <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio10"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                     </div>
                                                   </div>
-                                                  
+
                                                   <div class="row helpDiv col-md-12">
                                                     <li><b>Level 0:</b> No problem.  </li>
                                                     <li><b>Level 1:</b> History of hepatitis > five years ago / cholecystectomy.  </li>
@@ -863,11 +1173,11 @@
                                                   <b>Pancreatic Disease</b> - Pancreatic insufficiency requiring supplemental enzymes or chronic pancreatitis merits a '3,' acute pancreatitis merits a '4.'</br>
                                                   <b>Carcinoma</b> - Any hepato-biliary tree carcinoma generally merits a '4' (see 'Rating Malignancies')
                                                 </div>
-                                                
+
                                                 <div class="divider row col-md-12"></div>
-                                                
+
                                               </div>
-                                              
+
                                               <div class = "CIRSTopic">
                                                 <div class="row">
                                                   <div class="col-md-5">
@@ -883,7 +1193,7 @@
                                                     <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio11"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                   </div>
                                                 </div>
-                                                
+
                                                 <div class="row helpDiv col-md-12">
                                                   <li><b>Level 0:</b> No problem.</li>
                                                   <li><b>Level 1: </b>s/p kidney stone passage within the past 10 years or asymptomatic kidney stone / pyelonephritis within five years. </li>
@@ -894,11 +1204,11 @@
                                                 <b>Additional Considerations: </b></br>
                                                 Renal function must also rely on laboratory tests reflected in the above cut-off values.  Some patients are asymptomatic with an elevated creatinine and thus differentiating a '2' from a '3' will depend on whether adjunctive medications are required.  Either peritoneal or hemodialysis would merit a '4' as would any end stage renal state or renal carcinoma.  Specific glomerular disease or nephrotic syndromes would merit a '2' or '3' depending on the treatment required.
                                               </div>
-                                              
+
                                               <div class="divider row col-md-12"></div>
-                                              
+
                                             </div>
-                                            
+
                                             <div class = "CIRSTopic">
                                               <div class="row">
                                                 <div class="col-md-5">
@@ -914,7 +1224,7 @@
                                                   <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio12"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                                 </div>
                                               </div>
-                                              
+
                                               <div class="row helpDiv col-md-12">
                                                 <li><b>Level 0:</b> No problem.  </li>
                                                 <li><b>Level 1:</b> Stress incontinence / hysterectomy / BPH without urinary symptoms. </li>
@@ -930,11 +1240,11 @@
                                               <b>Prostate problems </b>- An enlarged prostate on physical exam merits a '1,' with urinary hesitancy or frequency or status post Trans Urethral Prostatectomy (TURP) merits a '2,' an incidental finding of carcinoma in situ found during a TURP merits a '3,' and prostate carcinoma or bladder outlet obstruction generally merits a '4' (see 'Rating Malignancies')</br>
                                               <b>Urinary Diversion Procedure</b> - Patients with ileal loops, indwelling catheters or nephrostomies would merit at least a '2.'
                                             </div>
-                                            
+
                                             <div class="divider row col-md-12"></div>
-                                            
+
                                           </div>
-                                          
+
                                           <div class = "CIRSTopic">
                                             <div class="row">
                                               <div class="col-md-5">
@@ -950,7 +1260,7 @@
                                                 <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio13"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                               </div>
                                             </div>
-                                            
+
                                             <div class="row helpDiv col-md-12">
                                               <li><b>Level 0:</b> No problem.   </li>
                                               <li><b>Level 1:</b> Uses prn meds for arthritis or has mildly limited ADL's from joint pathology / excised non-melatonic skin cancers / skin infections requiring antibiotics within a year.</li>
@@ -964,11 +1274,11 @@
                                             <b>Osteoporosis, Osteomyelitis, and Cancer</b> - Osteoporosis with compression fractures a '3.'  Osteomyelitis requires intensive inpatient treatment generally and merits a '4.'  An muscle or joint cancer generally merits a '4' (see 'Rating Malignancies').</br>
                                             <b>Orthopedic Surgery</b> - Since hip or knee replacements are usually performed for severe arthritis we suggest a rating of 3
                                           </div>
-                                          
+
                                           <div class="divider row col-md-12"></div>
-                                          
+
                                         </div>
-                                        
+
                                         <div class = "CIRSTopic">
                                           <div class="row">
                                             <div class="col-md-5">
@@ -984,7 +1294,7 @@
                                               <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio14"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="row helpDiv col-md-12">
                                             <li><b>Level 0:</b> No problem. </li>
                                             <li><b>Level 1:</b> Frequent headaches requiring prn meds without interference with daily activities / a history of TIA phenomena (at least one). </li>
@@ -998,13 +1308,13 @@
                                           <b>Vertigo, Dizziness and Lightheadedness</b> - For consistency these are grouped under ear, nose and throat although this category overlaps with neurology.</br>
                                           <b>Neurodenerative Disease</b> - Parkinson's disease, Multiple Sclerosis, and Amyotrophic Lateral Sclerosis (ALS) are three exams of a wide variety of degenerative neurological diseases.  These illnesses are rated according to the severity of impairment at the time of rating, beginning at the '2' level.  An example of a '3' would be a parkinsonian patient who shows residual bradykinesia and shuffling gait despite anti-parkinsonia medication, an example of a '4' would be a patient unable to care for their own basic needs bathing, toileting, etc.) because of the severe progression of their illness.</br>
                                           <b>Dementia (see 'Psychiatric Conditions') </b>- Although dementia can be considered a neurological as well as a psychiatric condition, for simplicity it should be grouped under 'psychiatric conditions' as it's effect on function is primarily in this realm.  For arbitrary clarity, Alzheimer's disease should be listed only under psych.  If the dementia stems from multi-infarct dementia or other neurological condition with concomitant neurological signs or symptoms, both 'neurologic' and 'psychiatric' categories should be endorses at the appropriate level for severity.
-                                          
+
                                         </div>
-                                        
+
                                         <div class="divider row col-md-12"></div>
-                                        
+
                                       </div>
-                                      
+
                                       <div class = "CIRSTopic">
                                         <div class="row">
                                           <div class="col-md-5">
@@ -1020,7 +1330,7 @@
                                             <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio15"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                           </div>
                                         </div>
-                                        
+
                                         <div class="row helpDiv col-md-12">
                                           <li><b>Level 0:</b> No problem. </li>
                                           <li><b>Level 1:</b> Diabetes mellitus compensated with diet / obesity: BMI > 30*/requires thyroid hormone replacement. </li>
@@ -1033,13 +1343,13 @@
                                         <b>Hormone replacement / Electrolyte disturbance</b> - Thyroid replacement in the elderly is common and should be rated a '1' if otherwise uncomplicated.  Potassium supplementation for patients taking diuretics is routine and would not merit a rating unless the serum potassium level was severely low.  Abnormalities of other electrolytes can be serious conditions, for simplicity, we have designated those conditions that require hospital treatment to merit at least a '3.'  Adrenal hormone replacement merits a '3.'  Other endocrine conditions require judgment of relative severity according to the level of morbidity caused by the condition.</br>
                                         <b>Obesity</b> - Obesity is considered a risk for a variety of conditions and is rated with guidelines of relative severity using the Body Mass Index (BMI) as the current standard for measuring weight for a given height.  Note the sex specific charts or nomograms provided in the index of this manual.</br>
                                         <b>Breast Pathology</b> - For lack of a better place, breast problems were included with endocrine / metabolic even though the breast is technically an exocrine gland.  Fibrocystic breast disease merits a '2,' breast cancer generally merits a '4' (see 'Rating Malignancies').
-                                        
+
                                       </div>
-                                      
+
                                       <div class="divider row col-md-12"></div>
-                                      
+
                                     </div>
-                                    
+
                                     <div class = "CIRSTopic">
                                       <div class="row">
                                         <div class="col-md-5">
@@ -1055,7 +1365,7 @@
                                           <div class="col-md-1"><div class="CIRSRadio mdc-radio"><input class="CIRSRadioVal mdc-radio__native-control" type="radio" id="radio-1" name="radio17"><div class="mdc-radio__background"><div class="mdc-radio__outer-circle"></div><div class="mdc-radio__inner-circle"></div></div></div></div>
                                         </div>
                                       </div>
-                                      
+
                                       <div class="row helpDiv col-md-12">
                                         <li><b>Level 0:</b> No psychiatric problem or history thereof. </li>
                                         <li><b>Level 1:</b> Minor psychiatric condition or history thereof.  Specifically: previous outpatient mental health treatment during a crisis / outpatient treatment for depression > 10 years ago / current usage of minor tranquilizers for episodic anxiety (occasional usage) / mild early dementia (MMS > 25 < 28).</li>
@@ -1072,50 +1382,50 @@
                                 </div>
                               </div>
                               <div class="formout">
-                                
+
                                 <div class="row">
-                                  
+
                                   <div class="col-md-4 col-xs-4 row">
                                     <div class="col-md-6 col-xs-6 medtxt">GCE ω:</div>
                                     <div id="omega_out" class="col-md-6 col-xs-6 medtxt"></div>
                                   </div>
-                                  
+
                                   <div class="col-md-4 col-xs-4 row verticalLine">
                                     <div class="col-md-6 col-xs-6 medtxt">G8:</div>
                                     <div id="G8Score" class="col-md-6 col-xs-6 medtxt"></div>
                                   </div>
-                                  
+
                                   <div class="col-md-4 col-xs-4 row verticalLine">
                                     <div class="col-md-6 col-xs-6 medtxt">Charlson:</div>
                                     <div id="Charlson_out" class="col-md-6 col-xs-6 medtxt"></div>
                                   </div>
-                                  
+
                                 </div>
-                                
+
                                 <div class="row blankDivider"></div>
-                                
+
                                 <div class="row">
-                                  
+
                                   <div class="col-md-4 col-xs-4 row">
                                     <div class="col-md-6 col-xs-6 medtxt">CARG:</div>
                                     <div id="CARG_out" class="col-md-6 col-xs-6 medtxt"></div>
                                   </div>
-                                  
+
                                   <div class="col-md-4 col-xs-4 row verticalLine">
                                     <div class="col-md-6 col-xs-6 medtxt">ACE-27:</div>
                                     <div id="aceout" class="col-md-6 col-xs-6 medtxt"></div>
                                   </div>
-                                  
+
                                   <div class="col-md-4 col-xs-4 row verticalLine">
                                     <div class="col-md-6 col-xs-6 medtxt">CIRS-G:</div>
                                     <div id="cirsout" class="col-md-6 col-xs-6 medtxt"></div>
                                   </div>
-                                  
+
                                 </div>
-                                
+
                                 <div class="row blankDivider"></div>
-                                
-                                
+
+
                                 <div class="row">
                                   <div class="col-xs-3 medtxt">
                                     Eligibility:
@@ -1127,8 +1437,8 @@
                                     </div>
                                   </div>
                                 </div>
-                                
-                                
+
+
                               </div>
                             </body>
                             </html>
