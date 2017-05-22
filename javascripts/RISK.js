@@ -30,9 +30,8 @@ $(document).ready(function() {
     return ACEVal;
   }
 
-
   $(".CIRSTopicBtn").click(function() {
-    $(this).closest(".CIRSTopic").find(".CIRSHelp").slideToggle( "fast", function() {});
+    $(this).closest(".CIRSTopic").find(".helpDiv").slideToggle( "fast", function() {});
     console.log('here');
   });
 
@@ -46,7 +45,7 @@ $(document).ready(function() {
     return CIRSVal;
   }
 
-  // function displayCIRSHelp(type) {
+  // function displayhelpDiv(type) {
   //   console.log(type);
   //
   //   if (type === "heart") {

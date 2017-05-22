@@ -8,8 +8,8 @@ background-size: cover;
 
 .style{
 margin-top: 24px;
-  padding-left: 16%;
-  margin-right:16%;
+  padding-left: 10%;
+  margin-right:10%;
     padding-bottom: 180px;
 
 }
@@ -50,11 +50,7 @@ font-style: italic;
   margin:  0px;
 }
 
-.basic_entry{
-  font-size: 16px;
-  min-width: 226px;
 
-}
 
 .hw_entry{
   font-size: 16px;
@@ -90,7 +86,7 @@ font-size: 16px;
     margin-top: 20px;
 }
 
-.CIRSHelp {
+.helpDiv {
   display: none;
   margin: 5px;
   margin-bottom: 20px;
@@ -116,7 +112,7 @@ margin-top: 8px
   text-align: left;
 }
 
-.CIRSHelpTitle {
+.helpDivTitle {
   font-weight: 700;
 }
 
