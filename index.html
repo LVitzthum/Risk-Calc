@@ -48,7 +48,7 @@
 <div class="jumbotron text-center">
   <h1 class="mdc-typography--display4">
     NRG-HN004 Eligibility Calculator</h1>
-    <p>A tool to calculate comorbidity scores and determinite eligibility for HN004 </p>
+    <p>A tool to calculate comorbidity scores and determine eligibility for HN004 </p>
     <!-- Navigation Tabs -->
     <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#home">Calculator</a></li>
@@ -66,7 +66,7 @@
 
       <div id="section1" class=container-fluid>
       <div class="row minihead">
-        <div class="mdc-typography--display2 col-md-8">1. General/ GCE Model Input</div>
+        <div class="mdc-typography--display2 col-md-8">1.  GCE Model Input</div>
       </div>
             <div class="row">
 
@@ -1431,7 +1431,7 @@
 
                           </div>
                           <!-- Explanation page -->
-                          <div id="info" class="tab-pane fade in active">
+                          <div id="info" class="tab-pane fade">
                             <div class="row minihead">
                               <div class="mdc-typography--display2 col-md-12"> NRG-HN004 Eligibility Criteria</div>
                             </div>
@@ -1493,7 +1493,7 @@
 
                           </div>
 
-                          <div id="ref" class="tab-pane fade in active">
+                          <div id="ref" class="tab-pane fade">
                             <div class="row minihead">
                               <div class="mdc-typography--display2 col-md-12"> References </div>
                             </div>
@@ -1578,7 +1578,13 @@
 
                               </div>
 
-
+                              <script>
+                              $(document).ready(function(){
+                                  $(".nav-tabs a").click(function(){
+                                      $(this).tab('show');
+                                  });
+                              });
+                              </script>
 
                             </body>
                             </html>
