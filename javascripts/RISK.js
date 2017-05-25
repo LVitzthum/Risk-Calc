@@ -59,12 +59,13 @@ $(document).ready(function() {
   // }
 
 
+// !!!!!!!!!!!GCE Score is currently messed up, waiting for Mell input.
+
   function omega(){
 
     // Calculates Rblind from omega
     var age = parseFloat(document.getElementById('age').value);
-    var Rb = -0.2306 * (0.1 * age - 5.8) / 0.948 ;
-    var R = -0.2306 * (0.1 * age - 5.8) / 0.948 ;
+    var R = -0.35448 * (0.1 * age - 5.81) / .939 ;
 
     // BMI calc start
     var wt = parseFloat(document.getElementById('weight').value)
@@ -75,14 +76,19 @@ $(document).ready(function() {
     var h_unit = document.getElementById('h_unit').value;
 
     if (w_unit == 1) wt /= 2.20462262;
-    if (h_unit == 1) ht *= 0.0254;
+    if (h_unit == 1) ht *= 2.54;
 
     //BMI calc end
-    var bmi = wt/Math.pow(ht, 2);
-    var Rb = Rb - 0.08198 * (0.2 * bmi -5.17)  / 1.15
-    var R = R - 0.08198 * (0.2 * bmi -5.17)  / 1.15
+    var bmi = wt/Math.pow((ht / 100 ), 2);
+    var R = R + 0.15618 * (0.2 * bmi -5.17)  / 1.15
+console.log('BMI')
+console.log (bmi)
 
+console.log('wt')
+console.log(wt)
 
+console.log('ht')
+console.log(ht)
     //goheres
 
     var sex = document.getElementById('sex_unit').value;
@@ -96,15 +102,12 @@ $(document).ready(function() {
 
 
     var ed = document.getElementById('ed').value;
-    var Rb = Rb - 0.00835 * ((ed - 0.308) / 0.462)
     var R = R - 0.00835 * ((ed - 0.308) / 0.462)
 
     var mar = document.getElementById('mar').value;
-    var Rb = Rb + .06975 * ((mar - 0.528) / .499);
     var R = R + .06975 * ((mar - 0.528) / .499);
 
     var ecog = document.getElementById('ECOG').value;
-    var Rb = Rb - 0.0514 * ((ecog - 0.382) / 0.486);
     var R = R - 0.0514 * ((ecog - 0.382) / 0.486);
 
     // R based on tumor primary location
@@ -128,7 +131,6 @@ $(document).ready(function() {
       var oc = 0;
     }
 
-    var Rb = Rb - 0.05956 * ((lrnx - 0.21) / 0.407) - 0.04083 * ( ( hpx - 0.097) / 0.296) + 0.04364 * ((oc - 0.0577) / 0.233);
     var R = R - 0.05956 * ((lrnx - 0.21) / 0.407) - 0.04083 * ( ( hpx - 0.097) / 0.296) + 0.04364 * ((oc - 0.0577) / 0.233);
 
     // R based on T stage
@@ -144,7 +146,6 @@ $(document).ready(function() {
       var t4 = 1;
     }
 
-    var Rb = Rb - .075 * ((t02 - 0.323) / 0.468) + 0.15228 * (( t4 - 0.28) / 0.449);
     var R = R - .075 * ((t02 - 0.323) / 0.468) + 0.15228 * (( t4 - 0.28) / 0.449);
 
     // R based on N stage
@@ -162,25 +163,20 @@ $(document).ready(function() {
       var n3 = 1;
     }
 
-    var Rb = Rb - 0.07905 * ((n02a - 0.416) / 0.493) + 0.02246 * ((n3 - 0.0844) / 0.278);
     var R = R - 0.07905 * ((n02a - 0.416) / 0.493) + 0.02246 * ((n3 - 0.0844) / 0.278);
 
     // Smoking and p16
     var smoke = document.getElementById('smoke').value;
     var p16 = document.getElementById('p16').value;
 
-    Rb = Rb - 0.2509 * ((p16 - 0.509) / 0.5) + 0.08921 * ((smoke - 0.323) / 0.468);
     R = R - 0.2509 * ((p16 - 0.509) / 0.5) + 0.08921 * ((smoke - 0.323) / 0.468);
 
     //  // Calculates omega from Risk score
-    var wb = Math.exp(Rb)*1.761;
     var w = Math.exp(R)*1.761;
 
-    var wbp = wb / (wb + 1);
     var wp = w / (w + 1);
 
     // rounds omega to nearest to 2 decimels
-    var wbp = Math.round(wbp * 100) / 100;
     var wp = Math.round(wp * 100) / 100;
 
     // Age Output
@@ -194,7 +190,7 @@ $(document).ready(function() {
     //  else {
     // Outputs to index.html
     // document.getElementById("prompt1").innerHTML = "GCE ω score (blind to race and gender): ";
-    document.getElementById("omega_out").innerHTML = wbp;
+    document.getElementById("omega_out").innerHTML = wp;
     // document.getElementById("prompt2").innerHTML = "GCE ω score (w/ race and gender): ";
     // document.getElementById("omega2_out").innerHTML = wp;
     // }
@@ -342,7 +338,7 @@ ccl = Math.round(ccl*10) / 10;
     if (age >= 70){
       var ELIG = 0;
 
-      if (wbp < 0.6) ELIG += 1;
+      if (wp < 0.6) ELIG += 1;
       if (ace >= 1) ELIG += 1;
       if (cirs >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
@@ -357,7 +353,7 @@ ccl = Math.round(ccl*10) / 10;
       }
     } else {
       var ELIG = 0
-      if (wbp < 0.5) ELIG += 1;
+      if (wp < 0.5) ELIG += 1;
       if (ace >=2) ELIG += 1;
       if (Charlson >= 2) ELIG += 1;
       if (pCARG >= 29) ELIG += 1;
@@ -383,7 +379,7 @@ ccl = Math.round(ccl*10) / 10;
     if (age >= 70){
       var ELIG = 0;
 
-      if (wbp < 0.6) ELIG += 1;
+      if (wp < 0.6) ELIG += 1;
       if (ace >= 1) ELIG += 1;
       if (cirs >= 6) ELIG += 1;
       if (Charlson >=1) ELIG += 1;
@@ -398,7 +394,7 @@ ccl = Math.round(ccl*10) / 10;
       }
     } else {
       var ELIG = 0
-      if (wbp < 0.5) ELIG += 1;
+      if (wp < 0.5) ELIG += 1;
       if (ace >= 2) ELIG += 1;
       if (Charlson >=2) ELIG += 1;
       if (pCARG >= 30) ELIG += 1;

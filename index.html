@@ -17,12 +17,10 @@
 <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" >
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
-<!-- Bootstrap Select -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+<!-- Clipboard JS -->
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+
   <style>
 
 
@@ -45,18 +43,34 @@
   <link rel="stylesheet" type="text/css" href="styles/RISKstyle.css">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50" class="mdc-typography">
+
+<body class="mdc-typography">
 <div class="jumbotron text-center">
   <h1 class="mdc-typography--display4">
     NRG-HN004 Eligibility Calculator</h1>
     <p>A tool to calculate comorbidity scores and determinite eligibility for HN004 </p>
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">Calculator</a></li>
+      <li><a data-toggle="tab" href="#info">Eligibility Criteria</a></li>
+      <li><a data-toggle="tab" href="#ref">References</a></li>
+    </ul>
   </div>
+
+
+
+
   <div class="style">
-    <div id="section1" class=container-fluid>
+    <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+
+      <div id="section1" class=container-fluid>
       <div class="row minihead">
         <div class="mdc-typography--display2 col-md-8">1. General/ GCE Model Input</div>
       </div>
-      <div class="row">
+            <div class="row">
+
+
 
 <!-- Column 1, GCE -->
         <div class="col-xs-12 col-md-6">
@@ -91,7 +105,7 @@
             <div class="col-xs-1 padding-0L"></div>
             <div class="col-xs-3">
             <select id="h_unit" class="form-control">
-                <option value=0 default selected>m</option>
+                <option value=0 default selected>cm</option>
                 <option value=1>in</option>
               </select>
             </div>
@@ -99,7 +113,7 @@
 
           <div class="row">
             <div class="form-group">
-              <label class="col-xs-4 control-label" for="radios">Gender</label>
+              <label class="col-xs-4 control-label" for="radios">Gender *</label>
               <div class="col-xs-8">
                 <select id="sex_unit" class="form-control">
                   <option value=0 default selected>Male</option>
@@ -110,7 +124,7 @@
 
             <div class="row">
               <div class= "form-group">
-                <label for="Race" class="col-xs-4 control-label"> Race</label>
+                <label for="Race" class="col-xs-4 control-label"> Race *</label>
                 <div class="col-xs-8">
                   <select id="race" class="form-control">
                     <option value=0>White</option> <option value =0>Hispanic </option><option value=1>Black or African American</option> <option value=0>Asian</option> <option value=0>American Indian</option>
@@ -119,7 +133,7 @@
 
 
                 <div class="row">
-                  <label for="Education" class="col-xs-4 control-label"> Education</label>
+                  <label for="Education" class="col-xs-4 control-label"> Education *</label>
                   <div class="col-xs-8">
                     <select id="ed" class="form-control">
                       <option value=1>Any College Experience</option> <option value=0>No college</option>
@@ -127,7 +141,7 @@
                   </div> </div>
 
                   <div class="row">
-                    <label for="mar" class="col-xs-4 control-label"> Marital Status</label>
+                    <label for="mar" class="col-xs-4 control-label"> Marital Status *</label>
                     <div class="col-xs-8">
                       <select id="mar" class="form-control">
                         <option value=1>Married</option> <option value=0>Divorced/Not Married</option>
@@ -151,12 +165,12 @@
                       <label for="site" class="col-xs-5 control-label"> Primary Site</label>
                       <div class="col-xs-7">
                         <select id="site" class="form-control">
-                          <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Nasopharynx </option> <option value=3> Oropharynx </option>
+                          <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Oropharynx </option>
                         </select>
                       </div> </div>
 
                       <div class="row">
-                        <label for="TStage" class="col-xs-5 control-label"> T Stage</label>
+                        <label for="TStage" class="col-xs-5 control-label"> T Stage *</label>
                         <div class="col-xs-7">
                           <select id="tstage" class="form-control">
                             <option value=0>0</option><option value=0>1</option> <option value=0>2</option> <option value=1>3</option> <option value=2>4</option>
@@ -179,7 +193,7 @@
                             </div> </div>
 
                             <div class="row">
-                              <label for="smoke" class="col-xs-5 control-label"> Smoking History</label>
+                              <label for="smoke" class="col-xs-5 control-label"> Smoking History *</label>
                               <div class="col-xs-7">
                                 <select id="smoke" class="form-control">
                                   <option value=0> > 10 pack yr hx</option><option value=1> ≤ 10 pack yr hx </option>
@@ -187,11 +201,15 @@
                               </div> </div>
 
                               <div class="row">
-                                <label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL</label>
+                                <label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL <sup> #</sup></label>
                                 <div class="mdc-textfield col-xs-7">
                                   <input type="number" placeholder="Type Creatinine" class="basic_entry mdc-textfield__input form-control" id="cr" >
                                 </div> </div>
                               </div>
+                              <div class="col-xs-12">
+                                <p class="soft">* Variable not used to determine eligibility with GCE model but will be recorded for future analysis </p>
+                                <p class="soft"><sup>#</sup> Used to calculate GFR for CARG model </p>
+                            </div>
                             </div>
                           </div>
 
@@ -1410,7 +1428,96 @@
                                   </div>
                                 </div>
                               </div>
+
+                          </div>
+                          <!-- Explanation page -->
+                          <div id="info" class="tab-pane fade in active">
+                            <div class="row minihead">
+                              <div class="mdc-typography--display2 col-md-12"> NRG-HN004 Eligibility Criteria</div>
                             </div>
+
+                            <h3>  </h3>
+
+                            <p>Patients can qualify for NRG HN004 by meeting any one of the three sets of criteria detailed below.</p>
+                            <ul>
+                            <li>Age&ge; 70 with moderate to severe comorbidity or vulnerability to cisplatin, defined as having&nbsp;<strong><u>any one</u></strong>&nbsp;of the following conditions within 30 days prior to registration:
+                            <ul>
+                            <li>Charlson Comorbidity Index &ge; 1</li>
+                            <li>ACE-27 Index &ge; 1</li>
+                            <li>GCE &omega;pfs-score &lt; 0.7</li>
+                            <li>G-8 score &le; 14</li>
+                            <li>CARG Toxicity Score &ge; 30%</li>
+                            <li>CIRS-G Score &ge; 4</li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p>&mdash;OR&mdash;</p>
+                            <p>&nbsp;</p>
+                            <ul>
+                            <li>Age &lt; 70 with severe comorbidity or vulnerability to cisplatin, defined as having&nbsp;<strong><u>two or more</u></strong>of the following conditions within 30 days prior to registration
+                            <ul>
+                            <li>Charlson Comorbidity Index &ge; 2</li>
+                            <li>ACE-27 Index &ge; 2</li>
+                            <li>GCE &omega;pfs-score &lt; 0.7</li>
+                            <li>G-8 score &le; 14</li>
+                            <li>CARG Toxicity Score &ge; 30%</li>
+                            <li>CIRS-G Score &ge; 4</li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p>&mdash;OR&mdash;</p>
+                            <p>&nbsp;</p>
+                            <ul>
+                            <li>Any age with an absolute or relative contraindication to cisplatin, defined as one or more of the following within 30 days prior to registration:
+                            <ul>
+                            <li>Creatinine clearance (CC) &lt; 60 cc/min</li>
+                            <li>For this calculation, use the Cockroft-Gault formula:</li>
+                            <li>CC = Sex * ((140 - Age) / (Serum Creatinine)) * (Weight / 72)</li>
+                            <li>Zubrod performance status 2 prior to registration</li>
+                            <li>AST or ALT &gt; 3 times normal limit/institutional upper limit of normal</li>
+                            <li>Total bilirubin &gt; 2.0 mg/dL [</li>
+                            <li>Pre-existing peripheral neuropathy grade &ge; 1</li>
+                            <li>History of hearing loss, defined as either:
+                            <ul>
+                            <li>Existing need of a hearing aid&nbsp;<u>OR</u></li>
+                            <li>&ge;25 decibel shift over 2 contiguous frequencies on a pretreatment hearing test</li>
+                            </ul>
+                            </li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <p>&nbsp;</p>
+
+
+                          </div>
+
+                          <div id="ref" class="tab-pane fade in active">
+                            <div class="row minihead">
+                              <div class="mdc-typography--display2 col-md-12"> References </div>
+                            </div>
+                            <p><strong>Generalized Competing Event (GCE) Model</strong></p>
+                            <p>Carmona R, Zakeri K, Green G, et al. Improved method to stratify elderly patients with cancer at risk for competing events. J Clin Oncol 2016;34:1270-7. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26884579">PUBMED</a></p>
+                            <p><strong>Geriatric 8 (G8) Model</strong></p>
+                            <p>Bellera CA, Rainfray M, Mathoulin-Pelissier S, et al. Screening older cancer patients: First evaluation of the g-8 geriatric screening tool. Ann Oncol 2012;23:2166-72. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22250183">PUBMED</a></p>
+                            <p><strong>Charlson Comorbidity Index (CCI) Model</strong></p>
+                            <p>Charlson ME, Pompei P, Ales KL, et al. A new method of classifying prognostic comorbidity in longitudinal studies: Development and validation. J Chronic Dis 1987;40:373-83. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=3558716">PUBMED</a></p>
+                            <p><strong>Cancer and Aging Research Group (CARG) model</strong></p>
+                            <p>Hurria A, Togawa K, Mohile SG, et al. Predicting chemotherapy toxicity in older adults with cancer: A prospective multicenter study. J Clin Oncol 2011;29:3457-65. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=21810685">PUBMED</a></p>
+                            <p><strong>Adult Comorbidity Evaluation - 27 (ACE-27)</strong></p>
+                            <p>Piccirillo JF, Tierney RM, Costas I, et al. Prognostic importance of comorbidity in a hospital-based cancer registry. Jama 2004;291:2441-7. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15161894">PUBMED</a></p>
+                            <p><strong>Cumulative Illness Rating Scale for Geriatrics (CIRS-G)</strong></p>
+                            <p>Miller MD, Paradis CF, Houck PR, et al. Rating chronic medical illness burden in geropsychiatric practice and research: Application of the cumulative illness rating scale. Psychiatry Res 1992;41:237-48. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=1594710">PUBMED</a></p>
+
+                          </div>
+
+
+                        </div>
+                      </div>
+
+
+<!-- !!!! Output !!!! -->
                               <div class="formout">
 
                                 <div class="row">
@@ -1457,7 +1564,7 @@
 
 
                                 <div class="row">
-                                  <div class="col-xs-3 medtxt">
+                                  <div class="col-xs-4 medtxt">
                                     Eligibility:
                                     <!-- <button onclick="elig()" type="button" class="btn btn-info btn-lg">Check Eligibility</button> -->
                                   </div>
@@ -1470,5 +1577,8 @@
 
 
                               </div>
+
+
+
                             </body>
                             </html>

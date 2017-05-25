@@ -46,11 +46,20 @@ font-style: italic;
   background-color: #006A96;
   color: #f2f2f2;
   padding-top: 1em;
-  padding-bottom: 0.5em;
+  padding-bottom: 0px;
   margin:  0px;
 }
 
 
+.soft{
+  color: #676768;
+  font-size: 13px;
+  alitext-align: left;
+}
+
+.nav-tabs > li > a {
+  color: #f2f2f2;
+}
 
 .hw_entry{
   font-size: 16px;
