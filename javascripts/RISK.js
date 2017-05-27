@@ -62,10 +62,13 @@ $(document).ready(function() {
 // !!!!!!!!!!!GCE Score is currently messed up, waiting for Mell input.
 
   function omega(){
+// Make a Running string to output
+var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
 
     // Calculates Rblind from omega
     var age = parseFloat(document.getElementById('age').value);
     var R = -0.35448 * (0.1 * age - 5.81) / .939 ;
+     deets_out += 'age:' + age + '\n'
 
     // BMI calc start
     var wt = parseFloat(document.getElementById('weight').value)
@@ -81,14 +84,10 @@ $(document).ready(function() {
     //BMI calc end
     var bmi = wt/Math.pow((ht / 100 ), 2);
     var R = R + 0.15618 * (0.2 * bmi -5.17)  / 1.15
-console.log('BMI')
-console.log (bmi)
+    bmi= Math.round(bmi*100) / 100
 
-console.log('wt')
-console.log(wt)
+     deets_out += 'bmi:' + bmi + '\n'
 
-console.log('ht')
-console.log(ht)
     //goheres
 
     var sex = document.getElementById('sex_unit').value;
@@ -191,6 +190,7 @@ console.log(ht)
     // Outputs to index.html
     // document.getElementById("prompt1").innerHTML = "GCE ω score (blind to race and gender): ";
     document.getElementById("omega_out").innerHTML = wp;
+
     // document.getElementById("prompt2").innerHTML = "GCE ω score (w/ race and gender): ";
     // document.getElementById("omega2_out").innerHTML = wp;
     // }
@@ -233,6 +233,7 @@ if (sex == 0) {
   ccl = ((98 - (0.8 * (age - 20))) * 0.9 * (bodySA / 1.73)) / cr;
 ccl = Math.round(ccl*10) / 10;
 }
+deets_out += 'Cr Clearance:' + ccl + '\n'
 
     if (!ccl) {
       document.getElementById("CRC1").innerHTML = "Invalid Inputs";
@@ -242,7 +243,6 @@ ccl = Math.round(ccl*10) / 10;
       //  document.getElementById("CRC2").innerHTML = gfr;
     }
     // BMI output
-    bmi= Math.round(bmi*100) / 100
     if (!bmi) {
       document.getElementById("BMI1").innerHTML = "Invalid Inputs";
       //  document.getElementById("BMI2").innerHTML = "Invalid Inputs";
@@ -332,6 +332,7 @@ ccl = Math.round(ccl*10) / 10;
     document.getElementById("aceout").innerHTML = ace
 
 
+
     //var ace = document.getElementById('CIRS').value
     document.getElementById("cirsout").innerHTML = cirs;
 
@@ -369,6 +370,17 @@ ccl = Math.round(ccl*10) / 10;
         document.getElementById("elgout").innerHTML = "Does not qualify"
       }
     }
+    // Output those details
+    deets_out += 'GCE ω:' + wp + '\n'
+    deets_out += 'CARG Score:' + CARG + '\n'
+    deets_out += 'CCI Score:' + Charlson + '\n'
+    deets_out += 'G8 Score:' + g8 + '\n'
+    deets_out += 'CIRS-G Score:' + cirs + '\n'
+    deets_out += 'ACE-27 Score:' + ace + '\n'
+
+
+    $("#deets").val(deets_out);
+
   }
 
 

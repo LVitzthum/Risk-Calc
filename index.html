@@ -54,6 +54,8 @@
       <li class="active"><a data-toggle="tab" href="#home">Calculator</a></li>
       <li><a data-toggle="tab" href="#info">Eligibility Criteria</a></li>
       <li><a data-toggle="tab" href="#ref">References</a></li>
+      <li><a data-toggle="tab" href="#Copy">Copy Input/Output</a></li>
+
     </ul>
   </div>
 
@@ -1511,11 +1513,93 @@
                             <p>Miller MD, Paradis CF, Houck PR, et al. Rating chronic medical illness burden in geropsychiatric practice and research: Application of the cumulative illness rating scale. Psychiatry Res 1992;41:237-48. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=1594710">PUBMED</a></p>
 
                           </div>
+                          <!-- Explanation page -->
+                          <div id="info" class="tab-pane fade">
+                            <div class="row minihead">
+                              <div class="mdc-typography--display2 col-md-12"> NRG-HN004 Eligibility Criteria</div>
+                            </div>
+
+                            <h3>  </h3>
+
+                            <p>Patients can qualify for NRG HN004 by meeting any one of the three sets of criteria detailed below.</p>
+                            <ul>
+                            <li>Age&ge; 70 with moderate to severe comorbidity or vulnerability to cisplatin, defined as having&nbsp;<strong><u>any one</u></strong>&nbsp;of the following conditions within 30 days prior to registration:
+                            <ul>
+                            <li>Charlson Comorbidity Index &ge; 1</li>
+                            <li>ACE-27 Index &ge; 1</li>
+                            <li>GCE &omega;pfs-score &lt; 0.7</li>
+                            <li>G-8 score &le; 14</li>
+                            <li>CARG Toxicity Score &ge; 30%</li>
+                            <li>CIRS-G Score &ge; 4</li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p>&mdash;OR&mdash;</p>
+                            <p>&nbsp;</p>
+                            <ul>
+                            <li>Age &lt; 70 with severe comorbidity or vulnerability to cisplatin, defined as having&nbsp;<strong><u>two or more</u></strong>of the following conditions within 30 days prior to registration
+                            <ul>
+                            <li>Charlson Comorbidity Index &ge; 2</li>
+                            <li>ACE-27 Index &ge; 2</li>
+                            <li>GCE &omega;pfs-score &lt; 0.7</li>
+                            <li>G-8 score &le; 14</li>
+                            <li>CARG Toxicity Score &ge; 30%</li>
+                            <li>CIRS-G Score &ge; 4</li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p>&mdash;OR&mdash;</p>
+                            <p>&nbsp;</p>
+                            <ul>
+                            <li>Any age with an absolute or relative contraindication to cisplatin, defined as one or more of the following within 30 days prior to registration:
+                            <ul>
+                            <li>Creatinine clearance (CC) &lt; 60 cc/min</li>
+                            <li>For this calculation, use the Cockroft-Gault formula:</li>
+                            <li>CC = Sex * ((140 - Age) / (Serum Creatinine)) * (Weight / 72)</li>
+                            <li>Zubrod performance status 2 prior to registration</li>
+                            <li>AST or ALT &gt; 3 times normal limit/institutional upper limit of normal</li>
+                            <li>Total bilirubin &gt; 2.0 mg/dL [</li>
+                            <li>Pre-existing peripheral neuropathy grade &ge; 1</li>
+                            <li>History of hearing loss, defined as either:
+                            <ul>
+                            <li>Existing need of a hearing aid&nbsp;<u>OR</u></li>
+                            <li>&ge;25 decibel shift over 2 contiguous frequencies on a pretreatment hearing test</li>
+                            </ul>
+                            </li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <p>&nbsp;</p>
+
+                          </div>
 
 
-                        </div>
+                          <!-- Output to Copy -->
+                          <div id="Copy" class="tab-pane fade">
+                            <div class="row minihead">
+                              <div class="mdc-typography--display2 col-md-12"> Input/Output to Copy</div>
+                            </div>
+
+                            <div class="row">
+                            <div class="form-group col-xs-12 text-center">
+                            <textarea class="form-control" rows="15" id="deets" > </textarea>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-1q text-left">
+                            <button type="button" class="btn btn-info" data-clipboard-target="#deets">
+                              Copy
+                            </button>
+                          </div>
+                          </div>
+                            <script>
+                            var clip = new Clipboard('.btn');
+                           </script>
+                         </div>
                       </div>
-
+</div>
+</div>
 
 <!-- !!!! Output !!!! -->
                               <div class="formout">
