@@ -66,155 +66,115 @@
     <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
 
-      <div id="section1" class=container-fluid>
-      <div class="row minihead">
-        <div class="mdc-typography--display2 col-md-8">1.  GCE Model Input</div>
-      </div>
+        <!-- General-->
+        <div class="row minihead">
+          <div class="mdc-typography--display2 col-md-5 col-xs-8">General Information </div>
+        </div>
+
+        <div id="section0" class=container-fluid>
+
             <div class="row">
-
-
-
-<!-- Column 1, GCE -->
-        <div class="col-xs-12 col-md-6">
-          <div class="row">
-            <label class="col-xs-4 control-label" for="input_age">Age: </label>
-            <div class="col-xs-8">
-            <div class="mdc-textfield">
-              <input type="text" id="age" class="hw_entry mdc-textfield__input" placeholder="Type Age">
-            </div> </div>
-          </div>
-
-          <div class="row" >
-            <label class="col-xs-4 control-label" for="inputweight">Weight: </label>
-            <div class="mdc-textfield col-xs-4">
-              <input type="text" id="weight" class="hw_entry mdc-textfield__input " placeholder="Type Weight">
-            </div>
-            <div class="col-xs-1 padding-0L"></div>
-            <div class="col-xs-3">
-
-              <select id="w_unit" class="form-control">
-                <option value=0 default selected>kg</option>
-                <option value=1>lb</option>
-              </select>
-</div>
-       </div>
-
-          <div class="row" >
-            <label class="col-xs-4 control-label" for="inputheight">Height: </label>
-            <div class="mdc-textfield col-xs-4">
-              <input type="text" id="height" class="hw_entry mdc-textfield__input" placeholder="Type Height">
-            </div>
-            <div class="col-xs-1 padding-0L"></div>
-            <div class="col-xs-3">
-            <select id="h_unit" class="form-control">
-                <option value=0 default selected>cm</option>
-                <option value=1>in</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="form-group">
-              <label class="col-xs-4 control-label" for="radios">Gender *</label>
-              <div class="col-xs-8">
-                <select id="sex_unit" class="form-control">
-                  <option value=0 default selected>Male</option>
-                  <option value=1>Female</option>
-                </select>
+              <label class="col-xs-4 control-label" for="input_age">Age: </label>
+              <div class="col-xs-6">
+              <div class="mdc-textfield">
+                <input type="text" id="age" class="hw_entry mdc-textfield__input" placeholder="Type Age">
               </div> </div>
             </div>
 
+            <div class="row" >
+              <label class="col-xs-4 control-label" for="inputweight">Weight: </label>
+              <div class="mdc-textfield col-xs-4">
+                <input type="text" id="weight" class="hw_entry mdc-textfield__input " placeholder="Type Weight">
+              </div>
+              <!-- <div class="col-xs-1 padding-0L"></div> -->
+              <div class="col-xs-2">
+
+                <select id="w_unit" class="form-control">
+                  <option value=0 default selected>kg</option>
+                  <option value=1>lb</option>
+                </select>
+        </div>
+         </div>
+
+            <div class="row" >
+              <label class="col-xs-4 control-label" for="inputheight">Height: </label>
+              <div class="mdc-textfield col-xs-4">
+                <input type="text" id="height" class="hw_entry mdc-textfield__input" placeholder="Type Height">
+              </div>
+              <!-- <div class="col-xs-1 padding-0L"></div> -->
+              <div class="col-xs-2">
+              <select id="h_unit" class="form-control">
+                  <option value=0 default selected>cm</option>
+                  <option value=1>in</option>
+                </select>
+              </div>
+            </div>
+
             <div class="row">
-              <div class= "form-group">
-                <label for="Race" class="col-xs-4 control-label"> Race *</label>
-                <div class="col-xs-8">
-                  <select id="race" class="form-control">
-                    <option value=0>White</option> <option value =0>Hispanic </option><option value=1>Black or African American</option> <option value=0>Asian</option> <option value=0>American Indian</option>
+              <div class="form-group">
+                <label class="col-xs-4 control-label" for="radios">Gender</label>
+                <div class="col-xs-6">
+                  <select id="sex_unit" class="form-control">
+                    <option value=0 default selected>Male</option>
+                    <option value=1>Female</option>
                   </select>
-                </div> </div> </div>
+                </div> </div>
+              </div>
 
 
-                <div class="row">
-                  <label for="Education" class="col-xs-4 control-label"> Education *</label>
-                  <div class="col-xs-8">
-                    <select id="ed" class="form-control">
-                      <option value=1>Any College Experience</option> <option value=0>No college</option>
-                    </select>
-                  </div> </div>
-
-                  <div class="row">
-                    <label for="mar" class="col-xs-4 control-label"> Marital Status *</label>
-                    <div class="col-xs-8">
-                      <select id="mar" class="form-control">
-                        <option value=1>Married</option> <option value=0>Divorced/Not Married</option>
-                      </select>
-                    </div> </div>
-
-                    <div class="row">
-                      <label for="ECOG" class="col-xs-4 control-label"> ECOG PS</label>
-                      <div class="col-xs-8">
-                        <select id="ECOG" class="form-control">
-                          <option value=0>0</option><option value=1>1</option> <option value=1>2</option>
-                        </select>
+                      <div class="row">
+                        <label for="ECOG" class="col-xs-4 control-label"> ECOG PS</label>
+                        <div class="col-xs-6">
+                          <select id="ECOG" class="form-control">
+                            <option value=0>0</option><option value=1>1</option> <option value=1>2</option>
+                          </select>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                      <div class="row">
+                        <label for="input_cr" class="col-xs-4 control-label">Serum Cr mg/dL </label>
+                        <div class="mdc-textfield col-xs-6">
+                          <input type="number" placeholder="Type Creatinine" class="basic_entry mdc-textfield__input form-control" id="cr" >
+
+                        </div>
+                       </div>
+                      </div>
+
+      <div class="row minihead">
+        <div class="mdc-typography--display2 ">1.  GCE Model Input</div>
+      </div>
 
 
 <!-- Column 2, GCE -->
-                  <div class="col-xs-12 col-md-6">
+<div id="section1" class=container-fluid>
+
+
+
                     <div class= "row">
-                      <label for="site" class="col-xs-5 control-label"> Primary Site</label>
-                      <div class="col-xs-7">
+                      <label for="site" class="col-xs-4 control-label"> Primary Site</label>
+                      <div class="col-xs-6">
                         <select id="site" class="form-control">
-                          <option value=0>Larynx</option> <option value=1>Hypopharynx</option> <option value=2>Oral Cavity</option> <option value=3> Oropharynx </option>
+                          <option value=0>Larynx</option> <option value=0>Hypopharynx</option> <option value=1>Oral Cavity</option> <option value=0> Oropharynx </option> <option value=0> Unknown Primary </option>
                         </select>
                       </div> </div>
 
                       <div class="row">
-                        <label for="TStage" class="col-xs-5 control-label"> T Stage *</label>
-                        <div class="col-xs-7">
-                          <select id="tstage" class="form-control">
-                            <option value=0>0</option><option value=0>1</option> <option value=0>2</option> <option value=1>3</option> <option value=2>4</option>
-                          </select>
-                        </div> </div>
-                        <div class="row">
-                          <label for="nStage" class="col-xs-5 control-label"> N Stage</label>
-                          <div class="col-xs-7">
+                          <label for="nStage" class="col-xs-4 control-label"> N Stage</label>
+                          <div class="col-xs-6">
                             <select id="nstage" class="form-control">
-                              <option value=0>0</option><option value=0>1</option> <option value=0>2a</option value=0> <option value=1>2b</option> <option value=1>2c</option><option value=2>3</option>
+                              <option value=1>0</option><option value=0>1</option> <option value=0>2</option value=0><option value=0>3</option>
                             </select>
                           </div></div>
 
                           <div class="row">
-                            <label for="p16" class="col-xs-5 control-label"> p16 Status</label>
-                            <div class="col-xs-7">
+                            <label for="p16" class="col-xs-4 control-label"> p16 Status (local testing)</label>
+                            <div class="col-xs-6">
                               <select id="p16" class="form-control">
-                                <option value=1>p16 positive</option><option value=0>p16 negative </option>
+                                <option value=0>p16 negative/ not tested </option><option value=1>p16 positive</option>
                               </select>
                             </div> </div>
 
-                            <div class="row">
-                              <label for="smoke" class="col-xs-5 control-label"> Smoking History *</label>
-                              <div class="col-xs-7">
-                                <select id="smoke" class="form-control">
-                                  <option value=0> > 10 pack yr hx</option><option value=1> ≤ 10 pack yr hx </option>
-                                </select>
-                              </div> </div>
 
-                              <div class="row">
-                                <label for="input_cr" class="col-xs-5 control-label">Serum Cr mg/dL <sup> #</sup></label>
-                                <div class="mdc-textfield col-xs-7">
-                                  <input type="number" placeholder="Type Creatinine" class="basic_entry mdc-textfield__input form-control" id="cr" >
-                                </div> </div>
                               </div>
-                              <div class="col-xs-12">
-                                <p class="soft">* Variable not used to determine eligibility with GCE model but will be recorded for future analysis </p>
-                                <p class="soft"><sup>#</sup> Used to calculate GFR for CARG model </p>
-                            </div>
-                            </div>
-                          </div>
-
 
 
 <!-- G8 Model!! -->
@@ -311,7 +271,6 @@
                                                       </div>
 
 
-                                                    </div>
 
 
 
@@ -630,93 +589,6 @@
                                                          </div>
                                                       </div>
 
-                                                                                                          <div class = "CIRSTopic col-md-6">
-                                                        <div class="row">
-                                                          <div class="col-md-2 mdc-form-field">
-                                                            <div class="mdc-checkbox">
-                                                              <input id="leuk" type="checkbox" class="mdc-checkbox__native-control"/>
-                                                              <div class="mdc-checkbox__background">
-                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
-                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                                                                </svg>
-                                                                <div class="mdc-checkbox__mixedmark"></div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                                              Leukemia
-                                                            </button>
-                                                        </div>
-                                                        <div class="helpDiv col-md-12">
-                                                          Leukemia includes patients with acute and chronic myelogenous leukemia, acute and chronic lymphocytic leukemia, and polycythemia vera.
-                                                         </div>
-                                                      </div>
-
-                                                      <div class = "CIRSTopic col-md-6">
-                                                        <div class="row">
-                                                          <div class="col-md-2 mdc-form-field">
-                                                            <div class="mdc-checkbox">
-                                                              <input id="lymph" type="checkbox" class="mdc-checkbox__native-control"/>
-                                                              <div class="mdc-checkbox__background">
-                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
-                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                                                                </svg>
-                                                                <div class="mdc-checkbox__mixedmark"></div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                                              Lymphoma
-                                                            </button>
-                                                        </div>
-                                                        <div class="helpDiv col-md-12">
-                                                          Lymphoma includes patients with Hodgkins, lymphosarcoma, Waldenstrom’s macroglobulinemia, myeloma, and other lymphomas.
-                                                         </div>
-                                                      </div>
-
-                                                      <div class = "CIRSTopic col-md-6">
-                                                        <div class="row">
-                                                          <div class="col-md-2 mdc-form-field">
-                                                            <div class="mdc-checkbox">
-                                                              <input id="tumor" type="checkbox" class="mdc-checkbox__native-control"/>
-                                                              <div class="mdc-checkbox__background">
-                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
-                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                                                                </svg>
-                                                                <div class="mdc-checkbox__mixedmark"></div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                                              Additional solid tumor
-                                                            </button>
-                                                        </div>
-                                                        <div class="helpDiv col-md-12">
-                                                          Solid tumor consists of patients with solid tumors without documented metastases, including breast, colon, lung, prostate, and a variety of other tumors.
-                                                         </div>
-                                                      </div>
-
-                                                      <div class = "CIRSTopic col-md-6">
-                                                        <div class="row">
-                                                          <div class="col-md-2 mdc-form-field">
-                                                            <div class="mdc-checkbox">
-                                                              <input id="met" type="checkbox" class="mdc-checkbox__native-control"/>
-                                                              <div class="mdc-checkbox__background">
-                                                                <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
-                                                                  <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                                                                </svg>
-                                                                <div class="mdc-checkbox__mixedmark"></div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                            <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                                              Metastatic tumor
-                                                            </button>
-                                                        </div>
-                                                        <div class="helpDiv col-md-12">
-                                                          Metastatic cancer includes patients with metastatic solid tumors, including breast, lung, colon and other tumors.
-                                                         </div>
-                                                      </div>
 
                                                       <div class = "CIRSTopic col-md-6">
                                                         <div class="row">
@@ -1432,6 +1304,8 @@
                               </div>
 
                           </div>
+                        </div>
+
                           <!-- Explanation page -->
                           <div id="info" class="tab-pane fade">
                             <div class="row minihead">
@@ -1658,7 +1532,7 @@
                                     </div>
                                   </div>
                                 </div>
-
+<p> <font size="3" color="#d4d6d8">Please make a note of the following scores: GCE-ω, G-8, Charlson, CARG, ACE-27 and CIRS-G. The scores will be required to be entered on the registration form in OPEN.</font> </p>
 
                               </div>
 

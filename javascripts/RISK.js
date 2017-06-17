@@ -67,7 +67,7 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
 
     // Calculates Rblind from omega
     var age = parseFloat(document.getElementById('age').value);
-    var R = -0.35448 * (0.1 * age - 5.81) / .939 ;
+    var R = -.333664 * (0.1 * age - 5.71) / .8989 ;
      deets_out += 'age:' + age + '\n'
 
     // BMI calc start
@@ -78,13 +78,20 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
     var w_unit = document.getElementById('w_unit').value;
     var h_unit = document.getElementById('h_unit').value;
 
-    if (w_unit == 1) wt /= 2.20462262;
-    if (h_unit == 1) ht *= 2.54;
+    if (w_unit == 1) {wt /= 2.20462262};
+    if (h_unit == 1) {ht *= 2.54};
 
     //BMI calc end
+
     var bmi = wt/Math.pow((ht / 100 ), 2);
-    var R = R + 0.15618 * (0.2 * bmi -5.17)  / 1.15
+    var BMI_int = 1
+
+        if (bmi < 20) {
+        BMI_int = 0
+    }
+    var R = R + 0.1678 * (BMI_int - 0.1044)  / 0.306
     bmi= Math.round(bmi*100) / 100
+
 
      deets_out += 'bmi:' + bmi + '\n'
 
@@ -94,82 +101,35 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
 
     // var sex = document.querySelector('input[name="sex"]:checked').value;
     // var sex = document.getElementById('sex').value;
-    var R = R + .08463 * ((sex - 0.167) / 0.373);
-
-    var race = document.getElementById('race').value;
-    var R = R + 0.0454 * ((race-0.141)/0.348);
-
-
-    var ed = document.getElementById('ed').value;
-    var R = R - 0.00835 * ((ed - 0.308) / 0.462)
-
-    var mar = document.getElementById('mar').value;
-    var R = R + .06975 * ((mar - 0.528) / .499);
 
     var ecog = document.getElementById('ECOG').value;
-    var R = R - 0.0514 * ((ecog - 0.382) / 0.486);
+
+  var ecog_int = 0
+
+    if (ecog > 0) {
+      var ecog_int = 1
+    }
+    console.log(ecog_int)
+
+    var R = R - 0.2386 * ((ecog_int - 0.3643) / 0.4817);
 
     // R based on tumor primary location
     var loc = document.getElementById('site').value;
 
-    if (loc == 0) {
-      var lrnx = 1;
-      var hpx = 0;
-      var oc = 0;
-    } else if (loc == 1) {
-      var lrnx = 0;
-      var hpx = 1;
-      var oc = 0;
-    } else if (loc == 2) {
-      var lrnx = 0;
-      var hpx = 0;
-      var oc = 1;
-    } else if (loc == 3) {
-      var lrnx = 0;
-      var hpx = 0;
-      var oc = 0;
-    }
 
-    var R = R - 0.05956 * ((lrnx - 0.21) / 0.407) - 0.04083 * ( ( hpx - 0.097) / 0.296) + 0.04364 * ((oc - 0.0577) / 0.233);
+    var R = R + 0.176 * ((loc - 0.03985) / .1958)
 
-    // R based on T stage
-    var tstage = document.getElementById('tstage').value;
-    if (tstage == 0) {
-      var t02 = 1;
-      var t4 = 0;
-    } else if (tstage == 1) {
-      var t02 = 0;
-      var t4 = 0;
-    } else if (tstage == 2) {
-      var t02 = 0;
-      var t4 = 1;
-    }
-
-    var R = R - .075 * ((t02 - 0.323) / 0.468) + 0.15228 * (( t4 - 0.28) / 0.449);
 
     // R based on N stage
     var nstage = document.getElementById('nstage').value;
-    if (nstage == 0) {
-      var n02a = 1;
-      var n3 = 0;
-    }
 
-    if (nstage == 1) {
-      var n02a = 0;
-      var n3 = 0;
-    } else if (nstage == 2) {
-      var n02a = 0;
-      var n3 = 1;
-    }
 
-    var R = R - 0.07905 * ((n02a - 0.416) / 0.493) + 0.02246 * ((n3 - 0.0844) / 0.278);
+    var R = R - 0.1537 * ((nstage - 0.1461) / 0.3536);
 
     // Smoking and p16
-    var smoke = document.getElementById('smoke').value;
     var p16 = document.getElementById('p16').value;
 
-    R = R - 0.2509 * ((p16 - 0.509) / 0.5) + 0.08921 * ((smoke - 0.323) / 0.468);
-
+    R = R - 0.2368 * ((p16 - 0.5028) / 0.5);
     //  // Calculates omega from Risk score
     var w = Math.exp(R)*1.761;
 
@@ -288,11 +248,6 @@ deets_out += 'Cr Clearance:' + ccl + '\n'
     if (document.getElementById("HEMI").checked) Charlson += 2;
     if (document.getElementById("ModRenal").checked) Charlson += 2;
     if (document.getElementById("DMend").checked) Charlson += 2;
-    if (document.getElementById("leuk").checked) Charlson += 2;
-    if (document.getElementById("lymph").checked) Charlson += 2;
-    if (document.getElementById("tumor").checked) Charlson += 2;
-    if (document.getElementById("ModLD").checked) Charlson += 3;
-    if (document.getElementById("met").checked) Charlson += 6;
     if (document.getElementById("AIDS").checked) Charlson += 6;
 
     // // Outputs CARG to index.html
