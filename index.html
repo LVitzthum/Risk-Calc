@@ -83,7 +83,7 @@
 
             <div class="row" >
               <label class="col-xs-4 control-label" for="inputweight">Weight: </label>
-              <div class="mdc-textfield col-xs-4">
+              <div class="mdc-textfield col-xs-3">
                 <input type="text" id="weight" class="hw_entry mdc-textfield__input " placeholder="Type Weight">
               </div>
               <!-- <div class="col-xs-1 padding-0L"></div> -->
@@ -98,7 +98,7 @@
 
             <div class="row" >
               <label class="col-xs-4 control-label" for="inputheight">Height: </label>
-              <div class="mdc-textfield col-xs-4">
+              <div class="mdc-textfield col-xs-3">
                 <input type="text" id="height" class="hw_entry mdc-textfield__input" placeholder="Type Height">
               </div>
               <!-- <div class="col-xs-1 padding-0L"></div> -->
@@ -133,10 +133,26 @@
                       <div class="row">
                         <label for="input_cr" class="col-xs-4 control-label">Serum Cr mg/dL </label>
                         <div class="mdc-textfield col-xs-6">
-                          <input type="number" placeholder="Type Creatinine" class="basic_entry mdc-textfield__input form-control" id="cr" >
+                          <input type="number" placeholder="Type Creatinine" class="hw_entry mdc-textfield__input" id="cr" >
 
                         </div>
                        </div>
+
+                         <div class="row autofill">
+                           <div class="col-xs-3">
+                             <strong>Creatinine Clearance (Jeliffe) : </strong>
+                           </div>
+                           <div class=  "col-xs-3">
+                             <dev id=CRC2> </dev> (mL/min)
+                           </div>
+                           <div class="col-xs-3">
+                             <strong>Creatinine Clearance (Cockroft-Gault) : </strong>
+                           </div>
+                           <div class=  "col-xs-3">
+                             <dev id=CRC3> </dev> (mL/min)
+                           </div>
+                         </div>
+
                       </div>
 
       <div class="row minihead">
@@ -169,10 +185,37 @@
                             <label for="p16" class="col-xs-4 control-label"> p16 Status (local testing)</label>
                             <div class="col-xs-6">
                               <select id="p16" class="form-control">
-                                <option value=0>p16 negative/ not tested </option><option value=1>p16 positive</option>
+                                <option value=1>p16 positive</option> <option value=0>p16 negative/ not tested </option>
                               </select>
                             </div> </div>
 
+                            <div class="row autofill">
+                              <div class="col-xs-3">
+                                <strong> Age: </strong>
+                              </div>
+                              <div class=  "col-xs-3">
+                                <dev id=age_gce> </dev>
+                              </div>
+
+                            </div>
+                            <div class="row autofill">
+                              <div class="col-xs-3">
+                                <strong> ECOG: </strong>
+                              </div>
+                              <div class=  "col-xs-3">
+                                <dev id=ECOG_gce> </dev>
+                              </div>
+
+                            </div>
+                            <div class="row autofill">
+                              <div class="col-xs-3">
+                                <strong> BMI: </strong>
+                              </div>
+                              <div class=  "col-xs-3">
+                                <dev id=BMI_gce> </dev>
+                              </div>
+
+                            </div>
 
                               </div>
 
@@ -191,7 +234,7 @@
                                   <div class="col-xs-6">
 
                                     <select id="Food" class="form-control ">
-                                      <option value=0>Severe decline</option> <option value =1>Moderate Decline </option><option value=2>No decline</option>
+                                      <option value=2>No decline</option> <option value =1>Moderate Decline </option> <option value=0>Severe decline</option>
                                     </select>
                                   </div>
                                   </div> </div>
@@ -202,7 +245,7 @@
                                       <div class= "col-xs-6">
 
                                           <select id="WL" class="form-control ">
-                                          <option value=0>>3 kg</option> <option value =1>Don't know </option><option value=2>Between 1 and 3 kg </option> <option value=3> No Weight loss </option>
+                                          <option value=3> No Weight loss </option><option value=2>Between 1 and 3 kg </option><option value=0>>3 kg</option> <option value =1>Don't know </option>
                                         </select>
                                       </div>
                                       </div>
@@ -213,7 +256,7 @@
                                           <label for="Mob" class="col-xs-4 control-label"> Mobility</label>
                                           <div class= "col-xs-6">
                                             <select id="Mob" class="form-control">
-                                              <option value=0>Bed/chair bound</option> <option value =1> Doesn't go out</option><option value=2>Goes out</option>
+                                              <option value=2>Goes out</option>  <option value =1> Doesn't go out</option> <option value=0>Bed/chair bound</option>
                                             </select>
                                           </div>
                                           </div> </div>
@@ -223,7 +266,7 @@
                                               <label for="Psy" class="col-xs-4 control-label"> Psychiatric health</label>
                                               <div class="col-xs-6">
                                                 <select id="Psy" class="form-control">
-                                                  <option value=0>Severe depression/dementia</option> <option value =1> Mild Dementia</option><option value=2>No Psych issues</option>
+                                                  <option value=2>No Psych issues</option> <option value =1> Mild Dementia</option><option value=0>Severe depression/dementia</option>
                                                 </select>
                                               </div>
                                               </div> </div>
@@ -234,7 +277,7 @@
                                                   <label for="Rx" class="col-xs-4 control-label"> Prescriptions per day</label>
                                                   <div class= "col-xs-6">
                                                     <select id="Rx" class="form-control">
-                                                      <option value=0>> 3</option> <option value =1> ≤3 </option>
+                                                      <option value =1> ≤3 </option><option value=0>> 3</option>
                                                     </select>
                                                   </div>
                                                   </div> </div>
@@ -246,7 +289,7 @@
                                                       <div class="col-sm-6">
 
                                                       <select id="Self" class="form-control" >
-                                                          <option value=0>Worse</option> <option value =0.5> Doesn't Know </option> <option value =1> Same </option> <option value =2> Better </option>
+                                                          <option value =2> Better </option><option value =1> Same </option><option value =0.5> Doesn't Know </option><option value=0>Worse</option>
                                                         </select>
                                                       </div>
                                                       </div>

@@ -59,7 +59,6 @@ $(document).ready(function() {
   // }
 
 
-// !!!!!!!!!!!GCE Score is currently messed up, waiting for Mell input.
 
   function omega(){
 // Make a Running string to output
@@ -109,7 +108,6 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
     if (ecog > 0) {
       var ecog_int = 1
     }
-    console.log(ecog_int)
 
     var R = R - 0.2386 * ((ecog_int - 0.3643) / 0.4817);
 
@@ -151,6 +149,11 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
     // document.getElementById("prompt1").innerHTML = "GCE ω score (blind to race and gender): ";
     document.getElementById("omega_out").innerHTML = wp;
 
+  // Output autofilled info for GCE model
+$("#age_gce").text(age)
+$("#ECOG_gce").text(ecog)
+$("#BMI_gce").text(bmi)
+
     // document.getElementById("prompt2").innerHTML = "GCE ω score (w/ race and gender): ";
     // document.getElementById("omega2_out").innerHTML = wp;
     // }
@@ -175,12 +178,12 @@ if (sex == 0) {
 } else if (sex == 1) {
     we = 45.5;
 }
-var htcm= ht*100;
+
 // Calculates ideal body weight
-var ibw = we + 2.3*(htcm * 0.3937 - 60);
+var ibw = we + 2.3*(ht * 0.3937 - 60);
 
 //Body Surface Area (BSA) = (ideal body weight (kg)^0.425) &times; (height (cm)^0.725) &times; 0.007184
-var bodySA = Math.pow(ibw, 0.425) * Math.pow(htcm, 0.725) * 0.007184;
+var bodySA = Math.pow(ibw, 0.425) * Math.pow(ht, 0.725) * 0.007184;
 
 //Male ((9.8-0.8(age-20)) X(BSA/1.73))/serum creatinine
 //Female((9.8-0.8(age-20)) X 0.9 X (BSA/1.73))/serum creatinine
@@ -193,14 +196,28 @@ if (sex == 0) {
   ccl = ((98 - (0.8 * (age - 20))) * 0.9 * (bodySA / 1.73)) / cr;
 ccl = Math.round(ccl*10) / 10;
 }
-deets_out += 'Cr Clearance:' + ccl + '\n'
+
+// Cockroft-Gault formula
+if (sex == 1){
+var CGF = 0.85*(140-age) / cr * wt / 72
+}
+else if (sex ==0){
+  var CGF = (140-age) / cr * wt / 72
+}
+CGF = Math.round(CGF*10) / 10;
+
+
+deets_out += 'Cr Clearance (Jeliffe):' + ccl + '\n'
+deets_out += 'Cr Clearance (Cockroft-Gault):' + CGF + '\n'
 
     if (!ccl) {
       document.getElementById("CRC1").innerHTML = "Invalid Inputs";
       // document.getElementById("CRC2").innerHTML = "Invalid Inputs";
     } else {
       document.getElementById("CRC1").innerHTML = ccl;
-      //  document.getElementById("CRC2").innerHTML = gfr;
+      document.getElementById("CRC2").innerHTML = ccl;
+      document.getElementById("CRC3").innerHTML = CGF;
+
     }
     // BMI output
     if (!bmi) {
