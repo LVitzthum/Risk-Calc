@@ -64,9 +64,9 @@ $(document).ready(function() {
 // Make a Running string to output
 var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
 
-    // Calculates Rblind from omega
+    // Calculates R
     var age = parseFloat(document.getElementById('age').value);
-    var R = -.333664 * (0.1 * age - 5.71) / .8989 ;
+    var R = -.3135292 * (0.1 * age - 5.72) / .9126 
      deets_out += 'age:' + age + '\n'
 
     // BMI calc start
@@ -88,7 +88,7 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
         if (bmi < 20) {
         BMI_int = 0
     }
-    var R = R + 0.1678 * (BMI_int - 0.1044)  / 0.306
+    var R = R + .18329 * (BMI_int - 0.1044)  / 0.306
     bmi= Math.round(bmi*100) / 100
 
 
@@ -307,6 +307,8 @@ deets_out += 'Cr Clearance (Cockroft-Gault):' + CGF + '\n'
 
     //var ace = document.getElementById('CIRS').value
     document.getElementById("cirsout").innerHTML = cirs;
+// !!!!NEW BUTTON FEATURE!!!!
+    $("#calcelg").click(function(){
 
     if (age >= 70){
       var ELIG = 0;
@@ -321,7 +323,43 @@ deets_out += 'Cr Clearance (Cockroft-Gault):' + CGF + '\n'
       if (ELIG >= 1){
         var eligible_out = ["Qualifies by ", ELIG, "criteria."]
         document.getElementById("elgout").innerHTML = eligible_out.join(" ")
-      } else {
+      }
+       else if (document.getElementById("AST").checked) {
+        var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+        document.getElementById("elgout").innerHTML = eligible_out
+
+      }
+      else if (document.getElementById("Bili").checked) {
+       var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+       document.getElementById("elgout").innerHTML = eligible_out
+
+     }
+     else if (document.getElementById("pneuro").checked) {
+      var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+      document.getElementById("elgout").innerHTML = eligible_out
+
+    }
+    else if (document.getElementById("hearloss").checked) {
+     var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+     document.getElementById("elgout").innerHTML = eligible_out
+
+   }
+   else if (document.getElementById("AST").checked) {
+    var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+    document.getElementById("elgout").innerHTML = eligible_out
+
+  }
+  else if (ecog > 1) {
+   var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+   document.getElementById("elgout").innerHTML = eligible_out
+
+ }
+ else if (CGF < 60) {
+  var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+  document.getElementById("elgout").innerHTML = eligible_out
+
+}
+      else {
         document.getElementById("elgout").innerHTML = "Does not qualify"
       }
     } else {
@@ -337,11 +375,48 @@ deets_out += 'Cr Clearance (Cockroft-Gault):' + CGF + '\n'
         var eligible_out = ["Qualifies by ", ELIG, "criteria."]
         // document.getElementById("ElAlert").className = "alert alert-success";
         document.getElementById("elgout").innerHTML = eligible_out.join(" ")
-      } else {
+      }
+      else if (document.getElementById("AST").checked) {
+       var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+       document.getElementById("elgout").innerHTML = eligible_out
+
+     }
+     else if (document.getElementById("Bili").checked) {
+      var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+      document.getElementById("elgout").innerHTML = eligible_out
+
+    }
+    else if (document.getElementById("pneuro").checked) {
+     var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+     document.getElementById("elgout").innerHTML = eligible_out
+
+   }
+   else if (document.getElementById("hearloss").checked) {
+    var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+    document.getElementById("elgout").innerHTML = eligible_out
+
+  }
+  else if (document.getElementById("AST").checked) {
+   var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+   document.getElementById("elgout").innerHTML = eligible_out
+
+ }
+ else if (ecog > 1) {
+  var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+  document.getElementById("elgout").innerHTML = eligible_out
+
+}
+else if (CGF < 60) {
+ var eligible_out = ["Qualifies by Cisplatin Contraindication"]
+ document.getElementById("elgout").innerHTML = eligible_out
+
+}
+      else {
         // document.getElementById("ElAlert").className = "alert alert-warning";
         document.getElementById("elgout").innerHTML = "Does not qualify"
       }
     }
+  });
     // Output those details
     deets_out += 'GCE ω:' + wp + '\n'
     deets_out += 'CARG Score:' + CARG + '\n'

@@ -68,7 +68,7 @@
 
         <!-- General-->
         <div class="row minihead">
-          <div class="mdc-typography--display2 col-md-5 col-xs-8">1. General Information </div>
+          <div class="mdc-typography--display2 col-md-8 col-xs-8">1. General Information and Cisplatin Contraindications </div>
         </div>
 
         <div id="section0" class=container-fluid>
@@ -115,7 +115,8 @@
                 <label class="col-xs-4 control-label" for="radios">Gender</label>
                 <div class="col-xs-6">
                   <select id="sex_unit" class="form-control">
-                    <option value=0 default selected>Male</option>
+                    <option> Select </option>
+                    <option value=0>Male</option>
                     <option value=1>Female</option>
                   </select>
                 </div> </div>
@@ -126,7 +127,7 @@
                         <label for="ECOG" class="col-xs-4 control-label"> ECOG PS</label>
                         <div class="col-xs-6">
                           <select id="ECOG" class="form-control">
-                            <option value=0>0</option><option value=1>1</option> <option value=1>2</option>
+                            <option> Select </option>  <option value=0>0</option><option value=1>1</option> <option value=1>≥2</option>
                           </select>
                         </div>
                       </div>
@@ -152,6 +153,11 @@
                              <dev id=CRC3> </dev> (mL/min)
                            </div>
                          </div>
+                         <br>
+
+                         <!-- <div class="divider row col-md-10"></div> -->
+                         <div class= "col-md-6 col-sm-12">
+
                          <div class="CARGRow row">
                            <div class="mdc-form-field col-md-8">
                              <div class="mdc-checkbox">
@@ -178,10 +184,14 @@
                                  <div class="mdc-checkbox__mixedmark"></div>
                                </div>
                              </div>
-                             <div class = "CARGLabel">Total bilirubin > 2.0 mg/dL</div>
-                           </div>
-                         </div>
+                             <div class = "CARGLabel"> Total bilirubin > 2.0 mg/dL</div>
 
+
+                           </div>
+
+                         </div>
+                       </div>
+                         <div class= "col-md-6 col-sm-12">
                          <div class="CARGRow row">
                            <div class="mdc-form-field col-md-8">
                              <div class="mdc-checkbox">
@@ -194,6 +204,7 @@
                                </div>
                              </div>
                              <div class = "CARGLabel">Pre-existing peripheral neuropathy grade ≥ 1</div>
+                             <a href="#" data-toggle="popover"  data-trigger="focus" data-content="Clinical or diagnostic observations or symptoms consistent with peripheral motor and or sensory neuropathy"><font size="3"> <sup>? </sup></font></a>
                            </div>
                          </div>
 
@@ -209,13 +220,15 @@
                                </div>
                              </div>
                              <div class = "CARGLabel">History of hearing loss</div>
+                             <a href="#" data-toggle="popover" data-trigger="focus" data-content="Existing need of a hearing aid OR ≥25 decibel shift over 2 contiguous frequencies on a pretreatment hearing test"><font size="3"> <sup>? </sup></font></a>
+
                            </div>
                          </div>
-
+</div>
                       </div>
 
       <div class="row minihead">
-        <div class="mdc-typography--display2 ">1.  GCE Model Input</div>
+        <div class="mdc-typography--display2 ">2. GCE Model Input</div>
       </div>
 
 
@@ -228,6 +241,8 @@
                       <label for="site" class="col-xs-4 control-label"> Primary Site</label>
                       <div class="col-xs-6">
                         <select id="site" class="form-control">
+                          <option> Select </option>
+
                           <option value=0>Larynx</option> <option value=0>Hypopharynx</option> <option value=1>Oral Cavity</option> <option value=0> Oropharynx </option> <option value=0> Unknown Primary </option>
                         </select>
                       </div> </div>
@@ -236,6 +251,8 @@
                           <label for="nStage" class="col-xs-4 control-label"> N Stage</label>
                           <div class="col-xs-6">
                             <select id="nstage" class="form-control">
+                              <option> Select </option>
+
                               <option value=1>0</option><option value=0>1</option> <option value=0>2</option value=0><option value=0>3</option>
                             </select>
                           </div></div>
@@ -244,6 +261,8 @@
                             <label for="p16" class="col-xs-4 control-label"> p16 Status (local testing)</label>
                             <div class="col-xs-6">
                               <select id="p16" class="form-control">
+                                <option> Select </option>
+
                                 <option value=1>p16 positive</option> <option value=0>p16 negative/ not tested </option>
                               </select>
                             </div> </div>
@@ -283,7 +302,7 @@
 <div id="section2" class=container-fluid>
 
                             <div class="row minihead">
-                              <div class="mdc-typography--display2 col-md-8">2. G8 Model Input</div>
+                              <div class="mdc-typography--display2 col-md-8">3. G8 Model Input</div>
                             </div>
 <form class="form-horizontal">
                             <div class="row col-xs-12">
@@ -293,6 +312,8 @@
                                   <div class="col-xs-6">
 
                                     <select id="Food" class="form-control ">
+                                      <option> Select </option>
+
                                       <option value=2>No decline</option> <option value =1>Moderate Decline </option> <option value=0>Severe decline</option>
                                     </select>
                                   </div>
@@ -304,6 +325,8 @@
                                       <div class= "col-xs-6">
 
                                           <select id="WL" class="form-control ">
+                                            <option> Select </option>
+
                                           <option value=3> No Weight loss </option><option value=2>Between 1 and 3 kg </option><option value=0>>3 kg</option> <option value =1>Don't know </option>
                                         </select>
                                       </div>
@@ -315,6 +338,8 @@
                                           <label for="Mob" class="col-xs-4 control-label"> Mobility</label>
                                           <div class= "col-xs-6">
                                             <select id="Mob" class="form-control">
+                                              <option> Select </option>
+
                                               <option value=2>Goes out</option>  <option value =1> Doesn't go out</option> <option value=0>Bed/chair bound</option>
                                             </select>
                                           </div>
@@ -325,6 +350,8 @@
                                               <label for="Psy" class="col-xs-4 control-label"> Psychiatric health</label>
                                               <div class="col-xs-6">
                                                 <select id="Psy" class="form-control">
+                                                  <option> Select </option>
+
                                                   <option value=2>No Psych issues</option> <option value =1> Mild Dementia</option><option value=0>Severe depression/dementia</option>
                                                 </select>
                                               </div>
@@ -336,6 +363,8 @@
                                                   <label for="Rx" class="col-xs-4 control-label"> Prescriptions per day</label>
                                                   <div class= "col-xs-6">
                                                     <select id="Rx" class="form-control">
+                                                      <option> Select </option>
+
                                                       <option value =1> ≤3 </option><option value=0>> 3</option>
                                                     </select>
                                                   </div>
@@ -348,6 +377,7 @@
                                                       <div class="col-sm-6">
 
                                                       <select id="Self" class="form-control" >
+                                                        <option> Select </option>
                                                           <option value =2> Better </option><option value =1> Same </option><option value =0.5> Doesn't Know </option><option value=0>Worse</option>
                                                         </select>
                                                       </div>
@@ -379,7 +409,7 @@
                                                   <div id="section3" class=container-fluid>
 
                                                     <div class="row minihead">
-                                                      <div class="mdc-typography--display2 col-md-8">3. Charlson Model Input</div>
+                                                      <div class="mdc-typography--display2 col-md-8">4. Charlson Model Input</div>
                                                     </div>
 
                                                     <div class="row">
@@ -721,7 +751,7 @@
                                                   <div id="section4" class=container-fluid>
 
                                                     <div class="row minihead">
-                                                      <div class="mdc-typography--display2 col-md-8">4. CARG Model Input </div>
+                                                      <div class="mdc-typography--display2 col-md-8">5.  CARG Model Input </div>
                                                     </div>
 
 
@@ -780,8 +810,11 @@
                                                             <div class = "CARGLabel">Hearing, fair or worse</div>
                                                           </div>
                                                         </div>
+                                                        <div class="divider row col-md-5"></div>
 
                                                       </div>
+
+
 
                                                       <div class="col-md-7">
 
@@ -869,7 +902,7 @@
                                                   <div id="section5" class=container-fluid>
 
                                                     <div class="row minihead">
-                                                      <div class="mdc-typography--display2 col-md-8">5. ACE-27 Model Input </div>
+                                                      <div class="mdc-typography--display2 col-md-8">6. ACE-27 Model Input </div>
                                                     </div>
 
 
@@ -906,7 +939,7 @@
                                                   <div id="section6" class="container-fluid">
 
                                                     <div class="row minihead">
-                                                      <div class="mdc-typography--display2 col-md-8">6. CIRS-G Model Input </div>
+                                                      <div class="mdc-typography--display2 col-md-8">7. CIRS-G Model Input </div>
                                                     </div>
 
                                                     <div class="row">
@@ -1401,6 +1434,14 @@
                                       <b>Delirium</b> - Delirium (see DMS III-R definition) is assumed to have an underlying organic etiology and should be scored both according to the level of psychiatric impairment and in the appropriate medical category, e.g., delirium secondary to hyponatremia requiring hospitalization would merit a '4' for 'Psyche' and at least a '3' for 'Metabolic' (depending on severity).
                                     </div>
                                   </div>
+                                  <br><br><br><br>
+                                  <div class="center">
+                                    <button id="calcelg" class="ElgTopicBtn mdc-button mdc-button--raised mdc-button--primary ">
+                                    <strong>  Calculate Eligibility </strong>
+                                    </button>
+                                  </div>
+                                  <br><br><br><br><br><br><br>
+
                                 </div>
                               </div>
 
@@ -1643,6 +1684,10 @@
                                   $(".nav-tabs a").click(function(){
                                       $(this).tab('show');
                                   });
+                              });
+
+                              $(document).ready(function(){
+                                $('[data-toggle="popover"]').popover();
                               });
                               </script>
 

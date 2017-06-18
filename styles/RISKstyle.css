@@ -120,6 +120,11 @@ margin-top: 8px
   min-width: 240px;
   text-align: left;
 }
+.ElgTopicBtn {
+  min-width: 480px;
+  text-align: center;
+  
+}
 
 .helpDivTitle {
   font-weight: 700;
