@@ -6,6 +6,15 @@ background: #e5e5e5 no-repeat center center fixed; //#3b5998
 background-size: cover;
 }
 
+@media (max-width:600px) {
+.style{
+  margin-top: 5px;
+    padding-left: 5%;
+    margin-right:5%;
+      padding-bottom: 200px;
+      font-size: 15px;
+}}
+
 .style{
 margin-top: 24px;
   padding-left: 10%;
@@ -13,20 +22,44 @@ margin-top: 24px;
     padding-bottom: 180px;
 
 }
-h1
-{
+
+@media (max-width:600px) {
+  .jumbotron {
+    background-color: #006A96;
+    color: #f2f2f2;
+    padding-top: 1em;
+    padding-bottom: 0px;
+    margin:  0px;
+  }
+  .jumbotron  h1 {
+    font-size: 20px;
+  }
+  .jumbotron h4 {
+    font-size: 15px;
+  }
+}
+.jumbotron{
+
+  background-color: #006A96;
+  color: #f2f2f2;
+  padding-top: 1em;
+  padding-bottom: 0px;
+  margin:  0px;
+}
+
+h1{
 font-family: 'Open Sans Condensed', sans-serif;
-font-size: 50px;
-//letter-spacing: 40px;
+/*font-size: 50px;*/
+/*letter-spacing: 40px;*/
 }
 
 p
 {
-font-size: 18px;
 letter-spacing: 1px;
 margin-right: 10%;
 margin-left: 10%;
 }
+
 .minihead{
 background-color: #182B49;
     margin-bottom: 18px;
@@ -41,14 +74,7 @@ background-color: #182B49;
 color:#666666;
 font-style: italic;
 }
-.jumbotron{
 
-  background-color: #006A96;
-  color: #f2f2f2;
-  padding-top: 1em;
-  padding-bottom: 0px;
-  margin:  0px;
-}
 
 
 .soft{
@@ -62,20 +88,20 @@ font-style: italic;
 }
 
 .hw_entry{
-  font-size: 16px;
+  font-size: 14px;
   min-width: 100px;
 
 }
 
 .unit_entry{
-  font-size: 16px;
+  font-size: 14px;
   min-width: 44px;
 
 }
 
 .G8Input{
 min-width: 246px;
-font-size: 16px;
+font-size: 14px;
 }
 
 .divider {
@@ -86,7 +112,7 @@ font-size: 16px;
 }
 
 .CARGLabel {
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 10px;
 }
 
@@ -114,6 +140,7 @@ margin-top: 8px
 .CIRSTopicBtn {
   min-width: 240px;
   text-align: left;
+  font-size: 12px;
 }
 
 .ACETopicBtn {
@@ -121,9 +148,9 @@ margin-top: 8px
   text-align: left;
 }
 .ElgTopicBtn {
-  min-width: 480px;
+  min-width: 300px;
   text-align: center;
-  
+
 }
 
 .helpDivTitle {
@@ -156,29 +183,55 @@ margin-top: 8px
    width:100%;
    padding-bottom: 10px;
    padding-top: 10px;
-   padding-left: 16%;
-   padding-right: 16%;
+   padding-left: 5%;
+   padding-right: 5%;
    background-color: #006A96;
    color: #f2f2f2;
    text-align: center;
 }
+.well {
+    background: #e5e5e5;
+    margin: 0px;
 
+}
 .medtxt{
-  font-size: 20px;
+  font-size: 18px;
   text-align:left;
 }
+@media (max-width:600px) {
+.medtxt{
+  text-align:left;
+  font-size:14px;
+}
+}
+
+
 .bigout{
   font-weight: bold;
 
 }
 .finalout{
   text-align:left;
-  font-size:200%;
+  font-size:150%;
   font-weight: bold;
 }
+@media (max-width:600px) {
+.finalout{
+  text-align:left;
+  font-size:100%;
+  font-weight: bold;
+}
+.finalout p{
+  font-size:14px;
+
+
+}
+}
+
 .center {
-margin: auto;
-width: 50%;
-padding: 10px;
+
 text-align: center;
+}
+.border{
+  border:1px solid #white;"
 }
