@@ -66,7 +66,7 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
 
     // Calculates R
     var age = parseFloat(document.getElementById('age').value);
-    var R = -.3135292 * (0.1 * age - 5.72) / .9126 
+    var R = -.3135292 * (0.1 * age - 5.72) / .9126
      deets_out += 'age:' + age + '\n'
 
     // BMI calc start
@@ -88,7 +88,7 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
         if (bmi < 20) {
         BMI_int = 0
     }
-    var R = R + .18329 * (BMI_int - 0.1044)  / 0.306
+    var R = R + .18329 * (BMI_int - 0.88538)  / 0.31883
     bmi= Math.round(bmi*100) / 100
 
 
@@ -109,27 +109,27 @@ var deets_out = 'Name (Last, First):' + '\n' + 'DOB (MM/DD/YYYY):' + '\n'
       var ecog_int = 1
     }
 
-    var R = R - 0.2386 * ((ecog_int - 0.3643) / 0.4817);
+    var R = R - 0.2025297 * ((ecog_int - 0.377076) / 0.4851);
 
     // R based on tumor primary location
     var loc = document.getElementById('site').value;
 
 
-    var R = R + 0.176 * ((loc - 0.03985) / .1958)
+    var R = R + 0.148293 * ((loc - 0.03488) / .18364)
 
 
     // R based on N stage
     var nstage = document.getElementById('nstage').value;
 
 
-    var R = R - 0.1537 * ((nstage - 0.1461) / 0.3536);
+    var R = R - 0.1332337 * ((nstage - 0.14452) / 0.3519);
 
     // Smoking and p16
     var p16 = document.getElementById('p16').value;
 
-    R = R - 0.2368 * ((p16 - 0.5028) / 0.5);
+    R = R - 0.2390754 * ((p16 - 0.488372) / 0.5);
     //  // Calculates omega from Risk score
-    var w = Math.exp(R)*1.761;
+    var w = Math.exp(R);
 
     var wp = w / (w + 1);
 
