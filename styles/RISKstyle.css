@@ -73,6 +73,7 @@ background-color: #182B49;
 .autofill{
 color:#666666;
 font-style: italic;
+text-align: left;
 }
 
 
@@ -83,20 +84,40 @@ font-style: italic;
   alitext-align: left;
 }
 
+
 .nav-tabs > li > a {
   color: #f2f2f2;
 }
-
+/*MDC elements made adaptive for cell phone*/
+@media (max-width:600px) {
 .hw_entry{
   font-size: 14px;
-  min-width: 100px;
+  min-width: 40px;
 
 }
 
+.hw_select{
+width: 80%;
+font-size: 12px;
+}
+.unit_entry{
+  font-size: 12px;
+  min-width: 44px;
+}
+}
+.hw_entry{
+  font-size: 14px;
+  min-width: 40px;
+
+}
+
+.hw_select{
+width: 80%;
+font-size: 14px;
+}
 .unit_entry{
   font-size: 14px;
   min-width: 44px;
-
 }
 
 .G8Input{
