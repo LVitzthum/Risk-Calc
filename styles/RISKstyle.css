@@ -73,6 +73,7 @@ background-color: #182B49;
 .autofill{
 color:#666666;
 font-style: italic;
+text-align: left;
 }
 
 
@@ -83,20 +84,75 @@ font-style: italic;
   alitext-align: left;
 }
 
+
 .nav-tabs > li > a {
   color: #f2f2f2;
+}
+/*MDC elements made adaptive for cell phone*/
+@media (max-width:600px) {
+.label_width{
+  min-width:90px;
+  font-size:10px;
+}
+.hw_entry{
+  font-size: 10px;
+  width: 120px;
+}
+
+.hw_select{
+font-size: 10px;
+width: 120px;
+}
+.hw_select_wide{
+font-size: 10px;
+min-width: 240px;
+}
+.unit_entry{
+  font-size: 10px;
+  min-width: 20px;
+}
+.hw_select_small{
+  min-width: 20px;
+  font-size:10px;
+}
+.flex_text{
+font-size: 75%;
+
+
+}
+
+}
+/*Big screen*/
+.flex_text{
+.font-size:100%;
+
+}
+
+.label_width{
+  width:20%;
+}
+.hw_select_small{
+  min-width: 5%;
+  font-size:14px;
 }
 
 .hw_entry{
   font-size: 14px;
-  min-width: 100px;
+  min-width: 44px;
 
 }
 
+.hw_select{
+min-width: 60px;
+font-size: 14px;
+}
+.hw_select_wide{
+font-size: 14px;
+width: 50%;
+}
 .unit_entry{
   font-size: 14px;
   min-width: 44px;
-
 }
 
 .G8Input{
@@ -117,8 +173,8 @@ font-size: 14px;
 }
 
 .CARGRow {
-  margin-bottom: 12px;
-    margin-top: 20px;
+  margin-bottom: 3px;
+    margin-top: 3px;
 }
 
 .helpDiv {

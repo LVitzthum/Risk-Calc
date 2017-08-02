@@ -13,14 +13,19 @@
   <script src="./javascripts/RISK.js"></script>
   <!-- Material design component thing paul added -->
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-  <!-- Material design lite w/ blue colors  -->
-  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" >
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
 
   <!-- Clipboard JS -->
   <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-102622958-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
   <style>
 
 
@@ -73,123 +78,93 @@
         <div id="section0" class=container-fluid>
 
           <div class="row">
-            <label class="col-xs-4 control-label" for="input_age">Age: </label>
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-md-6">
+            <!-- <label class="col-xs-2 mdc-textfield" for="input_age">Age: </label>
+            <div class="col-xs-4">
               <div class="mdc-textfield">
-                <input type="text" id="age" class="hw_entry mdc-textfield__input" placeholder="Type Age">
-              </div> </div>
+                <input type="number" id="age" class="hw_entry mdc-textfield__input" placeholder="Type Age">
+              </div> </div> -->
+              <label for="input_age" class="label_width">Age: </label>
+<div class="mdc-textfield">
+  <input type="number" id="age" class="mdc-textfield__input hw_entry" placeholder="Type age">
+</div>
             </div>
 
-            <div class="row" >
-              <label class="col-xs-4 control-label" for="inputweight">Weight: </label>
-              <div class="mdc-textfield col-xs-3">
-                <input type="text" id="weight" class="hw_entry mdc-textfield__input " placeholder="Type Weight">
+<div class="col-xs-12 col-md-6">
+              <label for="weight" class="label_width">Weight: </label>
+              <div class="mdc-textfield">
+                <input type="number" id="weight" class="hw_entry mdc-textfield__input" placeholder="Type Weight">
               </div>
-              <!-- <div class="col-xs-1 padding-0L"></div> -->
-              <div class="col-xs-2">
-
-                <select id="w_unit" class="form-control">
+                          <!-- <div class="col-xs-1 padding-0L"></div> -->
+                <select class="mdc-select hw_select_small" id="w_unit">
                   <option value=0 default selected>kg</option>
                   <option value=1>lb</option>
-                </select>
-              </div>
+              </select>
+
+            </div>
             </div>
 
+
             <div class="row" >
-              <label class="col-xs-4 control-label" for="inputheight">Height: </label>
-              <div class="mdc-textfield col-xs-3">
-                <input type="text" id="height" class="hw_entry mdc-textfield__input" placeholder="Type Height">
+                <div class="col-xs-12 col-md-6">
+              <label  for="inputheight" class="label_width">Height: </label>
+              <div class="mdc-textfield">
+                <input type="number"  id="height" class="hw_entry mdc-textfield__input" placeholder="Type Height">
               </div>
               <!-- <div class="col-xs-1 padding-0L"></div> -->
-              <div class="col-xs-2">
-                <select id="h_unit" class="form-control">
+
+                <select id="h_unit" class="mdc-select hw_select_small">
                   <option value=0 default selected>cm</option>
                   <option value=1>in</option>
                 </select>
-              </div>
+
             </div>
 
-            <div class="row">
-              <div class="form-group">
-                <label class="col-xs-4 control-label" for="radios">Gender</label>
-                <div class="col-xs-6">
-                  <select id="sex_unit" class="form-control">
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                <label  for="radios" class="label_width">Gender</label>
+                    <select id="sex_unit" class="mdc-select hw_select">
                     <option> Select </option>
                     <option value=0>Male</option>
                     <option value=1>Female</option>
                   </select>
-                </div> </div>
+                 </div>
               </div>
-
-
+            </div>
               <div class="row">
-                <label for="ECOG" class="col-xs-4 control-label"> ECOG PS</label>
-                <div class="col-xs-6">
-                  <select id="ECOG" class="form-control">
+              <div class="col-xs-12 col-md-6">
+
+                <label for="ECOG" class="label_width"> ECOG PS</label>
+                                  <select id="ECOG" class="mdc-select hw_select">
                     <option> Select </option>  <option value=0>0</option><option value=1>1</option> <option value=1>≥2</option>
                   </select>
                 </div>
-              </div>
-              <div class="row">
-                <label for="input_cr" class="col-xs-4 control-label">Serum Cr mg/dL </label>
-                <div class="mdc-textfield col-xs-6">
-                  <input type="number" placeholder="Type Creatinine" class="hw_entry mdc-textfield__input" id="cr" >
+                <div class="col-xs-12 col-md-6">
+                <label for="input_cr" class="label_width" >Serum Cr mg/dL </label>
+                <div class="mdc-textfield ">
+                  <input type="number" step="0.01" placeholder="Type Creatinine" class="hw_entry mdc-textfield__input" id="cr" >
 
                 </div>
+              </div>
               </div>
 
               <div class="row autofill">
-                <div class="col-xs-3">
-                  <strong>Creatinine Clearance (Jeliffe) : </strong>
+                <div class="col-xs-3 flex_text">
+                  <strong>CrCl (Jeliffe): </strong>
                 </div>
-                <div class=  "col-xs-3">
+                <div class=  "col-xs-3 flex_text">
                   <dev id=CRC2> </dev> (mL/min)
                 </div>
-                <div class="col-xs-3">
-                  <strong>Creatinine Clearance (Cockroft-Gault) : </strong>
+                <div class="col-xs-3 flex_text">
+                  <strong>CrCl (Cockroft-Gault): </strong>
                 </div>
-                <div class=  "col-xs-3">
+                <div class=  "col-xs-3 flex_text">
                   <dev id=CRC3> </dev> (mL/min)
                 </div>
               </div>
               <br>
 
               <!-- <div class="divider row col-md-10"></div> -->
-              <div class= "col-md-6 col-sm-12">
-
-                <div class="CARGRow row">
-                  <div class="mdc-form-field col-md-8">
-                    <div class="mdc-checkbox">
-                      <input id="AST" type="checkbox" class="mdc-checkbox__native-control"/>
-                      <div class="mdc-checkbox__background">
-                        <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
-                          <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                        </svg>
-                        <div class="mdc-checkbox__mixedmark"></div>
-                      </div>
-                    </div>
-                    <div class = "CARGLabel">AST or ALT > 3 times normal limit/institutional upper limit of normal</div>
-                  </div>
-                </div>
-
-                <div class="CARGRow row">
-                  <div class="mdc-form-field col-md-8">
-                    <div class="mdc-checkbox">
-                      <input id="Bili" type="checkbox" class="mdc-checkbox__native-control"/>
-                      <div class="mdc-checkbox__background">
-                        <svg version="1.1" class="mdc-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
-                          <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                        </svg>
-                        <div class="mdc-checkbox__mixedmark"></div>
-                      </div>
-                    </div>
-                    <div class = "CARGLabel"> Total bilirubin > 2.0 mg/dL</div>
-
-
-                  </div>
-
-                </div>
-              </div>
               <div class= "col-md-6 col-sm-12">
                 <div class="CARGRow row">
                   <div class="mdc-form-field col-md-8">
@@ -206,6 +181,10 @@
 
                   </div>
                 </div>
+
+              </div>
+              <div class= "col-md-6 col-sm-12">
+
 
                 <div class="CARGRow row">
                   <div class="mdc-form-field col-md-8">
@@ -233,61 +212,59 @@
 
             <!-- Column 2, GCE -->
 
-
-
             <div class= "row">
-              <label for="site" class="col-xs-4 control-label"> Primary Site</label>
-              <div class="col-xs-6">
-                <select id="site" class="form-control">
+              <label for="site" class="label_width"> Primary Site</label>
+
+                <select id="site" class="mdc-select hw_select_wide">
                   <option> Select </option>
 
                   <option value=0>Larynx</option> <option value=0>Hypopharynx</option> <option value=1>Oral Cavity</option> <option value=0> Oropharynx </option> <option value=0> Unknown Primary </option>
                 </select>
-              </div> </div>
+              </div>
 
               <div class="row">
-                <label for="nStage" class="col-xs-4 control-label"> N Stage</label>
-                <div class="col-xs-6">
-                  <select id="nstage" class="form-control">
+                <label for="nStage" class="label_width"> N Stage</label>
+
+                  <select id="nstage" class="mdc-select hw_select_wide">
                     <option> Select </option>
 
                     <option value=1>0</option><option value=0>1</option> <option value=0>2</option value=0><option value=0>3</option>
                   </select>
-                </div></div>
+                </div>
 
                 <div class="row">
-                  <label for="p16" class="col-xs-4 control-label"> p16 Status (local testing)</label>
-                  <div class="col-xs-6">
-                    <select id="p16" class="form-control">
+                  <label for="p16" class="label_width"> p16 Status (local testing)</label>
+
+                    <select id="p16" class="mdc-select hw_select_wide">
                       <option> Select </option>
 
                       <option value=1>p16 positive</option> <option value=0>p16 negative/ not tested </option>
                     </select>
-                  </div> </div>
+                  </div>
 
                   <div class="row autofill">
-                    <div class="col-xs-3">
+                    <div class="col-xs-3 flex_text">
                       <strong> Age: </strong>
                     </div>
-                    <div class=  "col-xs-3">
+                    <div class=  "flex_text col-xs-3">
                       <dev id=age_gce> </dev>
                     </div>
 
                   </div>
                   <div class="row autofill">
-                    <div class="col-xs-3">
+                    <div class="col-xs-3 flex_text">
                       <strong> ECOG: </strong>
                     </div>
-                    <div class=  "col-xs-3">
+                    <div class=  "col-xs-3 flex_text">
                       <dev id=ECOG_gce> </dev>
                     </div>
 
                   </div>
                   <div class="row autofill">
-                    <div class="col-xs-3">
+                    <div class="col-xs-3 flex_text">
                       <strong> BMI: </strong>
                     </div>
-                    <div class=  "col-xs-3">
+                    <div class=  "col-xs-3 flex_text">
                       <dev id=BMI_gce> </dev>
                     </div>
 
@@ -300,100 +277,98 @@
                   <div class="row minihead">
                     <div class="mdc-typography--display1">3. G8 Model Input</div>
                   </div>
-                  <form class="form-horizontal">
-                    <div class="row col-xs-12">
-                      <div class="row">
-                        <div class= "form-group">
-                          <label for="Food" class="col-xs-4 control-label"> Decline in food intake over past 3 months?</label>
-                          <div class="col-xs-6">
 
-                            <select id="Food" class="form-control ">
+                        <div class="row">
+                        <div class= "form-group">
+                          <label for="Food" class="label_width"> Decline in food intake over past 3 months?</label>
+                              <select id="Food" class="mdc-select hw_select_wide">
                               <option> Select </option>
 
                               <option value=2>No decline</option> <option value =1>Moderate Decline </option> <option value=0>Severe decline</option>
                             </select>
-                          </div>
+
                         </div> </div>
                         <div class="row">
 
                           <div class= "form-group">
-                            <label for="WL" class="col-xs-4 control-label"> Weight loss during last 3 months</label>
-                            <div class= "col-xs-6">
+                            <label for="WL" class="label_width"> Weight loss during last 3 months</label>
 
-                              <select id="WL" class="form-control ">
+
+                              <select id="WL" class="mdc-select hw_select_wide">
                                 <option> Select </option>
 
                                 <option value=3> No Weight loss </option><option value=2>Between 1 and 3 kg </option><option value=0>>3 kg</option> <option value =1>Don't know </option>
                               </select>
-                            </div>
+
                           </div>
                         </div>
 
                         <div class="row">
                           <div class= "form-group">
-                            <label for="Mob" class="col-xs-4 control-label"> Mobility</label>
-                            <div class= "col-xs-6">
-                              <select id="Mob" class="form-control">
+                            <label for="Mob" class="label_width"> Mobility</label>
+
+                              <select id="Mob" class="mdc-select hw_select_wide">
                                 <option> Select </option>
 
                                 <option value=2>Goes out</option>  <option value =1> Doesn't go out</option> <option value=0>Bed/chair bound</option>
                               </select>
-                            </div>
+
                           </div> </div>
 
                           <div class="row">
                             <div class= "form-group">
-                              <label for="Psy" class="col-xs-4 control-label"> Psychiatric health</label>
-                              <div class="col-xs-6">
-                                <select id="Psy" class="form-control">
+                              <label for="Psy" class="label_width"> Psychiatric health</label>
+
+                                <select id="Psy" class="mdc-select hw_select_wide">
                                   <option> Select </option>
 
                                   <option value=2>No Psych issues</option> <option value =1> Mild Dementia</option><option value=0>Severe depression/dementia</option>
                                 </select>
-                              </div>
+
                             </div> </div>
 
 
                             <div class="row">
                               <div class= "form-group">
-                                <label for="Rx" class="col-xs-4 control-label"> Prescriptions per day</label>
-                                <div class= "col-xs-6">
-                                  <select id="Rx" class="form-control">
+                                <label for="Rx" class="label_width"> Prescriptions per day</label>
+
+                                  <select id="Rx" class="mdc-select hw_select_wide">
                                     <option> Select </option>
 
                                     <option value =1> ≤3 </option><option value=0>> 3</option>
                                   </select>
                                 </div>
-                              </div> </div>
+                              </div>
 
                               <div class="row">
 
                                 <div class= "form-group">
-                                  <label for="Self" class="control-label col-sm-4"> Self rating of health compared to others of same age</label>
-                                  <div class="col-sm-6">
+                                  <label for="Self" class="label_width"> Self rating of health compared to others of same age</label>
 
-                                    <select id="Self" class="form-control" >
+
+                                    <select id="Self" class="mdc-select hw_select_wide" >
                                       <option> Select </option>
                                       <option value =2> Better </option><option value =1> Same </option><option value =0.5> Doesn't Know </option><option value=0>Worse</option>
                                     </select>
-                                  </div>
+
                                 </div>
-                              </div> </div>
-                            </form>
+                              </div>
+
+
                             <div class="row autofill">
-                              <div class="col-xs-5">
+                              <div class="col-xs-5 flex_text">
                                 <strong>BMI : </strong>
                               </div>
-                              <div class=  "col-xs-7">
+                              <div class=  "col-xs-7 flex_text">
                                 <dev id=BMI1> </dev>
                               </div>
                             </div>
 
                             <div class="row autofill">
-                              <div class="col-xs-5">
+                              <div class="col-xs-5 flex_text">
                                 <strong>Age: </strong>
                               </div>
-                              <div class=  "col-xs-7">
+                              <div class=  "col-xs-7 flex_text">
                                 <dev id=AGE2> </dev>
                               </div>
                             </div>
@@ -619,7 +594,7 @@
                                       </div>
                                     </div>
                                     <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                      Moderate to severe liver disease
+                                      Mod to severe liver disease
                                     </button>
                                   </div>
                                   <div class="helpDiv col-xs-12">
@@ -663,7 +638,7 @@
                                       </div>
                                     </div>
                                     <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                      Diabetes with end organ damage
+                                      DM with end organ damage
                                     </button>
                                   </div>
                                   <div class="helpDiv col-xs-12">
@@ -707,7 +682,7 @@
                                       </div>
                                     </div>
                                     <button class="CIRSTopicBtn mdc-button button--compact mdc-button--raised">
-                                      Moderate or severe renal disease
+                                      Mod to severe renal disease
                                     </button>
                                   </div>
                                   <div class="helpDiv col-xs-12">
@@ -1421,28 +1396,27 @@
                 <b>Delirium</b> - Delirium (see DMS III-R definition) is assumed to have an underlying organic etiology and should be scored both according to the level of psychiatric impairment and in the appropriate medical category, e.g., delirium secondary to hyponatremia requiring hospitalization would merit a '4' for 'Psyche' and at least a '3' for 'Metabolic' (depending on severity).
               </div>
             </div>
-            <br><br><br><br>
+<hr>
 
-            <div class="well">
-              <p> <font size="3" color="black">Please make a note of the following scores: GCE-ω, G-8, Charlson, CARG, ACE-27 and CIRS-G. The scores will be required to be entered on the registration form in OPEN.</font> </p>
+
+              <p class="flex_text"> <font  color="black">This tool helps determine eligibility per section 3.1.1. Please refer to the trial protocol for determining ultimate eligibility. Make note of the following scores: GCE-ω, G-8, Charlson, CARG, ACE-27 and CIRS-G. The scores will be required to be entered on the registration form in OPEN.</font> </p>
               <div class="center">
                 <button id="calcelg" class="ElgTopicBtn mdc-button mdc-button--raised mdc-button--primary ">
                   <strong>  Calculate Eligibility </strong>
                 </button>
               </div>
-            </div>
-            <br><br><br><br><br><br><br>
 
+            <br><br><br>
 
           </div>
 
           <!-- Explanation page -->
           <div id="info" class="tab-pane fade">
             <div class="row minihead">
-              <div class="mdc-typography--display2 col-xs-12"> NRG-HN004 Eligibility Criteria</div>
+              <div class="mdc-typography--display2 col-xs-12"> NRG-HN004 Eligibility Criteria Per Section 3.1.1</div>
             </div>
 
-            <p>Patients can qualify for NRG HN004 by meeting one of the three sets of criteria detailed below.</p>
+            <h4>Patients can qualify for NRG HN004 by meeting one of the three sets of criteria detailed below.</h4>
             <ul>
               <li>Age&ge; 70 with moderate to severe comorbidity or vulnerability to cisplatin, defined as having&nbsp;<strong><u>any one</u></strong>&nbsp;of the following conditions within 30 days prior to registration:
                 <ul>
@@ -1483,8 +1457,6 @@
                     </ul>
                   </li>
                   <li>Zubrod performance status 2 prior to registration</li>
-                  <li>AST or ALT &gt; 3 times normal limit/institutional upper limit of normal</li>
-                  <li>Total bilirubin &gt; 2.0 mg/dL</li>
                   <li>Pre-existing peripheral neuropathy grade &ge; 1 (Clinical or diagnostic observations or symptoms consistent with peripheral motor and or sensory neuropathy)</li>
                   <li>History of hearing loss, defined as either:
                     <ul>
