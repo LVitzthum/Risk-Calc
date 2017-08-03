@@ -88,8 +88,17 @@ text-align: left;
 .nav-tabs > li > a {
   color: #f2f2f2;
 }
+.medtxt{
+  font-size: 18px;
+  text-align:left;
+}
 /*MDC elements made adaptive for cell phone*/
 @media (max-width:600px) {
+  .medtxt{
+    font-size: 11px;
+    text-align:left;
+  }
+
 .label_width{
   min-width:90px;
   font-size:10px;
@@ -117,11 +126,15 @@ min-width: 240px;
 }
 .flex_text{
 font-size: 75%;
+}
+.CARGLabel {
+  font-size: 10x;
+}
+
 
 
 }
 
-}
 /*Big screen*/
 .flex_text{
 .font-size:100%;
@@ -142,6 +155,10 @@ font-size: 75%;
 
 }
 
+.CARGLabel {
+  font-size: 14px;
+  margin-left: 10px;
+}
 .hw_select{
 min-width: 60px;
 font-size: 14px;
@@ -167,10 +184,7 @@ font-size: 14px;
     margin-left: 0px;
 }
 
-.CARGLabel {
-  font-size: 14px;
-  margin-left: 10px;
-}
+
 
 .CARGRow {
   margin-bottom: 3px;
@@ -250,16 +264,8 @@ margin-top: 8px
     margin: 0px;
 
 }
-.medtxt{
-  font-size: 18px;
-  text-align:left;
-}
-@media (max-width:600px) {
-.medtxt{
-  text-align:left;
-  font-size:14px;
-}
-}
+
+
 
 
 .bigout{
